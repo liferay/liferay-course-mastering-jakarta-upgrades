@@ -4,6 +4,7 @@
 **/.project
 **/.sass-cache
 **/.settings
+**/.DS_Store
 **/bin
 **/build
 **/build_gradle

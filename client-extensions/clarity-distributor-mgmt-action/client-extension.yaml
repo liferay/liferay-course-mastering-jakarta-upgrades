@@ -1,0 +1,20 @@
+assemble:
+    - fromTask: bootJar
+clarity-distributor-mgmt-action-oauth-application-user-agent:
+    .serviceAddress: localhost:58081
+    .serviceScheme: http
+    name: Clarity Distributor Mgmt Action OAuth Application User Agent
+    scopes:
+        - Liferay.Headless.Admin.User.everything
+        - Liferay.Headless.Admin.Workflow.everything
+    type: oAuthApplicationUserAgent
+clarity-distributor-mgmt-object-action:
+    name: Clarity Distributor Mgmt Object Action Account
+    oAuth2ApplicationExternalReferenceCode: clarity-distributor-mgmt-action-oauth-application-user-agent
+    resourcePath: /object/action/account
+    type: objectAction
+clarity-distributor-mgmt-workflow-action-application:
+    name: Clarity Distributor Mgmt Workflow Action Application
+    oAuth2ApplicationExternalReferenceCode: clarity-distributor-mgmt-action-oauth-application-user-agent
+    resourcePath: /workflow/action/application
+    type: workflowAction

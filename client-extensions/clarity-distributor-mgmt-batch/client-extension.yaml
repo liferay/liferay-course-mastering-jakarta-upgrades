@@ -1,0 +1,19 @@
+assemble:
+    - from: batch
+      into: batch
+liferay-clarity-batch:
+    name: Clarity Distributor Mgmt Batch
+    oAuthApplicationHeadlessServer: -clarity-distributor-mgmt-batch-oauth-application-headless-server
+    type: batch
+clarity-distributor-mgmt-batch-oauth-application-headless-server:
+    .serviceAddress: localhost:8080
+    .serviceScheme: http
+    name: Clarity Distributor Mgmt Batch OAuth Application Headless Server
+    scopes:
+        - Liferay.Headless.Admin.List.Type.everything
+        - Liferay.Headless.Admin.User.everything
+        - Liferay.Headless.Admin.Workflow.everything
+        - Liferay.Headless.Batch.Engine.everything
+        - Liferay.Notification.REST.everything
+        - Liferay.Object.Admin.REST.everything
+    type: oAuthApplicationHeadlessServer
