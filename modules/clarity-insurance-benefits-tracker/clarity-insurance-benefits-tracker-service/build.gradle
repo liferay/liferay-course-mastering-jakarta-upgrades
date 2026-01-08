@@ -1,0 +1,12 @@
+dependencies {
+	api project(":modules:clarity-insurance-benefits-tracker:clarity-insurance-benefits-tracker-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../clarity-insurance-benefits-tracker-api/src/main/java"
+	testDir = "../clarity-insurance-benefits-tracker-test/src/testIntegration/java"
+}
+
+group = "com.clarity.insurance.benefits.tracker"

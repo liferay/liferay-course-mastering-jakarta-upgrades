@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.clarityvisionsolutions.insurance.benefits.tracker" mvcc-enabled="true">
+	<namespace>CIBT</namespace>
+
+	<!-- ===================== -->
+	<!-- InsurancePlan          -->
+	<!-- ===================== -->
+	<entity
+		name="InsurancePlan"
+		local-service="true"
+		remote-service="true"
+		human-name="Insurance Plan"
+		uuid="true" external-reference-code="group" change-tracking-enabled="true" trash-enabled="true"
+	>
+
+		<!-- PK -->
+		<column name="insurancePlanId" primary="true" type="long" container-model="true" />
+
+		<!-- Standard Liferay fields -->
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Business fields -->
+		<column change-tracking-resolution-type="merge" name="planName" type="String" />
+		<column change-tracking-resolution-type="merge" name="providerName" type="String" />
+		<column name="active" type="boolean" />
+
+		<!-- Allowances (store as cents to avoid BigDecimal pain in JSP/forms) -->
+		<column name="annualExamAllowanceCents" type="long" />
+		<column name="annualFramesAllowanceCents" type="long" />
+		<column name="annualLensesAllowanceCents" type="long" />
+		<column name="annualContactsAllowanceCents" type="long" />
+
+		<!-- Usually 12 -->
+		<column name="coveragePeriodMonths" type="int" />
+
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" uad-anonymize-field-name="fullName" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="providerName" />
+			<order-column name="planName" />
+		</order>
+
+		<!-- Finders -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CompanyIdActive" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="active" />
+		</finder>
+
+		<finder name="GroupIdActive" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="active" />
+		</finder>
+
+		<finder name="CompanyId" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="G_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="G_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="C_S" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="C_NotS" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="G_U_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column arrayable-operator="OR" name="status" />
+		</finder>
+		<finder name="G_U_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+
+		<finder name="ExternalReferenceCode" return-type="InsurancePlan">
+			<finder-column name="externalReferenceCode" />
+		</finder>
+	</entity>
+
+	<!-- ===================== -->
+	<!-- PlanEnrollment         -->
+	<!-- ===================== -->
+	<entity
+		name="PlanEnrollment"
+		local-service="true"
+		remote-service="true"
+		human-name="Plan Enrollment"
+		uuid="true" external-reference-code="group" change-tracking-enabled="true"  trash-enabled="true"
+	>
+		<column name="planEnrollmentId" primary="true" type="long" container-model="true" />
+
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" uad-anonymize-field-name="fullName" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Relationships -->
+		<column name="insurancePlanId" type="long" parent-container-model="true" />
+		<column name="memberUserId" type="long" />
+		<column name="memberUserName" type="String" uad-anonymize-field-name="fullName" />
+
+		<!-- Enrollment fields (these are stable across years unless plan changes) -->
+		<column name="memberId" type="String" />
+		<column name="groupNumber" type="String" />
+
+		<!-- Coverage window for enrollment -->
+		<column change-tracking-resolution-type="merge" name="startDate" type="Date" />
+		<column change-tracking-resolution-type="merge" name="endDate" type="Date" />
+
+		<!-- Use simple int status to keep UI/service straightforward -->
+		<column name="enrollmentStatus" type="int" />
+
+		<column change-tracking-resolution-type="merge" name="notes" type="String" />
+
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" uad-anonymize-field-name="fullName" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="insurancePlanId" />
+			<order-column name="memberUserId" />
+			<order-column name="startDate" order-by="desc" />
+		</order>
+
+		<!-- Finders -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CompanyId" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="G_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="G_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="IP_S" return-type="Collection">
+			<finder-column name="insurancePlanId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="IP_NotS" return-type="Collection">
+			<finder-column name="insurancePlanId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="G_IP_M_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="insurancePlanId" />
+			<finder-column name="memberUserId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="G_IP_M_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="insurancePlanId" />
+			<finder-column name="memberUserId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="C_S" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="C_NotS" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="G_U_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column arrayable-operator="OR" name="status" />
+		</finder>
+		<finder name="G_U_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdEnrollmentStatus" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="enrollmentStatus" />
+		</finder>
+
+		<finder name="GroupIdEnrollmentStatus" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="enrollmentStatus" />
+		</finder>
+
+		<finder name="MemberUserId" return-type="Collection">
+			<finder-column name="memberUserId" />
+		</finder>
+
+		<finder name="MemberId" return-type="Collection">
+			<finder-column name="memberId" />
+		</finder>
+
+		<finder name="InsurancePlan" return-type="Collection">
+			<finder-column name="insurancePlanId" />
+		</finder>
+	</entity>
+
+	<!-- ===================== -->
+	<!-- BenefitUsage           -->
+	<!-- ===================== -->
+	<entity
+		name="BenefitUsage"
+		local-service="true"
+		remote-service="true"
+		human-name="Benefit Usage"
+		uuid="true" external-reference-code="group" change-tracking-enabled="true"  trash-enabled="true"
+	>
+		<column name="benefitUsageId" primary="true" type="long" />
+
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Relationship -->
+		<column name="planEnrollmentId" type="long" />
+
+		<!-- EXAM / FRAMES / LENSES / CONTACTS -->
+		<column name="benefitType" type="String" />
+
+		<!-- Amount of allowance consumed -->
+		<column name="amountUsedCents" type="long" />
+
+		<column change-tracking-resolution-type="merge" name="serviceDate" type="Date" />
+		<column change-tracking-resolution-type="merge" name="reference" type="String" />
+		<column change-tracking-resolution-type="merge" name="notes" type="String" />
+
+		<!-- For future “Commerce integration” without depending on Commerce today -->
+		<column name="sourceType" type="String" />
+		<column name="sourceReference" type="String" />
+
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" uad-anonymize-field-name="fullName" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="planEnrollmentId" />
+			<order-column name="serviceDate" order-by="desc" />
+		</order>
+
+		<!-- Finders -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CompanyId" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="G_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="G_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="PE_S" return-type="Collection">
+			<finder-column name="planEnrollmentId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="PE_NotS" return-type="Collection">
+			<finder-column name="planEnrollmentId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="G_PE_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="planEnrollmentId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="G_PE_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="planEnrollmentId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="C_S" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="C_NotS" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+		<finder name="G_U_S" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column arrayable-operator="OR" name="status" />
+		</finder>
+		<finder name="G_U_NotS" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column comparator="!=" name="status" />
+		</finder>
+
+		<finder name="PlanEnrollment" return-type="Collection">
+			<finder-column name="planEnrollmentId" />
+		</finder>
+
+		<finder name="PlanEnrollmentServiceDate" return-type="Collection">
+			<finder-column name="planEnrollmentId" />
+			<finder-column name="serviceDate" />
+		</finder>
+	</entity>
+	<exceptions>
+		<exception>NoSuchInsurancePlanException</exception>
+		<exception>NoSuchPlanEnrollmentException</exception>
+		<exception>NoSuchBenefitUsageException</exception>
+		<exception>InsurancePlanException</exception>
+		<exception>PlanEnrollmentException</exception>
+		<exception>BenefitUsageException</exception>
+		<exception>DuplicatePlanEnrollmentException</exception>
+		<exception>DuplicateIndusrancePlanException</exception>
+		<exception>DuplicateBenefitUsageException</exception>
+	</exceptions>
+
+</service-builder>

@@ -1,0 +1,32 @@
+create index IX_58634331 on CIBT_BenefitUsage (companyId);
+create unique index IX_927E6FCC on CIBT_BenefitUsage (groupId, ctCollectionId, externalReferenceCode[$COLUMN_LENGTH:75$]);
+create unique index IX_A645B4BF on CIBT_BenefitUsage (groupId, uuid_[$COLUMN_LENGTH:75$], ctCollectionId);
+create index IX_82885180 on CIBT_BenefitUsage (planEnrollmentId, serviceDate);
+create index IX_E1C5BF8B on CIBT_BenefitUsage (status, companyId);
+create index IX_FAF62F89 on CIBT_BenefitUsage (status, groupId, planEnrollmentId);
+create index IX_F15CE807 on CIBT_BenefitUsage (status, groupId, userId);
+create index IX_3C4A7B39 on CIBT_BenefitUsage (status, planEnrollmentId);
+create index IX_6E50553D on CIBT_BenefitUsage (uuid_[$COLUMN_LENGTH:75$]);
+
+create index IX_7C1B1FE3 on CIBT_InsurancePlan (companyId, active_);
+create index IX_B7984DFB on CIBT_InsurancePlan (externalReferenceCode[$COLUMN_LENGTH:75$]);
+create index IX_231F3A21 on CIBT_InsurancePlan (groupId, active_);
+create unique index IX_63E3FAB3 on CIBT_InsurancePlan (groupId, externalReferenceCode[$COLUMN_LENGTH:75$], ctCollectionId);
+create index IX_DF2B5B08 on CIBT_InsurancePlan (groupId, status, userId);
+create unique index IX_17DF992A on CIBT_InsurancePlan (groupId, uuid_[$COLUMN_LENGTH:75$], ctCollectionId);
+create index IX_34FA0940 on CIBT_InsurancePlan (status, companyId);
+create index IX_7205C672 on CIBT_InsurancePlan (uuid_[$COLUMN_LENGTH:75$]);
+
+create index IX_7E4D2A0E on CIBT_PlanEnrollment (companyId);
+create unique index IX_573D7F0F on CIBT_PlanEnrollment (groupId, ctCollectionId, externalReferenceCode[$COLUMN_LENGTH:75$]);
+create index IX_5F874F9A on CIBT_PlanEnrollment (groupId, enrollmentStatus);
+create index IX_CD89608C on CIBT_PlanEnrollment (groupId, status, insurancePlanId, memberUserId);
+create index IX_83540D30 on CIBT_PlanEnrollment (groupId, status, userId);
+create unique index IX_C319AA02 on CIBT_PlanEnrollment (groupId, uuid_[$COLUMN_LENGTH:75$], ctCollectionId);
+create index IX_1169F8B4 on CIBT_PlanEnrollment (insurancePlanId);
+create index IX_CDDDF463 on CIBT_PlanEnrollment (memberId[$COLUMN_LENGTH:75$]);
+create index IX_6CCF1BCE on CIBT_PlanEnrollment (memberUserId);
+create index IX_897D7968 on CIBT_PlanEnrollment (status, companyId);
+create index IX_9DD3DC8E on CIBT_PlanEnrollment (status, insurancePlanId);
+create index IX_47E8669E on CIBT_PlanEnrollment (userId, enrollmentStatus);
+create index IX_CD52329A on CIBT_PlanEnrollment (uuid_[$COLUMN_LENGTH:75$]);

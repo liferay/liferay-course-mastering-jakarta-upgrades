@@ -1,0 +1,10 @@
+Bundle-Name: Clarity Vision Solutions :: Insurance Benefits Tracker :: API
+Bundle-SymbolicName: com.clarityvisionsolutions.insurance.benefits.tracker.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.clarityvisionsolutions.insurance.benefits.tracker.exception,\
+	com.clarityvisionsolutions.insurance.benefits.tracker.model,\
+	com.clarityvisionsolutions.insurance.benefits.tracker.service,\
+	com.clarityvisionsolutions.insurance.benefits.tracker.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../clarity-insurance-benefits-tracker-service/service.xml

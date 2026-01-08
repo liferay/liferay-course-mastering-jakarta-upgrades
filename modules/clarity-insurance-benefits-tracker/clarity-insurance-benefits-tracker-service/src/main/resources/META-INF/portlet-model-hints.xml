@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.clarityvisionsolutions.insurance.benefits.tracker.model.BenefitUsage">
+		<field name="mvccVersion" type="long" />
+		<field name="ctCollectionId" type="long" />
+		<field name="uuid" type="String" />
+		<field name="externalReferenceCode" type="String" />
+		<field name="benefitUsageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="planEnrollmentId" type="long" />
+		<field name="benefitType" type="String" />
+		<field name="amountUsedCents" type="long" />
+		<field name="serviceDate" type="Date" />
+		<field name="reference" type="String" />
+		<field name="notes" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="sourceType" type="String" />
+		<field name="sourceReference" type="String" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="com.clarityvisionsolutions.insurance.benefits.tracker.model.InsurancePlan">
+		<field name="mvccVersion" type="long" />
+		<field name="ctCollectionId" type="long" />
+		<field name="uuid" type="String" />
+		<field name="externalReferenceCode" type="String" />
+		<field name="insurancePlanId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="planName" type="String" />
+		<field name="providerName" type="String" />
+		<field name="active" type="boolean" />
+		<field name="annualExamAllowanceCents" type="long" />
+		<field name="annualFramesAllowanceCents" type="long" />
+		<field name="annualLensesAllowanceCents" type="long" />
+		<field name="annualContactsAllowanceCents" type="long" />
+		<field name="coveragePeriodMonths" type="int" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment">
+		<field name="mvccVersion" type="long" />
+		<field name="ctCollectionId" type="long" />
+		<field name="uuid" type="String" />
+		<field name="externalReferenceCode" type="String" />
+		<field name="planEnrollmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="insurancePlanId" type="long" />
+		<field name="memberUserId" type="long" />
+		<field name="memberUserName" type="String" />
+		<field name="memberId" type="String" />
+		<field name="groupNumber" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="enrollmentStatus" type="int" />
+		<field name="notes" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

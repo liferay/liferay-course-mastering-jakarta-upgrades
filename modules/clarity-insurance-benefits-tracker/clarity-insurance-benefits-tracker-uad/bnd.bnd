@@ -1,0 +1,4 @@
+Bundle-Name: Clarity Vision Solutions :: Insurance Benefits Tracker :: UAD
+Bundle-SymbolicName: com.clarityvisionsolutions.insurance.benefits.tracker.uad
+Bundle-Version: 1.0.0
+-dsannotations-options: inherit
