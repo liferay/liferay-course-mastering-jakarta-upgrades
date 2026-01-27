@@ -78,7 +78,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * The persistence implementation for the insurance plan service.
+ * The persistence implementation for the Insurance Plan service.
  *
  * <p>
  * Caching information and settings can be found in <code>portal.properties</code>
@@ -95,7 +95,7 @@ public class InsurancePlanPersistenceImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. Always use <code>InsurancePlanUtil</code> to access the insurance plan persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify or reference this class directly. Always use <code>InsurancePlanUtil</code> to access the Insurance Plan persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static final String FINDER_CLASS_NAME_ENTITY =
 		InsurancePlanImpl.class.getName();
@@ -114,10 +114,10 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByUuid;
 
 	/**
-	 * Returns all the insurance plans where uuid = &#63;.
+	 * Returns all the Insurance Plans where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid(String uuid) {
@@ -125,16 +125,16 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where uuid = &#63;.
+	 * Returns a range of all the Insurance Plans where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid(String uuid, int start, int end) {
@@ -142,17 +142,17 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where uuid = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid(
@@ -163,18 +163,18 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where uuid = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid(
@@ -290,12 +290,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where uuid = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByUuid_First(
@@ -322,11 +322,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where uuid = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUuid_First(
@@ -342,12 +342,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where uuid = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByUuid_Last(
@@ -373,11 +373,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where uuid = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUuid_Last(
@@ -400,13 +400,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where uuid = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where uuid = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByUuid_PrevAndNext(
@@ -564,7 +564,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where uuid = &#63; from the database.
+	 * Removes all the Insurance Plans where uuid = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 */
@@ -578,10 +578,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where uuid = &#63;.
+	 * Returns the number of Insurance Plans where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByUuid(String uuid) {
@@ -654,12 +654,12 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathFetchByUUID_G;
 
 	/**
-	 * Returns the insurance plan where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
+	 * Returns the Insurance Plan where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByUUID_G(String uuid, long groupId)
@@ -691,11 +691,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Insurance Plan where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUUID_G(String uuid, long groupId) {
@@ -703,12 +703,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Insurance Plan where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUUID_G(
@@ -812,11 +812,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes the insurance plan where uuid = &#63; and groupId = &#63; from the database.
+	 * Removes the Insurance Plan where uuid = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the insurance plan that was removed
+	 * @return the Insurance Plan that was removed
 	 */
 	@Override
 	public InsurancePlan removeByUUID_G(String uuid, long groupId)
@@ -828,11 +828,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where uuid = &#63; and groupId = &#63;.
+	 * Returns the number of Insurance Plans where uuid = &#63; and groupId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByUUID_G(String uuid, long groupId) {
@@ -859,11 +859,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByUuid_C;
 
 	/**
-	 * Returns all the insurance plans where uuid = &#63; and companyId = &#63;.
+	 * Returns all the Insurance Plans where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid_C(String uuid, long companyId) {
@@ -872,7 +872,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where uuid = &#63; and companyId = &#63;.
+	 * Returns a range of all the Insurance Plans where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -880,9 +880,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid_C(
@@ -892,7 +892,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -900,10 +900,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid_C(
@@ -915,7 +915,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -923,11 +923,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByUuid_C(
@@ -1051,13 +1051,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByUuid_C_First(
@@ -1088,12 +1088,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUuid_C_First(
@@ -1111,13 +1111,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByUuid_C_Last(
@@ -1148,12 +1148,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByUuid_C_Last(
@@ -1177,14 +1177,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByUuid_C_PrevAndNext(
@@ -1349,7 +1349,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where uuid = &#63; and companyId = &#63; from the database.
+	 * Removes all the Insurance Plans where uuid = &#63; and companyId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
@@ -1366,11 +1366,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where uuid = &#63; and companyId = &#63;.
+	 * Returns the number of Insurance Plans where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByUuid_C(String uuid, long companyId) {
@@ -1452,10 +1452,10 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByGroupId;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupId(long groupId) {
@@ -1464,16 +1464,16 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupId(long groupId, int start, int end) {
@@ -1481,17 +1481,17 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupId(
@@ -1502,18 +1502,18 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupId(
@@ -1618,12 +1618,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByGroupId_First(
@@ -1650,11 +1650,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByGroupId_First(
@@ -1671,12 +1671,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByGroupId_Last(
@@ -1703,11 +1703,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByGroupId_Last(
@@ -1730,13 +1730,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByGroupId_PrevAndNext(
@@ -1881,10 +1881,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupId(long groupId) {
@@ -1893,16 +1893,16 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupId(
@@ -1912,17 +1912,17 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupId(
@@ -2013,13 +2013,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByGroupId_PrevAndNext(
@@ -2212,7 +2212,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 */
@@ -2227,10 +2227,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByGroupId(long groupId) {
@@ -2282,10 +2282,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByGroupId(long groupId) {
@@ -2337,11 +2337,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByCompanyIdActive;
 
 	/**
-	 * Returns all the insurance plans where companyId = &#63; and active = &#63;.
+	 * Returns all the Insurance Plans where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyIdActive(
@@ -2352,7 +2352,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where companyId = &#63; and active = &#63;.
+	 * Returns a range of all the Insurance Plans where companyId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2360,9 +2360,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyIdActive(
@@ -2372,7 +2372,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and active = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2380,10 +2380,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyIdActive(
@@ -2395,7 +2395,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and active = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2403,11 +2403,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyIdActive(
@@ -2519,13 +2519,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and active = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByCompanyIdActive_First(
@@ -2556,12 +2556,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and active = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByCompanyIdActive_First(
@@ -2579,13 +2579,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and active = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByCompanyIdActive_Last(
@@ -2616,12 +2616,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and active = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByCompanyIdActive_Last(
@@ -2645,14 +2645,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where companyId = &#63; and active = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where companyId = &#63; and active = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param companyId the company ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByCompanyIdActive_PrevAndNext(
@@ -2804,7 +2804,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where companyId = &#63; and active = &#63; from the database.
+	 * Removes all the Insurance Plans where companyId = &#63; and active = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
@@ -2821,11 +2821,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where companyId = &#63; and active = &#63;.
+	 * Returns the number of Insurance Plans where companyId = &#63; and active = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param active the active
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByCompanyIdActive(long companyId, boolean active) {
@@ -2891,11 +2891,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByGroupIdActive;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and active = &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupIdActive(
@@ -2906,7 +2906,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and active = &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2914,9 +2914,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupIdActive(
@@ -2926,7 +2926,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and active = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2934,10 +2934,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupIdActive(
@@ -2949,7 +2949,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and active = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -2957,11 +2957,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByGroupIdActive(
@@ -3073,13 +3073,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and active = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByGroupIdActive_First(
@@ -3110,12 +3110,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and active = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByGroupIdActive_First(
@@ -3133,13 +3133,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and active = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByGroupIdActive_Last(
@@ -3170,12 +3170,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and active = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByGroupIdActive_Last(
@@ -3199,14 +3199,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63; and active = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63; and active = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByGroupIdActive_PrevAndNext(
@@ -3358,11 +3358,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and active = &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupIdActive(
@@ -3373,7 +3373,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and active = &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -3381,9 +3381,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupIdActive(
@@ -3393,7 +3393,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63; and active = &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and active = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -3401,10 +3401,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByGroupIdActive(
@@ -3500,14 +3500,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63; and active = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param active the active
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByGroupIdActive_PrevAndNext(
@@ -3707,7 +3707,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; and active = &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; and active = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
@@ -3724,11 +3724,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and active = &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByGroupIdActive(long groupId, boolean active) {
@@ -3784,11 +3784,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and active = &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param active the active
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByGroupIdActive(long groupId, boolean active) {
@@ -3850,10 +3850,10 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByCompanyId;
 
 	/**
-	 * Returns all the insurance plans where companyId = &#63;.
+	 * Returns all the Insurance Plans where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyId(long companyId) {
@@ -3862,16 +3862,16 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where companyId = &#63;.
+	 * Returns a range of all the Insurance Plans where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyId(
@@ -3881,17 +3881,17 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyId(
@@ -3902,18 +3902,18 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByCompanyId(
@@ -4018,12 +4018,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByCompanyId_First(
@@ -4050,11 +4050,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByCompanyId_First(
@@ -4071,12 +4071,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByCompanyId_Last(
@@ -4103,11 +4103,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByCompanyId_Last(
@@ -4130,13 +4130,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where companyId = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where companyId = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByCompanyId_PrevAndNext(
@@ -4281,7 +4281,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where companyId = &#63; from the database.
+	 * Removes all the Insurance Plans where companyId = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 */
@@ -4296,10 +4296,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where companyId = &#63;.
+	 * Returns the number of Insurance Plans where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByCompanyId(long companyId) {
@@ -4358,11 +4358,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByG_S;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and status = &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_S(long groupId, int status) {
@@ -4371,7 +4371,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -4379,9 +4379,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_S(
@@ -4391,7 +4391,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -4399,10 +4399,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_S(
@@ -4413,7 +4413,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -4421,11 +4421,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_S(
@@ -4536,13 +4536,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_S_First(
@@ -4573,12 +4573,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_S_First(
@@ -4596,13 +4596,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_S_Last(
@@ -4633,12 +4633,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_S_Last(
@@ -4662,14 +4662,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63; and status = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByG_S_PrevAndNext(
@@ -4820,11 +4820,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_S(long groupId, int status) {
@@ -4833,7 +4833,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -4841,9 +4841,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_S(
@@ -4853,7 +4853,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -4861,10 +4861,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_S(
@@ -4959,14 +4959,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByG_S_PrevAndNext(
@@ -5165,7 +5165,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; and status = &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -5182,11 +5182,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and status = &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByG_S(long groupId, int status) {
@@ -5242,11 +5242,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_S(long groupId, int status) {
@@ -5304,11 +5304,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_NotS;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_NotS(long groupId, int status) {
@@ -5317,7 +5317,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -5325,9 +5325,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_NotS(
@@ -5337,7 +5337,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -5345,10 +5345,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_NotS(
@@ -5360,7 +5360,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -5368,11 +5368,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_NotS(
@@ -5473,13 +5473,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_NotS_First(
@@ -5510,12 +5510,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_NotS_First(
@@ -5533,13 +5533,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_NotS_Last(
@@ -5570,12 +5570,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_NotS_Last(
@@ -5599,14 +5599,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByG_NotS_PrevAndNext(
@@ -5757,11 +5757,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_NotS(long groupId, int status) {
@@ -5770,7 +5770,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -5778,9 +5778,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_NotS(
@@ -5790,7 +5790,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -5798,10 +5798,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_NotS(
@@ -5896,14 +5896,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByG_NotS_PrevAndNext(
@@ -6102,7 +6102,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -6119,11 +6119,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByG_NotS(long groupId, int status) {
@@ -6179,11 +6179,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_NotS(long groupId, int status) {
@@ -6242,11 +6242,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathCountByC_S;
 
 	/**
-	 * Returns all the insurance plans where companyId = &#63; and status = &#63;.
+	 * Returns all the Insurance Plans where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_S(long companyId, int status) {
@@ -6255,7 +6255,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where companyId = &#63; and status = &#63;.
+	 * Returns a range of all the Insurance Plans where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6263,9 +6263,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_S(
@@ -6275,7 +6275,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6283,10 +6283,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_S(
@@ -6298,7 +6298,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6306,11 +6306,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_S(
@@ -6421,13 +6421,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByC_S_First(
@@ -6458,12 +6458,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByC_S_First(
@@ -6481,13 +6481,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByC_S_Last(
@@ -6518,12 +6518,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByC_S_Last(
@@ -6547,14 +6547,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where companyId = &#63; and status = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByC_S_PrevAndNext(
@@ -6706,7 +6706,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where companyId = &#63; and status = &#63; from the database.
+	 * Removes all the Insurance Plans where companyId = &#63; and status = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -6723,11 +6723,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where companyId = &#63; and status = &#63;.
+	 * Returns the number of Insurance Plans where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByC_S(long companyId, int status) {
@@ -6792,11 +6792,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByC_NotS;
 
 	/**
-	 * Returns all the insurance plans where companyId = &#63; and status &ne; &#63;.
+	 * Returns all the Insurance Plans where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_NotS(long companyId, int status) {
@@ -6805,7 +6805,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where companyId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Insurance Plans where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6813,9 +6813,9 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_NotS(
@@ -6825,7 +6825,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6833,10 +6833,10 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_NotS(
@@ -6848,7 +6848,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -6856,11 +6856,11 @@ public class InsurancePlanPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByC_NotS(
@@ -6961,13 +6961,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByC_NotS_First(
@@ -6998,12 +6998,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByC_NotS_First(
@@ -7021,13 +7021,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByC_NotS_Last(
@@ -7058,12 +7058,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByC_NotS_Last(
@@ -7087,14 +7087,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByC_NotS_PrevAndNext(
@@ -7246,7 +7246,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where companyId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Insurance Plans where companyId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -7263,11 +7263,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where companyId = &#63; and status &ne; &#63;.
+	 * Returns the number of Insurance Plans where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByC_NotS(long companyId, int status) {
@@ -7334,12 +7334,12 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_S;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -7351,7 +7351,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -7360,9 +7360,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -7372,7 +7372,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -7381,10 +7381,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -7396,7 +7396,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -7405,11 +7405,11 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -7525,14 +7525,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_U_S_First(
@@ -7566,13 +7566,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_U_S_First(
@@ -7590,14 +7590,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_U_S_Last(
@@ -7631,13 +7631,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_U_S_Last(
@@ -7661,15 +7661,15 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByG_U_S_PrevAndNext(
@@ -7825,12 +7825,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -7842,7 +7842,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -7851,9 +7851,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -7863,7 +7863,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -7872,10 +7872,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -7975,15 +7975,15 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByG_U_S_PrevAndNext(
@@ -8187,12 +8187,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -8204,7 +8204,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8213,9 +8213,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -8225,7 +8225,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8234,10 +8234,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_S(
@@ -8347,7 +8347,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8356,7 +8356,7 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -8368,7 +8368,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8377,9 +8377,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -8389,7 +8389,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8398,10 +8398,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -8413,7 +8413,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8422,11 +8422,11 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_S(
@@ -8561,7 +8561,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; and userId = &#63; and status = &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -8579,12 +8579,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int status) {
@@ -8644,12 +8644,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int[] statuses) {
@@ -8730,12 +8730,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int status) {
@@ -8788,12 +8788,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int[] statuses) {
@@ -8879,12 +8879,12 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_NotS;
 
 	/**
-	 * Returns all the insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching insurance plans
+	 * @return the matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_NotS(
@@ -8896,7 +8896,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8905,9 +8905,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_NotS(
@@ -8917,7 +8917,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8926,10 +8926,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_NotS(
@@ -8941,7 +8941,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -8950,11 +8950,11 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching insurance plans
+	 * @return the ordered range of matching Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findByG_U_NotS(
@@ -9060,14 +9060,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_U_NotS_First(
@@ -9101,13 +9101,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the first insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the first matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_U_NotS_First(
@@ -9125,14 +9125,14 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByG_U_NotS_Last(
@@ -9166,13 +9166,13 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the last insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the last matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByG_U_NotS_Last(
@@ -9196,15 +9196,15 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] findByG_U_NotS_PrevAndNext(
@@ -9360,12 +9360,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching insurance plans that the user has permission to view
+	 * @return the matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_NotS(
@@ -9377,7 +9377,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -9386,9 +9386,9 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of matching insurance plans that the user has permission to view
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_NotS(
@@ -9398,7 +9398,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
@@ -9407,10 +9407,10 @@ public class InsurancePlanPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching insurance plans that the user has permission to view
+	 * @return the ordered range of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public List<InsurancePlan> filterFindByG_U_NotS(
@@ -9510,15 +9510,15 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plans before and after the current insurance plan in the ordered set of insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param insurancePlanId the primary key of the current insurance plan
+	 * @param insurancePlanId the primary key of the current Insurance Plan
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @return the previous, current, and next Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan[] filterFindByG_U_NotS_PrevAndNext(
@@ -9722,7 +9722,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -9740,12 +9740,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByG_U_NotS(long groupId, long userId, int status) {
@@ -9805,12 +9805,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching insurance plans that the user has permission to view
+	 * @return the number of matching Insurance Plans that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_NotS(long groupId, long userId, int status) {
@@ -9874,11 +9874,11 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathFetchByExternalReferenceCode;
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
 	 *
 	 * @param externalReferenceCode the external reference code
-	 * @return the matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByExternalReferenceCode(
@@ -9909,10 +9909,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByExternalReferenceCode(
@@ -9922,11 +9922,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByExternalReferenceCode(
@@ -10047,10 +10047,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes the insurance plan where externalReferenceCode = &#63; from the database.
+	 * Removes the Insurance Plan where externalReferenceCode = &#63; from the database.
 	 *
 	 * @param externalReferenceCode the external reference code
-	 * @return the insurance plan that was removed
+	 * @return the Insurance Plan that was removed
 	 */
 	@Override
 	public InsurancePlan removeByExternalReferenceCode(
@@ -10064,10 +10064,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where externalReferenceCode = &#63;.
+	 * Returns the number of Insurance Plans where externalReferenceCode = &#63;.
 	 *
 	 * @param externalReferenceCode the external reference code
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByExternalReferenceCode(String externalReferenceCode) {
@@ -10092,12 +10092,12 @@ public class InsurancePlanPersistenceImpl
 	private FinderPath _finderPathFetchByERC_G;
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching insurance plan
-	 * @throws NoSuchInsurancePlanException if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan findByERC_G(String externalReferenceCode, long groupId)
@@ -10130,11 +10130,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByERC_G(
@@ -10144,12 +10144,12 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Insurance Plan where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByERC_G(
@@ -10255,11 +10255,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes the insurance plan where externalReferenceCode = &#63; and groupId = &#63; from the database.
+	 * Removes the Insurance Plan where externalReferenceCode = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the insurance plan that was removed
+	 * @return the Insurance Plan that was removed
 	 */
 	@Override
 	public InsurancePlan removeByERC_G(
@@ -10273,11 +10273,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans where externalReferenceCode = &#63; and groupId = &#63;.
+	 * Returns the number of Insurance Plans where externalReferenceCode = &#63; and groupId = &#63;.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the number of matching insurance plans
+	 * @return the number of matching Insurance Plans
 	 */
 	@Override
 	public int countByERC_G(String externalReferenceCode, long groupId) {
@@ -10317,9 +10317,9 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Caches the insurance plan in the entity cache if it is enabled.
+	 * Caches the Insurance Plan in the entity cache if it is enabled.
 	 *
-	 * @param insurancePlan the insurance plan
+	 * @param insurancePlan the Insurance Plan
 	 */
 	@Override
 	public void cacheResult(InsurancePlan insurancePlan) {
@@ -10356,9 +10356,9 @@ public class InsurancePlanPersistenceImpl
 	private int _valueObjectFinderCacheListThreshold;
 
 	/**
-	 * Caches the insurance plans in the entity cache if it is enabled.
+	 * Caches the Insurance Plans in the entity cache if it is enabled.
 	 *
-	 * @param insurancePlans the insurance plans
+	 * @param insurancePlans the Insurance Plans
 	 */
 	@Override
 	public void cacheResult(List<InsurancePlan> insurancePlans) {
@@ -10385,7 +10385,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for all insurance plans.
+	 * Clears the cache for all Insurance Plans.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -10399,7 +10399,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for the insurance plan.
+	 * Clears the cache for the Insurance Plan.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -10460,10 +10460,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Creates a new insurance plan with the primary key. Does not add the insurance plan to the database.
+	 * Creates a new Insurance Plan with the primary key. Does not add the Insurance Plan to the database.
 	 *
-	 * @param insurancePlanId the primary key for the new insurance plan
-	 * @return the new insurance plan
+	 * @param insurancePlanId the primary key for the new Insurance Plan
+	 * @return the new Insurance Plan
 	 */
 	@Override
 	public InsurancePlan create(long insurancePlanId) {
@@ -10482,11 +10482,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes the insurance plan with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Insurance Plan with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param insurancePlanId the primary key of the insurance plan
-	 * @return the insurance plan that was removed
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @param insurancePlanId the primary key of the Insurance Plan
+	 * @return the Insurance Plan that was removed
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan remove(long insurancePlanId)
@@ -10496,11 +10496,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes the insurance plan with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Insurance Plan with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param primaryKey the primary key of the insurance plan
-	 * @return the insurance plan that was removed
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @param primaryKey the primary key of the Insurance Plan
+	 * @return the Insurance Plan that was removed
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan remove(Serializable primaryKey)
@@ -10643,7 +10643,7 @@ public class InsurancePlanPersistenceImpl
 			if (isNew) {
 				if (ercInsurancePlan != null) {
 					throw new DuplicateInsurancePlanExternalReferenceCodeException(
-						"Duplicate insurance plan with external reference code " +
+						"Duplicate Insurance Plan with external reference code " +
 							insurancePlan.getExternalReferenceCode() +
 								" and group " + insurancePlan.getGroupId());
 				}
@@ -10654,7 +10654,7 @@ public class InsurancePlanPersistenceImpl
 						ercInsurancePlan.getInsurancePlanId())) {
 
 					throw new DuplicateInsurancePlanExternalReferenceCodeException(
-						"Duplicate insurance plan with external reference code " +
+						"Duplicate Insurance Plan with external reference code " +
 							insurancePlan.getExternalReferenceCode() +
 								" and group " + insurancePlan.getGroupId());
 				}
@@ -10725,11 +10725,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
+	 * Returns the Insurance Plan with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the insurance plan
-	 * @return the insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @param primaryKey the primary key of the Insurance Plan
+	 * @return the Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan findByPrimaryKey(Serializable primaryKey)
@@ -10750,11 +10750,11 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan with the primary key or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
+	 * Returns the Insurance Plan with the primary key or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
 	 *
-	 * @param insurancePlanId the primary key of the insurance plan
-	 * @return the insurance plan
-	 * @throws NoSuchInsurancePlanException if a insurance plan with the primary key could not be found
+	 * @param insurancePlanId the primary key of the Insurance Plan
+	 * @return the Insurance Plan
+	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan findByPrimaryKey(long insurancePlanId)
@@ -10764,10 +10764,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Insurance Plan with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the insurance plan
-	 * @return the insurance plan, or <code>null</code> if a insurance plan with the primary key could not be found
+	 * @param primaryKey the primary key of the Insurance Plan
+	 * @return the Insurance Plan, or <code>null</code> if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByPrimaryKey(Serializable primaryKey) {
@@ -10812,10 +10812,10 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the insurance plan with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Insurance Plan with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param insurancePlanId the primary key of the insurance plan
-	 * @return the insurance plan, or <code>null</code> if a insurance plan with the primary key could not be found
+	 * @param insurancePlanId the primary key of the Insurance Plan
+	 * @return the Insurance Plan, or <code>null</code> if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan fetchByPrimaryKey(long insurancePlanId) {
@@ -10949,9 +10949,9 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns all the insurance plans.
+	 * Returns all the Insurance Plans.
 	 *
-	 * @return the insurance plans
+	 * @return the Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findAll() {
@@ -10959,15 +10959,15 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the insurance plans.
+	 * Returns a range of all the Insurance Plans.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findAll(int start, int end) {
@@ -10975,16 +10975,16 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans.
+	 * Returns an ordered range of all the Insurance Plans.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of insurance plans
+	 * @return the ordered range of Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findAll(
@@ -10995,17 +10995,17 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the insurance plans.
+	 * Returns an ordered range of all the Insurance Plans.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of insurance plans
+	 * @return the ordered range of Insurance Plans
 	 */
 	@Override
 	public List<InsurancePlan> findAll(
@@ -11089,7 +11089,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Removes all the insurance plans from the database.
+	 * Removes all the Insurance Plans from the database.
 	 *
 	 */
 	@Override
@@ -11100,9 +11100,9 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of insurance plans.
+	 * Returns the number of Insurance Plans.
 	 *
-	 * @return the number of insurance plans
+	 * @return the number of Insurance Plans
 	 */
 	@Override
 	public int countAll() {
@@ -11241,7 +11241,7 @@ public class InsurancePlanPersistenceImpl
 	}
 
 	/**
-	 * Initializes the insurance plan persistence.
+	 * Initializes the Insurance Plan persistence.
 	 */
 	@Activate
 	public void activate() {

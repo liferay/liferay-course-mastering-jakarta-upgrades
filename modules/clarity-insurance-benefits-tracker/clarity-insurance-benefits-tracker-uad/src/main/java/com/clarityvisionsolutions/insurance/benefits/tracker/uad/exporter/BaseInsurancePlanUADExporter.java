@@ -16,7 +16,7 @@ import com.liferay.user.associated.data.exporter.DynamicQueryUADExporter;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * Provides the base implementation for the insurance plan UAD exporter.
+ * Provides the base implementation for the Insurance Plan UAD exporter.
  *
  * <p>
  * This implementation exists only as a container for the default methods

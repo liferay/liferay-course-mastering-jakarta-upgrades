@@ -26,7 +26,7 @@ public abstract class InsurancePlanBaseImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. All methods that expect a insurance plan model instance should use the <code>InsurancePlan</code> interface instead.
+	 * Never modify or reference this class directly. All methods that expect a Insurance Plan model instance should use the <code>InsurancePlan</code> interface instead.
 	 */
 	@Override
 	public void persist() {

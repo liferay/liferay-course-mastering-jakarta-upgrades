@@ -65,7 +65,7 @@ public interface PlanEnrollmentLocalService
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this interface directly. Add custom service methods to <code>com.clarityvisionsolutions.insurance.benefits.tracker.service.impl.PlanEnrollmentLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the plan enrollment local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link PlanEnrollmentLocalServiceUtil} if injection and service tracking are not available.
+	 * Never modify this interface directly. Add custom service methods to <code>com.clarityvisionsolutions.insurance.benefits.tracker.service.impl.PlanEnrollmentLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the Plan Enrollment local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link PlanEnrollmentLocalServiceUtil} if injection and service tracking are not available.
 	 */
 	@Indexable(type = IndexableType.REINDEX)
 	public PlanEnrollment addPlanEnrollment(
@@ -76,14 +76,14 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	/**
-	 * Adds the plan enrollment to the database. Also notifies the appropriate model listeners.
+	 * Adds the Plan Enrollment to the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was added
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was added
 	 */
 	@Indexable(type = IndexableType.REINDEX)
 	public PlanEnrollment addPlanEnrollment(PlanEnrollment planEnrollment);
@@ -104,10 +104,10 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	/**
-	 * Creates a new plan enrollment with the primary key. Does not add the plan enrollment to the database.
+	 * Creates a new Plan Enrollment with the primary key. Does not add the Plan Enrollment to the database.
 	 *
-	 * @param planEnrollmentId the primary key for the new plan enrollment
-	 * @return the new plan enrollment
+	 * @param planEnrollmentId the primary key for the new Plan Enrollment
+	 * @return the new Plan Enrollment
 	 */
 	@Transactional(enabled = false)
 	public PlanEnrollment createPlanEnrollment(long planEnrollmentId);
@@ -130,29 +130,29 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	/**
-	 * Deletes the plan enrollment with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Plan Enrollment with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment that was removed
-	 * @throws PortalException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
+	 * @throws PortalException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Indexable(type = IndexableType.DELETE)
 	public PlanEnrollment deletePlanEnrollment(long planEnrollmentId)
 		throws PortalException;
 
 	/**
-	 * Deletes the plan enrollment from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Plan Enrollment from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was removed
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
 	 * @throws PortalException
 	 */
 	@Indexable(type = IndexableType.DELETE)
@@ -243,11 +243,11 @@ public interface PlanEnrollmentLocalService
 		String externalReferenceCode, long groupId);
 
 	/**
-	 * Returns the plan enrollment matching the UUID and group.
+	 * Returns the Plan Enrollment matching the UUID and group.
 	 *
-	 * @param uuid the plan enrollment's UUID
+	 * @param uuid the Plan Enrollment's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PlanEnrollment fetchPlanEnrollmentByUuidAndGroupId(
@@ -279,11 +279,11 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	/**
-	 * Returns the plan enrollment with the primary key.
+	 * Returns the Plan Enrollment with the primary key.
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment
-	 * @throws PortalException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment
+	 * @throws PortalException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PlanEnrollment getPlanEnrollment(long planEnrollmentId)
@@ -301,16 +301,20 @@ public interface PlanEnrollmentLocalService
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PlanEnrollment getPlanEnrollmentByExternalReferenceCode(
+		String externalReferenceCode);
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public PlanEnrollment getPlanEnrollmentByExternalReferenceCode(
 			String externalReferenceCode, long groupId)
 		throws PortalException;
 
 	/**
-	 * Returns the plan enrollment matching the UUID and group.
+	 * Returns the Plan Enrollment matching the UUID and group.
 	 *
-	 * @param uuid the plan enrollment's UUID
+	 * @param uuid the Plan Enrollment's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching plan enrollment
-	 * @throws PortalException if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment
+	 * @throws PortalException if a matching Plan Enrollment could not be found
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PlanEnrollment getPlanEnrollmentByUuidAndGroupId(
@@ -321,15 +325,15 @@ public interface PlanEnrollmentLocalService
 	public int getPlanEnrollmentCounts(long insurancePlanId, int status);
 
 	/**
-	 * Returns a range of all the plan enrollments.
+	 * Returns a range of all the Plan Enrollments.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>com.clarityvisionsolutions.insurance.benefits.tracker.model.impl.PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of Plan Enrollments
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<PlanEnrollment> getPlanEnrollments(int start, int end);
@@ -339,25 +343,25 @@ public interface PlanEnrollmentLocalService
 		long insurancePlanId, int status, int start, int max);
 
 	/**
-	 * Returns all the plan enrollments matching the UUID and company.
+	 * Returns all the Plan Enrollments matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the plan enrollments
+	 * @param uuid the UUID of the Plan Enrollments
 	 * @param companyId the primary key of the company
-	 * @return the matching plan enrollments, or an empty list if no matches were found
+	 * @return the matching Plan Enrollments, or an empty list if no matches were found
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<PlanEnrollment> getPlanEnrollmentsByUuidAndCompanyId(
 		String uuid, long companyId);
 
 	/**
-	 * Returns a range of plan enrollments matching the UUID and company.
+	 * Returns a range of Plan Enrollments matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the plan enrollments
+	 * @param uuid the UUID of the Plan Enrollments
 	 * @param companyId the primary key of the company
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the range of matching plan enrollments, or an empty list if no matches were found
+	 * @return the range of matching Plan Enrollments, or an empty list if no matches were found
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<PlanEnrollment> getPlanEnrollmentsByUuidAndCompanyId(
@@ -365,9 +369,9 @@ public interface PlanEnrollmentLocalService
 		OrderByComparator<PlanEnrollment> orderByComparator);
 
 	/**
-	 * Returns the number of plan enrollments.
+	 * Returns the number of Plan Enrollments.
 	 *
-	 * @return the number of plan enrollments
+	 * @return the number of Plan Enrollments
 	 */
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public int getPlanEnrollmentsCount();
@@ -427,14 +431,14 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	/**
-	 * Updates the plan enrollment in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 * Updates the Plan Enrollment in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was updated
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was updated
 	 */
 	@Indexable(type = IndexableType.REINDEX)
 	public PlanEnrollment updatePlanEnrollment(PlanEnrollment planEnrollment);

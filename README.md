@@ -1,4 +1,4 @@
-# Building Enterprise Websites with Liferay
+# Mastering Jakarta Upgrades
 
 ## Setting up environments
 
@@ -7,13 +7,13 @@ Here are some instructions to prepare your environment to start your local Lifer
 1. Clone the repository to your computer.
 
     ```
-    git clone https://github.com/liferay/liferay-course-building-enterprise-websites.git
+    git clone https://github.com/liferay/liferay-course-mastering-jakarta-upgrades.git
     ```
 
     Once cloned, navigate into the project's folder.
 
     ```
-    cd liferay-course-building-enterprise-websites
+    cd liferay-course-mastering-jakarta-upgrades
     ```
 
 1. Perform a git fetch, a day before the training starts, to ensure you have the latest version.
@@ -22,22 +22,22 @@ Here are some instructions to prepare your environment to start your local Lifer
     git fetch origin
     ```
 
-1. Checkout the master branch.
+1. Checkout the main branch.
 
     ```
-    git checkout master
+    git checkout main
     ```
 
-1. To ensure you have the most recent content for master branch, run the following command.
+1. To ensure you have the most recent content for main branch, run the following command.
 
     ```
-    git pull origin master
+    git pull origin main
     ```
 
 1. In the terminal, navigate to the root folder of the repository and run the following command.
 
     ```
-    cd liferay-course-building-enterprise-websites
+    cd liferay-course-mastering-jakarta-upgrades
     ```
 
     ```

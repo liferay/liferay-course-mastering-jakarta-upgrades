@@ -51,14 +51,14 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Adds the plan enrollment to the database. Also notifies the appropriate model listeners.
+	 * Adds the Plan Enrollment to the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was added
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was added
 	 */
 	public static PlanEnrollment addPlanEnrollment(
 		PlanEnrollment planEnrollment) {
@@ -95,10 +95,10 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Creates a new plan enrollment with the primary key. Does not add the plan enrollment to the database.
+	 * Creates a new Plan Enrollment with the primary key. Does not add the Plan Enrollment to the database.
 	 *
-	 * @param planEnrollmentId the primary key for the new plan enrollment
-	 * @return the new plan enrollment
+	 * @param planEnrollmentId the primary key for the new Plan Enrollment
+	 * @return the new Plan Enrollment
 	 */
 	public static PlanEnrollment createPlanEnrollment(long planEnrollmentId) {
 		return getService().createPlanEnrollment(planEnrollmentId);
@@ -128,15 +128,15 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Deletes the plan enrollment with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Plan Enrollment with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment that was removed
-	 * @throws PortalException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
+	 * @throws PortalException if a Plan Enrollment with the primary key could not be found
 	 */
 	public static PlanEnrollment deletePlanEnrollment(long planEnrollmentId)
 		throws PortalException {
@@ -145,14 +145,14 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Deletes the plan enrollment from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Plan Enrollment from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was removed
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
 	 * @throws PortalException
 	 */
 	public static PlanEnrollment deletePlanEnrollment(
@@ -265,11 +265,11 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns the plan enrollment matching the UUID and group.
+	 * Returns the Plan Enrollment matching the UUID and group.
 	 *
-	 * @param uuid the plan enrollment's UUID
+	 * @param uuid the Plan Enrollment's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	public static PlanEnrollment fetchPlanEnrollmentByUuidAndGroupId(
 		String uuid, long groupId) {
@@ -317,11 +317,11 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns the plan enrollment with the primary key.
+	 * Returns the Plan Enrollment with the primary key.
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment
-	 * @throws PortalException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment
+	 * @throws PortalException if a Plan Enrollment with the primary key could not be found
 	 */
 	public static PlanEnrollment getPlanEnrollment(long planEnrollmentId)
 		throws PortalException {
@@ -346,6 +346,13 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	public static PlanEnrollment getPlanEnrollmentByExternalReferenceCode(
+		String externalReferenceCode) {
+
+		return getService().getPlanEnrollmentByExternalReferenceCode(
+			externalReferenceCode);
+	}
+
+	public static PlanEnrollment getPlanEnrollmentByExternalReferenceCode(
 			String externalReferenceCode, long groupId)
 		throws PortalException {
 
@@ -354,12 +361,12 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns the plan enrollment matching the UUID and group.
+	 * Returns the Plan Enrollment matching the UUID and group.
 	 *
-	 * @param uuid the plan enrollment's UUID
+	 * @param uuid the Plan Enrollment's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching plan enrollment
-	 * @throws PortalException if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment
+	 * @throws PortalException if a matching Plan Enrollment could not be found
 	 */
 	public static PlanEnrollment getPlanEnrollmentByUuidAndGroupId(
 			String uuid, long groupId)
@@ -375,15 +382,15 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments.
+	 * Returns a range of all the Plan Enrollments.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>com.clarityvisionsolutions.insurance.benefits.tracker.model.impl.PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of Plan Enrollments
 	 */
 	public static List<PlanEnrollment> getPlanEnrollments(int start, int end) {
 		return getService().getPlanEnrollments(start, end);
@@ -397,11 +404,11 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns all the plan enrollments matching the UUID and company.
+	 * Returns all the Plan Enrollments matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the plan enrollments
+	 * @param uuid the UUID of the Plan Enrollments
 	 * @param companyId the primary key of the company
-	 * @return the matching plan enrollments, or an empty list if no matches were found
+	 * @return the matching Plan Enrollments, or an empty list if no matches were found
 	 */
 	public static List<PlanEnrollment> getPlanEnrollmentsByUuidAndCompanyId(
 		String uuid, long companyId) {
@@ -411,14 +418,14 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns a range of plan enrollments matching the UUID and company.
+	 * Returns a range of Plan Enrollments matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the plan enrollments
+	 * @param uuid the UUID of the Plan Enrollments
 	 * @param companyId the primary key of the company
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the range of matching plan enrollments, or an empty list if no matches were found
+	 * @return the range of matching Plan Enrollments, or an empty list if no matches were found
 	 */
 	public static List<PlanEnrollment> getPlanEnrollmentsByUuidAndCompanyId(
 		String uuid, long companyId, int start, int end,
@@ -429,9 +436,9 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Returns the number of plan enrollments.
+	 * Returns the number of Plan Enrollments.
 	 *
-	 * @return the number of plan enrollments
+	 * @return the number of Plan Enrollments
 	 */
 	public static int getPlanEnrollmentsCount() {
 		return getService().getPlanEnrollmentsCount();
@@ -510,14 +517,14 @@ public class PlanEnrollmentLocalServiceUtil {
 	}
 
 	/**
-	 * Updates the plan enrollment in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 * Updates the Plan Enrollment in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect PlanEnrollmentLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param planEnrollment the plan enrollment
-	 * @return the plan enrollment that was updated
+	 * @param planEnrollment the Plan Enrollment
+	 * @return the Plan Enrollment that was updated
 	 */
 	public static PlanEnrollment updatePlanEnrollment(
 		PlanEnrollment planEnrollment) {

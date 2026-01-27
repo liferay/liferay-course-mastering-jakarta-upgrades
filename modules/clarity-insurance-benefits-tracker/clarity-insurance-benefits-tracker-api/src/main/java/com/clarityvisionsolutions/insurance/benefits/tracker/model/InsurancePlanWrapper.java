@@ -220,9 +220,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the active of this insurance plan.
+	 * Returns the active of this Insurance Plan.
 	 *
-	 * @return the active of this insurance plan
+	 * @return the active of this Insurance Plan
 	 */
 	@Override
 	public boolean getActive() {
@@ -230,9 +230,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the annual contacts allowance cents of this insurance plan.
+	 * Returns the annual contacts allowance cents of this Insurance Plan.
 	 *
-	 * @return the annual contacts allowance cents of this insurance plan
+	 * @return the annual contacts allowance cents of this Insurance Plan
 	 */
 	@Override
 	public long getAnnualContactsAllowanceCents() {
@@ -240,9 +240,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the annual exam allowance cents of this insurance plan.
+	 * Returns the annual exam allowance cents of this Insurance Plan.
 	 *
-	 * @return the annual exam allowance cents of this insurance plan
+	 * @return the annual exam allowance cents of this Insurance Plan
 	 */
 	@Override
 	public long getAnnualExamAllowanceCents() {
@@ -250,9 +250,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the annual frames allowance cents of this insurance plan.
+	 * Returns the annual frames allowance cents of this Insurance Plan.
 	 *
-	 * @return the annual frames allowance cents of this insurance plan
+	 * @return the annual frames allowance cents of this Insurance Plan
 	 */
 	@Override
 	public long getAnnualFramesAllowanceCents() {
@@ -260,9 +260,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the annual lenses allowance cents of this insurance plan.
+	 * Returns the annual lenses allowance cents of this Insurance Plan.
 	 *
-	 * @return the annual lenses allowance cents of this insurance plan
+	 * @return the annual lenses allowance cents of this Insurance Plan
 	 */
 	@Override
 	public long getAnnualLensesAllowanceCents() {
@@ -270,9 +270,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the company ID of this insurance plan.
+	 * Returns the company ID of this Insurance Plan.
 	 *
-	 * @return the company ID of this insurance plan
+	 * @return the company ID of this Insurance Plan
 	 */
 	@Override
 	public long getCompanyId() {
@@ -280,9 +280,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the container model ID of this insurance plan.
+	 * Returns the container model ID of this Insurance Plan.
 	 *
-	 * @return the container model ID of this insurance plan
+	 * @return the container model ID of this Insurance Plan
 	 */
 	@Override
 	public long getContainerModelId() {
@@ -290,9 +290,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the container name of this insurance plan.
+	 * Returns the container name of this Insurance Plan.
 	 *
-	 * @return the container name of this insurance plan
+	 * @return the container name of this Insurance Plan
 	 */
 	@Override
 	public String getContainerModelName() {
@@ -300,9 +300,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the coverage period months of this insurance plan.
+	 * Returns the coverage period months of this Insurance Plan.
 	 *
-	 * @return the coverage period months of this insurance plan
+	 * @return the coverage period months of this Insurance Plan
 	 */
 	@Override
 	public int getCoveragePeriodMonths() {
@@ -310,9 +310,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the create date of this insurance plan.
+	 * Returns the create date of this Insurance Plan.
 	 *
-	 * @return the create date of this insurance plan
+	 * @return the create date of this Insurance Plan
 	 */
 	@Override
 	public Date getCreateDate() {
@@ -320,9 +320,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the ct collection ID of this insurance plan.
+	 * Returns the ct collection ID of this Insurance Plan.
 	 *
-	 * @return the ct collection ID of this insurance plan
+	 * @return the ct collection ID of this Insurance Plan
 	 */
 	@Override
 	public long getCtCollectionId() {
@@ -330,9 +330,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the external reference code of this insurance plan.
+	 * Returns the external reference code of this Insurance Plan.
 	 *
-	 * @return the external reference code of this insurance plan
+	 * @return the external reference code of this Insurance Plan
 	 */
 	@Override
 	public String getExternalReferenceCode() {
@@ -340,9 +340,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the group ID of this insurance plan.
+	 * Returns the group ID of this Insurance Plan.
 	 *
-	 * @return the group ID of this insurance plan
+	 * @return the group ID of this Insurance Plan
 	 */
 	@Override
 	public long getGroupId() {
@@ -350,9 +350,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the insurance plan ID of this insurance plan.
+	 * Returns the insurance plan ID of this Insurance Plan.
 	 *
-	 * @return the insurance plan ID of this insurance plan
+	 * @return the insurance plan ID of this Insurance Plan
 	 */
 	@Override
 	public long getInsurancePlanId() {
@@ -360,9 +360,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the modified date of this insurance plan.
+	 * Returns the modified date of this Insurance Plan.
 	 *
-	 * @return the modified date of this insurance plan
+	 * @return the modified date of this Insurance Plan
 	 */
 	@Override
 	public Date getModifiedDate() {
@@ -370,9 +370,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the mvcc version of this insurance plan.
+	 * Returns the mvcc version of this Insurance Plan.
 	 *
-	 * @return the mvcc version of this insurance plan
+	 * @return the mvcc version of this Insurance Plan
 	 */
 	@Override
 	public long getMvccVersion() {
@@ -380,9 +380,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the parent container model ID of this insurance plan.
+	 * Returns the parent container model ID of this Insurance Plan.
 	 *
-	 * @return the parent container model ID of this insurance plan
+	 * @return the parent container model ID of this Insurance Plan
 	 */
 	@Override
 	public long getParentContainerModelId() {
@@ -390,9 +390,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the plan name of this insurance plan.
+	 * Returns the plan name of this Insurance Plan.
 	 *
-	 * @return the plan name of this insurance plan
+	 * @return the plan name of this Insurance Plan
 	 */
 	@Override
 	public String getPlanName() {
@@ -400,9 +400,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the primary key of this insurance plan.
+	 * Returns the primary key of this Insurance Plan.
 	 *
-	 * @return the primary key of this insurance plan
+	 * @return the primary key of this Insurance Plan
 	 */
 	@Override
 	public long getPrimaryKey() {
@@ -410,9 +410,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the provider name of this insurance plan.
+	 * Returns the provider name of this Insurance Plan.
 	 *
-	 * @return the provider name of this insurance plan
+	 * @return the provider name of this Insurance Plan
 	 */
 	@Override
 	public String getProviderName() {
@@ -420,9 +420,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the status of this insurance plan.
+	 * Returns the status of this Insurance Plan.
 	 *
-	 * @return the status of this insurance plan
+	 * @return the status of this Insurance Plan
 	 */
 	@Override
 	public int getStatus() {
@@ -430,9 +430,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the status by user ID of this insurance plan.
+	 * Returns the status by user ID of this Insurance Plan.
 	 *
-	 * @return the status by user ID of this insurance plan
+	 * @return the status by user ID of this Insurance Plan
 	 */
 	@Override
 	public long getStatusByUserId() {
@@ -440,9 +440,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the status by user name of this insurance plan.
+	 * Returns the status by user name of this Insurance Plan.
 	 *
-	 * @return the status by user name of this insurance plan
+	 * @return the status by user name of this Insurance Plan
 	 */
 	@Override
 	public String getStatusByUserName() {
@@ -450,9 +450,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the status by user uuid of this insurance plan.
+	 * Returns the status by user uuid of this Insurance Plan.
 	 *
-	 * @return the status by user uuid of this insurance plan
+	 * @return the status by user uuid of this Insurance Plan
 	 */
 	@Override
 	public String getStatusByUserUuid() {
@@ -460,9 +460,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the status date of this insurance plan.
+	 * Returns the status date of this Insurance Plan.
 	 *
-	 * @return the status date of this insurance plan
+	 * @return the status date of this Insurance Plan
 	 */
 	@Override
 	public Date getStatusDate() {
@@ -475,9 +475,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the class primary key of the trash entry for this insurance plan.
+	 * Returns the class primary key of the trash entry for this Insurance Plan.
 	 *
-	 * @return the class primary key of the trash entry for this insurance plan
+	 * @return the class primary key of the trash entry for this Insurance Plan
 	 */
 	@Override
 	public long getTrashEntryClassPK() {
@@ -485,9 +485,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the user ID of this insurance plan.
+	 * Returns the user ID of this Insurance Plan.
 	 *
-	 * @return the user ID of this insurance plan
+	 * @return the user ID of this Insurance Plan
 	 */
 	@Override
 	public long getUserId() {
@@ -495,9 +495,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the user name of this insurance plan.
+	 * Returns the user name of this Insurance Plan.
 	 *
-	 * @return the user name of this insurance plan
+	 * @return the user name of this Insurance Plan
 	 */
 	@Override
 	public String getUserName() {
@@ -505,9 +505,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the user uuid of this insurance plan.
+	 * Returns the user uuid of this Insurance Plan.
 	 *
-	 * @return the user uuid of this insurance plan
+	 * @return the user uuid of this Insurance Plan
 	 */
 	@Override
 	public String getUserUuid() {
@@ -515,9 +515,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns the uuid of this insurance plan.
+	 * Returns the uuid of this Insurance Plan.
 	 *
-	 * @return the uuid of this insurance plan
+	 * @return the uuid of this Insurance Plan
 	 */
 	@Override
 	public String getUuid() {
@@ -525,9 +525,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is active.
+	 * Returns <code>true</code> if this Insurance Plan is active.
 	 *
-	 * @return <code>true</code> if this insurance plan is active; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is active; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isActive() {
@@ -535,9 +535,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is approved.
+	 * Returns <code>true</code> if this Insurance Plan is approved.
 	 *
-	 * @return <code>true</code> if this insurance plan is approved; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is approved; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isApproved() {
@@ -545,9 +545,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is denied.
+	 * Returns <code>true</code> if this Insurance Plan is denied.
 	 *
-	 * @return <code>true</code> if this insurance plan is denied; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is denied; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDenied() {
@@ -555,9 +555,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is a draft.
+	 * Returns <code>true</code> if this Insurance Plan is a draft.
 	 *
-	 * @return <code>true</code> if this insurance plan is a draft; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is a draft; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDraft() {
@@ -565,9 +565,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is expired.
+	 * Returns <code>true</code> if this Insurance Plan is expired.
 	 *
-	 * @return <code>true</code> if this insurance plan is expired; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is expired; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isExpired() {
@@ -575,9 +575,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is inactive.
+	 * Returns <code>true</code> if this Insurance Plan is inactive.
 	 *
-	 * @return <code>true</code> if this insurance plan is inactive; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is inactive; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInactive() {
@@ -585,9 +585,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is incomplete.
+	 * Returns <code>true</code> if this Insurance Plan is incomplete.
 	 *
-	 * @return <code>true</code> if this insurance plan is incomplete; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is incomplete; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isIncomplete() {
@@ -595,9 +595,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is in the Recycle Bin.
+	 * Returns <code>true</code> if this Insurance Plan is in the Recycle Bin.
 	 *
-	 * @return <code>true</code> if this insurance plan is in the Recycle Bin; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is in the Recycle Bin; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInTrash() {
@@ -605,9 +605,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is pending.
+	 * Returns <code>true</code> if this Insurance Plan is pending.
 	 *
-	 * @return <code>true</code> if this insurance plan is pending; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is pending; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isPending() {
@@ -615,9 +615,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this insurance plan is scheduled.
+	 * Returns <code>true</code> if this Insurance Plan is scheduled.
 	 *
-	 * @return <code>true</code> if this insurance plan is scheduled; <code>false</code> otherwise
+	 * @return <code>true</code> if this Insurance Plan is scheduled; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isScheduled() {
@@ -630,9 +630,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets whether this insurance plan is active.
+	 * Sets whether this Insurance Plan is active.
 	 *
-	 * @param active the active of this insurance plan
+	 * @param active the active of this Insurance Plan
 	 */
 	@Override
 	public void setActive(boolean active) {
@@ -640,9 +640,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the annual contacts allowance cents of this insurance plan.
+	 * Sets the annual contacts allowance cents of this Insurance Plan.
 	 *
-	 * @param annualContactsAllowanceCents the annual contacts allowance cents of this insurance plan
+	 * @param annualContactsAllowanceCents the annual contacts allowance cents of this Insurance Plan
 	 */
 	@Override
 	public void setAnnualContactsAllowanceCents(
@@ -652,9 +652,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the annual exam allowance cents of this insurance plan.
+	 * Sets the annual exam allowance cents of this Insurance Plan.
 	 *
-	 * @param annualExamAllowanceCents the annual exam allowance cents of this insurance plan
+	 * @param annualExamAllowanceCents the annual exam allowance cents of this Insurance Plan
 	 */
 	@Override
 	public void setAnnualExamAllowanceCents(long annualExamAllowanceCents) {
@@ -662,9 +662,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the annual frames allowance cents of this insurance plan.
+	 * Sets the annual frames allowance cents of this Insurance Plan.
 	 *
-	 * @param annualFramesAllowanceCents the annual frames allowance cents of this insurance plan
+	 * @param annualFramesAllowanceCents the annual frames allowance cents of this Insurance Plan
 	 */
 	@Override
 	public void setAnnualFramesAllowanceCents(long annualFramesAllowanceCents) {
@@ -672,9 +672,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the annual lenses allowance cents of this insurance plan.
+	 * Sets the annual lenses allowance cents of this Insurance Plan.
 	 *
-	 * @param annualLensesAllowanceCents the annual lenses allowance cents of this insurance plan
+	 * @param annualLensesAllowanceCents the annual lenses allowance cents of this Insurance Plan
 	 */
 	@Override
 	public void setAnnualLensesAllowanceCents(long annualLensesAllowanceCents) {
@@ -682,9 +682,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the company ID of this insurance plan.
+	 * Sets the company ID of this Insurance Plan.
 	 *
-	 * @param companyId the company ID of this insurance plan
+	 * @param companyId the company ID of this Insurance Plan
 	 */
 	@Override
 	public void setCompanyId(long companyId) {
@@ -692,9 +692,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the container model ID of this insurance plan.
+	 * Sets the container model ID of this Insurance Plan.
 	 *
-	 * @param containerModelId the container model ID of this insurance plan
+	 * @param containerModelId the container model ID of this Insurance Plan
 	 */
 	@Override
 	public void setContainerModelId(long containerModelId) {
@@ -702,9 +702,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the coverage period months of this insurance plan.
+	 * Sets the coverage period months of this Insurance Plan.
 	 *
-	 * @param coveragePeriodMonths the coverage period months of this insurance plan
+	 * @param coveragePeriodMonths the coverage period months of this Insurance Plan
 	 */
 	@Override
 	public void setCoveragePeriodMonths(int coveragePeriodMonths) {
@@ -712,9 +712,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the create date of this insurance plan.
+	 * Sets the create date of this Insurance Plan.
 	 *
-	 * @param createDate the create date of this insurance plan
+	 * @param createDate the create date of this Insurance Plan
 	 */
 	@Override
 	public void setCreateDate(Date createDate) {
@@ -722,9 +722,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the ct collection ID of this insurance plan.
+	 * Sets the ct collection ID of this Insurance Plan.
 	 *
-	 * @param ctCollectionId the ct collection ID of this insurance plan
+	 * @param ctCollectionId the ct collection ID of this Insurance Plan
 	 */
 	@Override
 	public void setCtCollectionId(long ctCollectionId) {
@@ -732,9 +732,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the external reference code of this insurance plan.
+	 * Sets the external reference code of this Insurance Plan.
 	 *
-	 * @param externalReferenceCode the external reference code of this insurance plan
+	 * @param externalReferenceCode the external reference code of this Insurance Plan
 	 */
 	@Override
 	public void setExternalReferenceCode(String externalReferenceCode) {
@@ -742,9 +742,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the group ID of this insurance plan.
+	 * Sets the group ID of this Insurance Plan.
 	 *
-	 * @param groupId the group ID of this insurance plan
+	 * @param groupId the group ID of this Insurance Plan
 	 */
 	@Override
 	public void setGroupId(long groupId) {
@@ -752,9 +752,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the insurance plan ID of this insurance plan.
+	 * Sets the insurance plan ID of this Insurance Plan.
 	 *
-	 * @param insurancePlanId the insurance plan ID of this insurance plan
+	 * @param insurancePlanId the insurance plan ID of this Insurance Plan
 	 */
 	@Override
 	public void setInsurancePlanId(long insurancePlanId) {
@@ -762,9 +762,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the modified date of this insurance plan.
+	 * Sets the modified date of this Insurance Plan.
 	 *
-	 * @param modifiedDate the modified date of this insurance plan
+	 * @param modifiedDate the modified date of this Insurance Plan
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate) {
@@ -772,9 +772,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the mvcc version of this insurance plan.
+	 * Sets the mvcc version of this Insurance Plan.
 	 *
-	 * @param mvccVersion the mvcc version of this insurance plan
+	 * @param mvccVersion the mvcc version of this Insurance Plan
 	 */
 	@Override
 	public void setMvccVersion(long mvccVersion) {
@@ -782,9 +782,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the parent container model ID of this insurance plan.
+	 * Sets the parent container model ID of this Insurance Plan.
 	 *
-	 * @param parentContainerModelId the parent container model ID of this insurance plan
+	 * @param parentContainerModelId the parent container model ID of this Insurance Plan
 	 */
 	@Override
 	public void setParentContainerModelId(long parentContainerModelId) {
@@ -792,9 +792,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the plan name of this insurance plan.
+	 * Sets the plan name of this Insurance Plan.
 	 *
-	 * @param planName the plan name of this insurance plan
+	 * @param planName the plan name of this Insurance Plan
 	 */
 	@Override
 	public void setPlanName(String planName) {
@@ -802,9 +802,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the primary key of this insurance plan.
+	 * Sets the primary key of this Insurance Plan.
 	 *
-	 * @param primaryKey the primary key of this insurance plan
+	 * @param primaryKey the primary key of this Insurance Plan
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey) {
@@ -812,9 +812,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the provider name of this insurance plan.
+	 * Sets the provider name of this Insurance Plan.
 	 *
-	 * @param providerName the provider name of this insurance plan
+	 * @param providerName the provider name of this Insurance Plan
 	 */
 	@Override
 	public void setProviderName(String providerName) {
@@ -822,9 +822,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the status of this insurance plan.
+	 * Sets the status of this Insurance Plan.
 	 *
-	 * @param status the status of this insurance plan
+	 * @param status the status of this Insurance Plan
 	 */
 	@Override
 	public void setStatus(int status) {
@@ -832,9 +832,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the status by user ID of this insurance plan.
+	 * Sets the status by user ID of this Insurance Plan.
 	 *
-	 * @param statusByUserId the status by user ID of this insurance plan
+	 * @param statusByUserId the status by user ID of this Insurance Plan
 	 */
 	@Override
 	public void setStatusByUserId(long statusByUserId) {
@@ -842,9 +842,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the status by user name of this insurance plan.
+	 * Sets the status by user name of this Insurance Plan.
 	 *
-	 * @param statusByUserName the status by user name of this insurance plan
+	 * @param statusByUserName the status by user name of this Insurance Plan
 	 */
 	@Override
 	public void setStatusByUserName(String statusByUserName) {
@@ -852,9 +852,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the status by user uuid of this insurance plan.
+	 * Sets the status by user uuid of this Insurance Plan.
 	 *
-	 * @param statusByUserUuid the status by user uuid of this insurance plan
+	 * @param statusByUserUuid the status by user uuid of this Insurance Plan
 	 */
 	@Override
 	public void setStatusByUserUuid(String statusByUserUuid) {
@@ -862,9 +862,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the status date of this insurance plan.
+	 * Sets the status date of this Insurance Plan.
 	 *
-	 * @param statusDate the status date of this insurance plan
+	 * @param statusDate the status date of this Insurance Plan
 	 */
 	@Override
 	public void setStatusDate(Date statusDate) {
@@ -872,9 +872,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the user ID of this insurance plan.
+	 * Sets the user ID of this Insurance Plan.
 	 *
-	 * @param userId the user ID of this insurance plan
+	 * @param userId the user ID of this Insurance Plan
 	 */
 	@Override
 	public void setUserId(long userId) {
@@ -882,9 +882,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the user name of this insurance plan.
+	 * Sets the user name of this Insurance Plan.
 	 *
-	 * @param userName the user name of this insurance plan
+	 * @param userName the user name of this Insurance Plan
 	 */
 	@Override
 	public void setUserName(String userName) {
@@ -892,9 +892,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the user uuid of this insurance plan.
+	 * Sets the user uuid of this Insurance Plan.
 	 *
-	 * @param userUuid the user uuid of this insurance plan
+	 * @param userUuid the user uuid of this Insurance Plan
 	 */
 	@Override
 	public void setUserUuid(String userUuid) {
@@ -902,9 +902,9 @@ public class InsurancePlanWrapper
 	}
 
 	/**
-	 * Sets the uuid of this insurance plan.
+	 * Sets the uuid of this Insurance Plan.
 	 *
-	 * @param uuid the uuid of this insurance plan
+	 * @param uuid the uuid of this Insurance Plan
 	 */
 	@Override
 	public void setUuid(String uuid) {

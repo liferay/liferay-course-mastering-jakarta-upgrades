@@ -62,7 +62,7 @@ public class PlanEnrollmentModelImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. All methods that expect a plan enrollment model instance should use the <code>PlanEnrollment</code> interface instead.
+	 * Never modify or reference this class directly. All methods that expect a Plan Enrollment model instance should use the <code>PlanEnrollment</code> interface instead.
 	 */
 	public static final String TABLE_NAME = "CIBT_PlanEnrollment";
 

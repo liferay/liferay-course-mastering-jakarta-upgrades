@@ -80,7 +80,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * The persistence implementation for the benefit usage service.
+ * The persistence implementation for the Benefit Usage service.
  *
  * <p>
  * Caching information and settings can be found in <code>portal.properties</code>
@@ -97,7 +97,7 @@ public class BenefitUsagePersistenceImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. Always use <code>BenefitUsageUtil</code> to access the benefit usage persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify or reference this class directly. Always use <code>BenefitUsageUtil</code> to access the Benefit Usage persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static final String FINDER_CLASS_NAME_ENTITY =
 		BenefitUsageImpl.class.getName();
@@ -116,10 +116,10 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByUuid;
 
 	/**
-	 * Returns all the benefit usages where uuid = &#63;.
+	 * Returns all the Benefit Usages where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid(String uuid) {
@@ -127,16 +127,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where uuid = &#63;.
+	 * Returns a range of all the Benefit Usages where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid(String uuid, int start, int end) {
@@ -144,17 +144,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where uuid = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid(
@@ -165,18 +165,18 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where uuid = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid(
@@ -292,12 +292,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where uuid = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByUuid_First(
@@ -323,11 +323,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where uuid = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUuid_First(
@@ -343,12 +343,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where uuid = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByUuid_Last(
@@ -374,11 +374,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where uuid = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUuid_Last(
@@ -401,13 +401,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where uuid = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where uuid = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByUuid_PrevAndNext(
@@ -564,7 +564,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where uuid = &#63; from the database.
+	 * Removes all the Benefit Usages where uuid = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 */
@@ -578,10 +578,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where uuid = &#63;.
+	 * Returns the number of Benefit Usages where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByUuid(String uuid) {
@@ -654,12 +654,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathFetchByUUID_G;
 
 	/**
-	 * Returns the benefit usage where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
+	 * Returns the Benefit Usage where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByUUID_G(String uuid, long groupId)
@@ -691,11 +691,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Benefit Usage where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUUID_G(String uuid, long groupId) {
@@ -703,12 +703,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Benefit Usage where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUUID_G(
@@ -812,11 +812,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes the benefit usage where uuid = &#63; and groupId = &#63; from the database.
+	 * Removes the Benefit Usage where uuid = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the benefit usage that was removed
+	 * @return the Benefit Usage that was removed
 	 */
 	@Override
 	public BenefitUsage removeByUUID_G(String uuid, long groupId)
@@ -828,11 +828,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where uuid = &#63; and groupId = &#63;.
+	 * Returns the number of Benefit Usages where uuid = &#63; and groupId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByUUID_G(String uuid, long groupId) {
@@ -859,11 +859,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByUuid_C;
 
 	/**
-	 * Returns all the benefit usages where uuid = &#63; and companyId = &#63;.
+	 * Returns all the Benefit Usages where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid_C(String uuid, long companyId) {
@@ -872,7 +872,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where uuid = &#63; and companyId = &#63;.
+	 * Returns a range of all the Benefit Usages where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -880,9 +880,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid_C(
@@ -892,7 +892,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -900,10 +900,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid_C(
@@ -915,7 +915,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -923,11 +923,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByUuid_C(
@@ -1051,13 +1051,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByUuid_C_First(
@@ -1088,12 +1088,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUuid_C_First(
@@ -1111,13 +1111,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByUuid_C_Last(
@@ -1148,12 +1148,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByUuid_C_Last(
@@ -1177,14 +1177,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByUuid_C_PrevAndNext(
@@ -1347,7 +1347,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where uuid = &#63; and companyId = &#63; from the database.
+	 * Removes all the Benefit Usages where uuid = &#63; and companyId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
@@ -1364,11 +1364,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where uuid = &#63; and companyId = &#63;.
+	 * Returns the number of Benefit Usages where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByUuid_C(String uuid, long companyId) {
@@ -1450,10 +1450,10 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByGroupId;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByGroupId(long groupId) {
@@ -1462,16 +1462,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByGroupId(long groupId, int start, int end) {
@@ -1479,17 +1479,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByGroupId(
@@ -1500,18 +1500,18 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByGroupId(
@@ -1616,12 +1616,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByGroupId_First(
@@ -1648,11 +1648,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByGroupId_First(
@@ -1669,12 +1669,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByGroupId_Last(
@@ -1701,11 +1701,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByGroupId_Last(
@@ -1728,13 +1728,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByGroupId_PrevAndNext(
@@ -1878,10 +1878,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByGroupId(long groupId) {
@@ -1890,16 +1890,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByGroupId(
@@ -1909,17 +1909,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByGroupId(
@@ -2010,13 +2010,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByGroupId_PrevAndNext(
@@ -2208,7 +2208,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 */
@@ -2223,10 +2223,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByGroupId(long groupId) {
@@ -2278,10 +2278,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByGroupId(long groupId) {
@@ -2333,10 +2333,10 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByCompanyId;
 
 	/**
-	 * Returns all the benefit usages where companyId = &#63;.
+	 * Returns all the Benefit Usages where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByCompanyId(long companyId) {
@@ -2345,16 +2345,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where companyId = &#63;.
+	 * Returns a range of all the Benefit Usages where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByCompanyId(
@@ -2364,17 +2364,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByCompanyId(
@@ -2385,18 +2385,18 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByCompanyId(
@@ -2501,12 +2501,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByCompanyId_First(
@@ -2533,11 +2533,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByCompanyId_First(
@@ -2554,12 +2554,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByCompanyId_Last(
@@ -2586,11 +2586,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByCompanyId_Last(
@@ -2613,13 +2613,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where companyId = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where companyId = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByCompanyId_PrevAndNext(
@@ -2763,7 +2763,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where companyId = &#63; from the database.
+	 * Removes all the Benefit Usages where companyId = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 */
@@ -2778,10 +2778,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where companyId = &#63;.
+	 * Returns the number of Benefit Usages where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByCompanyId(long companyId) {
@@ -2840,11 +2840,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByG_S;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_S(long groupId, int status) {
@@ -2853,7 +2853,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -2861,9 +2861,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_S(
@@ -2873,7 +2873,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -2881,10 +2881,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_S(
@@ -2895,7 +2895,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -2903,11 +2903,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_S(
@@ -3018,13 +3018,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_S_First(
@@ -3055,12 +3055,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_S_First(
@@ -3078,13 +3078,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_S_Last(
@@ -3115,12 +3115,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_S_Last(
@@ -3144,14 +3144,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_S_PrevAndNext(
@@ -3301,11 +3301,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_S(long groupId, int status) {
@@ -3314,7 +3314,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -3322,9 +3322,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_S(
@@ -3334,7 +3334,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -3342,10 +3342,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_S(
@@ -3440,14 +3440,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_S_PrevAndNext(
@@ -3645,7 +3645,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and status = &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -3662,11 +3662,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_S(long groupId, int status) {
@@ -3722,11 +3722,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_S(long groupId, int status) {
@@ -3784,11 +3784,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_NotS;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_NotS(long groupId, int status) {
@@ -3797,7 +3797,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -3805,9 +3805,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_NotS(
@@ -3817,7 +3817,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -3825,10 +3825,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_NotS(
@@ -3840,7 +3840,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -3848,11 +3848,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_NotS(
@@ -3953,13 +3953,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_NotS_First(
@@ -3990,12 +3990,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_NotS_First(
@@ -4013,13 +4013,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_NotS_Last(
@@ -4050,12 +4050,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_NotS_Last(
@@ -4079,14 +4079,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_NotS_PrevAndNext(
@@ -4236,11 +4236,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_NotS(long groupId, int status) {
@@ -4249,7 +4249,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -4257,9 +4257,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_NotS(
@@ -4269,7 +4269,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -4277,10 +4277,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_NotS(
@@ -4375,14 +4375,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_NotS_PrevAndNext(
@@ -4580,7 +4580,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -4597,11 +4597,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_NotS(long groupId, int status) {
@@ -4657,11 +4657,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_NotS(long groupId, int status) {
@@ -4720,11 +4720,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByPE_S;
 
 	/**
-	 * Returns all the benefit usages where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_S(long planEnrollmentId, int status) {
@@ -4734,7 +4734,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -4742,9 +4742,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_S(
@@ -4754,7 +4754,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -4762,10 +4762,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_S(
@@ -4777,7 +4777,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -4785,11 +4785,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_S(
@@ -4901,13 +4901,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPE_S_First(
@@ -4938,12 +4938,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPE_S_First(
@@ -4961,13 +4961,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPE_S_Last(
@@ -4998,12 +4998,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPE_S_Last(
@@ -5027,14 +5027,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where planEnrollmentId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByPE_S_PrevAndNext(
@@ -5185,7 +5185,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where planEnrollmentId = &#63; and status = &#63; from the database.
+	 * Removes all the Benefit Usages where planEnrollmentId = &#63; and status = &#63; from the database.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
@@ -5202,11 +5202,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages where planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByPE_S(long planEnrollmentId, int status) {
@@ -5271,11 +5271,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByPE_NotS;
 
 	/**
-	 * Returns all the benefit usages where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_NotS(long planEnrollmentId, int status) {
@@ -5285,7 +5285,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5293,9 +5293,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_NotS(
@@ -5305,7 +5305,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5313,10 +5313,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_NotS(
@@ -5328,7 +5328,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5336,11 +5336,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPE_NotS(
@@ -5442,13 +5442,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPE_NotS_First(
@@ -5479,12 +5479,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPE_NotS_First(
@@ -5502,13 +5502,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPE_NotS_Last(
@@ -5539,12 +5539,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPE_NotS_Last(
@@ -5568,14 +5568,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByPE_NotS_PrevAndNext(
@@ -5726,7 +5726,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where planEnrollmentId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
@@ -5743,11 +5743,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages where planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByPE_NotS(long planEnrollmentId, int status) {
@@ -5813,12 +5813,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByG_PE_S;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_S(
@@ -5830,7 +5830,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5839,9 +5839,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_S(
@@ -5852,7 +5852,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5861,10 +5861,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_S(
@@ -5877,7 +5877,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -5886,11 +5886,11 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_S(
@@ -6010,14 +6010,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_PE_S_First(
@@ -6051,13 +6051,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_PE_S_First(
@@ -6075,14 +6075,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_PE_S_Last(
@@ -6116,13 +6116,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_PE_S_Last(
@@ -6147,15 +6147,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_PE_S_PrevAndNext(
@@ -6310,12 +6310,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_S(
@@ -6327,7 +6327,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -6336,9 +6336,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_S(
@@ -6349,7 +6349,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -6358,10 +6358,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_S(
@@ -6462,15 +6462,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_PE_S_PrevAndNext(
@@ -6674,7 +6674,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
@@ -6694,12 +6694,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_PE_S(long groupId, long planEnrollmentId, int status) {
@@ -6761,12 +6761,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_PE_S(
@@ -6833,12 +6833,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_PE_NotS;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_NotS(
@@ -6850,7 +6850,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -6859,9 +6859,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_NotS(
@@ -6872,7 +6872,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -6881,10 +6881,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_NotS(
@@ -6897,7 +6897,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -6906,11 +6906,11 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_PE_NotS(
@@ -7017,14 +7017,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_PE_NotS_First(
@@ -7058,13 +7058,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_PE_NotS_First(
@@ -7082,14 +7082,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_PE_NotS_Last(
@@ -7123,13 +7123,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_PE_NotS_Last(
@@ -7154,15 +7154,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_PE_NotS_PrevAndNext(
@@ -7317,12 +7317,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_NotS(
@@ -7334,7 +7334,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -7343,9 +7343,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_NotS(
@@ -7356,7 +7356,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -7365,10 +7365,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_PE_NotS(
@@ -7469,15 +7469,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_PE_NotS_PrevAndNext(
@@ -7681,7 +7681,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
@@ -7701,12 +7701,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_PE_NotS(
@@ -7770,12 +7770,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and planEnrollmentId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_PE_NotS(
@@ -7843,11 +7843,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByC_S;
 
 	/**
-	 * Returns all the benefit usages where companyId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_S(long companyId, int status) {
@@ -7856,7 +7856,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where companyId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -7864,9 +7864,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_S(
@@ -7876,7 +7876,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -7884,10 +7884,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_S(
@@ -7899,7 +7899,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -7907,11 +7907,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_S(
@@ -8022,13 +8022,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByC_S_First(
@@ -8059,12 +8059,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByC_S_First(
@@ -8082,13 +8082,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByC_S_Last(
@@ -8119,12 +8119,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByC_S_Last(
@@ -8148,14 +8148,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where companyId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByC_S_PrevAndNext(
@@ -8305,7 +8305,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where companyId = &#63; and status = &#63; from the database.
+	 * Removes all the Benefit Usages where companyId = &#63; and status = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -8322,11 +8322,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where companyId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByC_S(long companyId, int status) {
@@ -8391,11 +8391,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByC_NotS;
 
 	/**
-	 * Returns all the benefit usages where companyId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_NotS(long companyId, int status) {
@@ -8404,7 +8404,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where companyId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -8412,9 +8412,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_NotS(
@@ -8424,7 +8424,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -8432,10 +8432,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_NotS(
@@ -8447,7 +8447,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -8455,11 +8455,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByC_NotS(
@@ -8560,13 +8560,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByC_NotS_First(
@@ -8597,12 +8597,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByC_NotS_First(
@@ -8620,13 +8620,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByC_NotS_Last(
@@ -8657,12 +8657,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByC_NotS_Last(
@@ -8686,14 +8686,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByC_NotS_PrevAndNext(
@@ -8843,7 +8843,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where companyId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Benefit Usages where companyId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -8860,11 +8860,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where companyId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByC_NotS(long companyId, int status) {
@@ -8931,12 +8931,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_S;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -8948,7 +8948,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -8957,9 +8957,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -8969,7 +8969,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -8978,10 +8978,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -8993,7 +8993,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9002,11 +9002,11 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -9122,14 +9122,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_U_S_First(
@@ -9163,13 +9163,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_U_S_First(
@@ -9187,14 +9187,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_U_S_Last(
@@ -9228,13 +9228,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_U_S_Last(
@@ -9258,15 +9258,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_U_S_PrevAndNext(
@@ -9421,12 +9421,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9438,7 +9438,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9447,9 +9447,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9459,7 +9459,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9468,10 +9468,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9571,15 +9571,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_U_S_PrevAndNext(
@@ -9782,12 +9782,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9799,7 +9799,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9808,9 +9808,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9820,7 +9820,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9829,10 +9829,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_S(
@@ -9942,7 +9942,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9951,7 +9951,7 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -9963,7 +9963,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9972,9 +9972,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -9984,7 +9984,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -9993,10 +9993,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -10008,7 +10008,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -10017,11 +10017,11 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_S(
@@ -10156,7 +10156,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and userId = &#63; and status = &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -10174,12 +10174,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int status) {
@@ -10239,12 +10239,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int[] statuses) {
@@ -10325,12 +10325,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int status) {
@@ -10383,12 +10383,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int[] statuses) {
@@ -10474,12 +10474,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_NotS;
 
 	/**
-	 * Returns all the benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_NotS(
@@ -10491,7 +10491,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -10500,9 +10500,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_NotS(
@@ -10512,7 +10512,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -10521,10 +10521,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_NotS(
@@ -10536,7 +10536,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -10545,11 +10545,11 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByG_U_NotS(
@@ -10655,14 +10655,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_U_NotS_First(
@@ -10696,13 +10696,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_U_NotS_First(
@@ -10720,14 +10720,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByG_U_NotS_Last(
@@ -10761,13 +10761,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByG_U_NotS_Last(
@@ -10791,15 +10791,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByG_U_NotS_PrevAndNext(
@@ -10954,12 +10954,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching benefit usages that the user has permission to view
+	 * @return the matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_NotS(
@@ -10971,7 +10971,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -10980,9 +10980,9 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages that the user has permission to view
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_NotS(
@@ -10992,7 +10992,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Benefit Usages that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -11001,10 +11001,10 @@ public class BenefitUsagePersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages that the user has permission to view
+	 * @return the ordered range of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public List<BenefitUsage> filterFindByG_U_NotS(
@@ -11104,15 +11104,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set of benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set of Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] filterFindByG_U_NotS_PrevAndNext(
@@ -11315,7 +11315,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -11333,12 +11333,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByG_U_NotS(long groupId, long userId, int status) {
@@ -11398,12 +11398,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Benefit Usages that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching benefit usages that the user has permission to view
+	 * @return the number of matching Benefit Usages that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_NotS(long groupId, long userId, int status) {
@@ -11469,10 +11469,10 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByPlanEnrollment;
 
 	/**
-	 * Returns all the benefit usages where planEnrollmentId = &#63;.
+	 * Returns all the Benefit Usages where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollment(long planEnrollmentId) {
@@ -11481,16 +11481,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where planEnrollmentId = &#63;.
+	 * Returns a range of all the Benefit Usages where planEnrollmentId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollment(
@@ -11500,17 +11500,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollment(
@@ -11522,18 +11522,18 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollment(
@@ -11641,12 +11641,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPlanEnrollment_First(
@@ -11674,11 +11674,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPlanEnrollment_First(
@@ -11696,12 +11696,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPlanEnrollment_Last(
@@ -11729,11 +11729,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPlanEnrollment_Last(
@@ -11757,13 +11757,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where planEnrollmentId = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where planEnrollmentId = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByPlanEnrollment_PrevAndNext(
@@ -11909,7 +11909,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where planEnrollmentId = &#63; from the database.
+	 * Removes all the Benefit Usages where planEnrollmentId = &#63; from the database.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 */
@@ -11925,10 +11925,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where planEnrollmentId = &#63;.
+	 * Returns the number of Benefit Usages where planEnrollmentId = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByPlanEnrollment(long planEnrollmentId) {
@@ -11989,11 +11989,11 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathCountByPlanEnrollmentServiceDate;
 
 	/**
-	 * Returns all the benefit usages where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns all the Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
-	 * @return the matching benefit usages
+	 * @return the matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollmentServiceDate(
@@ -12005,7 +12005,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns a range of all the Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -12013,9 +12013,9 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of matching benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollmentServiceDate(
@@ -12026,7 +12026,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -12034,10 +12034,10 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollmentServiceDate(
@@ -12049,7 +12049,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns an ordered range of all the Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
@@ -12057,11 +12057,11 @@ public class BenefitUsagePersistenceImpl
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching benefit usages
+	 * @return the ordered range of matching Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findByPlanEnrollmentServiceDate(
@@ -12193,13 +12193,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPlanEnrollmentServiceDate_First(
@@ -12230,12 +12230,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the first benefit usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the first Benefit Usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the first matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPlanEnrollmentServiceDate_First(
@@ -12253,13 +12253,13 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByPlanEnrollmentServiceDate_Last(
@@ -12290,12 +12290,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the last benefit usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the last Benefit Usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the last matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPlanEnrollmentServiceDate_Last(
@@ -12320,14 +12320,14 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usages before and after the current benefit usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the Benefit Usages before and after the current Benefit Usage in the ordered set where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
-	 * @param benefitUsageId the primary key of the current benefit usage
+	 * @param benefitUsageId the primary key of the current Benefit Usage
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @return the previous, current, and next Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage[] findByPlanEnrollmentServiceDate_PrevAndNext(
@@ -12489,7 +12489,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages where planEnrollmentId = &#63; and serviceDate = &#63; from the database.
+	 * Removes all the Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63; from the database.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
@@ -12508,11 +12508,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where planEnrollmentId = &#63; and serviceDate = &#63;.
+	 * Returns the number of Benefit Usages where planEnrollmentId = &#63; and serviceDate = &#63;.
 	 *
 	 * @param planEnrollmentId the plan enrollment ID
 	 * @param serviceDate the service date
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByPlanEnrollmentServiceDate(
@@ -12600,12 +12600,12 @@ public class BenefitUsagePersistenceImpl
 	private FinderPath _finderPathFetchByERC_G;
 
 	/**
-	 * Returns the benefit usage where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
+	 * Returns the Benefit Usage where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching benefit usage
-	 * @throws NoSuchBenefitUsageException if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage findByERC_G(String externalReferenceCode, long groupId)
@@ -12638,11 +12638,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Benefit Usage where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByERC_G(
@@ -12652,12 +12652,12 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Benefit Usage where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByERC_G(
@@ -12763,11 +12763,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes the benefit usage where externalReferenceCode = &#63; and groupId = &#63; from the database.
+	 * Removes the Benefit Usage where externalReferenceCode = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the benefit usage that was removed
+	 * @return the Benefit Usage that was removed
 	 */
 	@Override
 	public BenefitUsage removeByERC_G(
@@ -12780,11 +12780,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages where externalReferenceCode = &#63; and groupId = &#63;.
+	 * Returns the number of Benefit Usages where externalReferenceCode = &#63; and groupId = &#63;.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the number of matching benefit usages
+	 * @return the number of matching Benefit Usages
 	 */
 	@Override
 	public int countByERC_G(String externalReferenceCode, long groupId) {
@@ -12823,9 +12823,9 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Caches the benefit usage in the entity cache if it is enabled.
+	 * Caches the Benefit Usage in the entity cache if it is enabled.
 	 *
-	 * @param benefitUsage the benefit usage
+	 * @param benefitUsage the Benefit Usage
 	 */
 	@Override
 	public void cacheResult(BenefitUsage benefitUsage) {
@@ -12857,9 +12857,9 @@ public class BenefitUsagePersistenceImpl
 	private int _valueObjectFinderCacheListThreshold;
 
 	/**
-	 * Caches the benefit usages in the entity cache if it is enabled.
+	 * Caches the Benefit Usages in the entity cache if it is enabled.
 	 *
-	 * @param benefitUsages the benefit usages
+	 * @param benefitUsages the Benefit Usages
 	 */
 	@Override
 	public void cacheResult(List<BenefitUsage> benefitUsages) {
@@ -12886,7 +12886,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for all benefit usages.
+	 * Clears the cache for all Benefit Usages.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -12900,7 +12900,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for the benefit usage.
+	 * Clears the cache for the Benefit Usage.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -12953,10 +12953,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Creates a new benefit usage with the primary key. Does not add the benefit usage to the database.
+	 * Creates a new Benefit Usage with the primary key. Does not add the Benefit Usage to the database.
 	 *
-	 * @param benefitUsageId the primary key for the new benefit usage
-	 * @return the new benefit usage
+	 * @param benefitUsageId the primary key for the new Benefit Usage
+	 * @return the new Benefit Usage
 	 */
 	@Override
 	public BenefitUsage create(long benefitUsageId) {
@@ -12975,11 +12975,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes the benefit usage with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Benefit Usage with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param benefitUsageId the primary key of the benefit usage
-	 * @return the benefit usage that was removed
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @param benefitUsageId the primary key of the Benefit Usage
+	 * @return the Benefit Usage that was removed
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage remove(long benefitUsageId)
@@ -12989,11 +12989,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes the benefit usage with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Benefit Usage with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param primaryKey the primary key of the benefit usage
-	 * @return the benefit usage that was removed
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @param primaryKey the primary key of the Benefit Usage
+	 * @return the Benefit Usage that was removed
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage remove(Serializable primaryKey)
@@ -13135,7 +13135,7 @@ public class BenefitUsagePersistenceImpl
 			if (isNew) {
 				if (ercBenefitUsage != null) {
 					throw new DuplicateBenefitUsageExternalReferenceCodeException(
-						"Duplicate benefit usage with external reference code " +
+						"Duplicate Benefit Usage with external reference code " +
 							benefitUsage.getExternalReferenceCode() +
 								" and group " + benefitUsage.getGroupId());
 				}
@@ -13146,7 +13146,7 @@ public class BenefitUsagePersistenceImpl
 						ercBenefitUsage.getBenefitUsageId())) {
 
 					throw new DuplicateBenefitUsageExternalReferenceCodeException(
-						"Duplicate benefit usage with external reference code " +
+						"Duplicate Benefit Usage with external reference code " +
 							benefitUsage.getExternalReferenceCode() +
 								" and group " + benefitUsage.getGroupId());
 				}
@@ -13217,11 +13217,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
+	 * Returns the Benefit Usage with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the benefit usage
-	 * @return the benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @param primaryKey the primary key of the Benefit Usage
+	 * @return the Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage findByPrimaryKey(Serializable primaryKey)
@@ -13242,11 +13242,11 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage with the primary key or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
+	 * Returns the Benefit Usage with the primary key or throws a <code>NoSuchBenefitUsageException</code> if it could not be found.
 	 *
-	 * @param benefitUsageId the primary key of the benefit usage
-	 * @return the benefit usage
-	 * @throws NoSuchBenefitUsageException if a benefit usage with the primary key could not be found
+	 * @param benefitUsageId the primary key of the Benefit Usage
+	 * @return the Benefit Usage
+	 * @throws NoSuchBenefitUsageException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage findByPrimaryKey(long benefitUsageId)
@@ -13256,10 +13256,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Benefit Usage with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the benefit usage
-	 * @return the benefit usage, or <code>null</code> if a benefit usage with the primary key could not be found
+	 * @param primaryKey the primary key of the Benefit Usage
+	 * @return the Benefit Usage, or <code>null</code> if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPrimaryKey(Serializable primaryKey) {
@@ -13304,10 +13304,10 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the benefit usage with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Benefit Usage with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param benefitUsageId the primary key of the benefit usage
-	 * @return the benefit usage, or <code>null</code> if a benefit usage with the primary key could not be found
+	 * @param benefitUsageId the primary key of the Benefit Usage
+	 * @return the Benefit Usage, or <code>null</code> if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage fetchByPrimaryKey(long benefitUsageId) {
@@ -13438,9 +13438,9 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns all the benefit usages.
+	 * Returns all the Benefit Usages.
 	 *
-	 * @return the benefit usages
+	 * @return the Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findAll() {
@@ -13448,15 +13448,15 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the benefit usages.
+	 * Returns a range of all the Benefit Usages.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findAll(int start, int end) {
@@ -13464,16 +13464,16 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages.
+	 * Returns an ordered range of all the Benefit Usages.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of benefit usages
+	 * @return the ordered range of Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findAll(
@@ -13483,17 +13483,17 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the benefit usages.
+	 * Returns an ordered range of all the Benefit Usages.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of benefit usages
+	 * @return the ordered range of Benefit Usages
 	 */
 	@Override
 	public List<BenefitUsage> findAll(
@@ -13577,7 +13577,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Removes all the benefit usages from the database.
+	 * Removes all the Benefit Usages from the database.
 	 *
 	 */
 	@Override
@@ -13588,9 +13588,9 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Returns the number of benefit usages.
+	 * Returns the number of Benefit Usages.
 	 *
-	 * @return the number of benefit usages
+	 * @return the number of Benefit Usages
 	 */
 	@Override
 	public int countAll() {
@@ -13728,7 +13728,7 @@ public class BenefitUsagePersistenceImpl
 	}
 
 	/**
-	 * Initializes the benefit usage persistence.
+	 * Initializes the Benefit Usage persistence.
 	 */
 	@Activate
 	public void activate() {

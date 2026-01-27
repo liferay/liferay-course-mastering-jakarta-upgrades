@@ -192,6 +192,21 @@ public class BenefitUsageLocalServiceImpl
 	}
 
 	@Override
+	public BenefitUsage getBenefitUsageByExternalReferenceCode(final String externalReferenceCode) {
+		DynamicQuery dq = benefitUsageLocalService.dynamicQuery();
+
+		dq.add(RestrictionsFactoryUtil.eq("externalReferenceCode", externalReferenceCode));
+
+		List<BenefitUsage> results = benefitUsagePersistence.findWithDynamicQuery(dq);
+
+		if (results.size() > 0) {
+			return results.get(0);
+		}
+
+		return null;
+	}
+
+	@Override
 	public List<BenefitUsage> getBenefitUsagesByPlanEnrollmentStatus(final long planEnrollmentId, final int status, final int start, final int max) throws PortalException {
 		if (status == WorkflowConstants.STATUS_ANY) {
 			return benefitUsagePersistence.findByPlanEnrollment(planEnrollmentId, start, max);

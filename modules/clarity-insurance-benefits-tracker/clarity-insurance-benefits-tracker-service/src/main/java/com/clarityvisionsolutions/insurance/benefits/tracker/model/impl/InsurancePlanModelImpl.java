@@ -61,7 +61,7 @@ public class InsurancePlanModelImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. All methods that expect a insurance plan model instance should use the <code>InsurancePlan</code> interface instead.
+	 * Never modify or reference this class directly. All methods that expect a Insurance Plan model instance should use the <code>InsurancePlan</code> interface instead.
 	 */
 	public static final String TABLE_NAME = "CIBT_InsurancePlan";
 

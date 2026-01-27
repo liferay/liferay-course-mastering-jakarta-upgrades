@@ -62,7 +62,7 @@ public class BenefitUsageModelImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. All methods that expect a benefit usage model instance should use the <code>BenefitUsage</code> interface instead.
+	 * Never modify or reference this class directly. All methods that expect a Benefit Usage model instance should use the <code>BenefitUsage</code> interface instead.
 	 */
 	public static final String TABLE_NAME = "CIBT_BenefitUsage";
 

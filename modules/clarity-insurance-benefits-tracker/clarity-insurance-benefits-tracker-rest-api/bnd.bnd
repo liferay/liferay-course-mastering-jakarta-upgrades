@@ -1,0 +1,6 @@
+Bundle-Name: Clarity Vision Solutions :: Insurance Benefits Tracker :: REST:: API
+Bundle-SymbolicName: com.clarityvisionsolutions.insurance.benefits.tracker.rest.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0,\
+	com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0

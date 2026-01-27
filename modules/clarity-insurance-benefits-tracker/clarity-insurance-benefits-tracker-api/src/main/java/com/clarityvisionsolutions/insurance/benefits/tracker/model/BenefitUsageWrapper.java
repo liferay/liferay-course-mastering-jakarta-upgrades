@@ -211,9 +211,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the amount used cents of this benefit usage.
+	 * Returns the amount used cents of this Benefit Usage.
 	 *
-	 * @return the amount used cents of this benefit usage
+	 * @return the amount used cents of this Benefit Usage
 	 */
 	@Override
 	public long getAmountUsedCents() {
@@ -221,9 +221,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the benefit type of this benefit usage.
+	 * Returns the benefit type of this Benefit Usage.
 	 *
-	 * @return the benefit type of this benefit usage
+	 * @return the benefit type of this Benefit Usage
 	 */
 	@Override
 	public String getBenefitType() {
@@ -231,9 +231,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the benefit usage ID of this benefit usage.
+	 * Returns the benefit usage ID of this Benefit Usage.
 	 *
-	 * @return the benefit usage ID of this benefit usage
+	 * @return the benefit usage ID of this Benefit Usage
 	 */
 	@Override
 	public long getBenefitUsageId() {
@@ -241,9 +241,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the company ID of this benefit usage.
+	 * Returns the company ID of this Benefit Usage.
 	 *
-	 * @return the company ID of this benefit usage
+	 * @return the company ID of this Benefit Usage
 	 */
 	@Override
 	public long getCompanyId() {
@@ -251,9 +251,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the create date of this benefit usage.
+	 * Returns the create date of this Benefit Usage.
 	 *
-	 * @return the create date of this benefit usage
+	 * @return the create date of this Benefit Usage
 	 */
 	@Override
 	public Date getCreateDate() {
@@ -261,9 +261,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the ct collection ID of this benefit usage.
+	 * Returns the ct collection ID of this Benefit Usage.
 	 *
-	 * @return the ct collection ID of this benefit usage
+	 * @return the ct collection ID of this Benefit Usage
 	 */
 	@Override
 	public long getCtCollectionId() {
@@ -271,9 +271,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the external reference code of this benefit usage.
+	 * Returns the external reference code of this Benefit Usage.
 	 *
-	 * @return the external reference code of this benefit usage
+	 * @return the external reference code of this Benefit Usage
 	 */
 	@Override
 	public String getExternalReferenceCode() {
@@ -281,9 +281,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the group ID of this benefit usage.
+	 * Returns the group ID of this Benefit Usage.
 	 *
-	 * @return the group ID of this benefit usage
+	 * @return the group ID of this Benefit Usage
 	 */
 	@Override
 	public long getGroupId() {
@@ -291,9 +291,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the modified date of this benefit usage.
+	 * Returns the modified date of this Benefit Usage.
 	 *
-	 * @return the modified date of this benefit usage
+	 * @return the modified date of this Benefit Usage
 	 */
 	@Override
 	public Date getModifiedDate() {
@@ -301,9 +301,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the mvcc version of this benefit usage.
+	 * Returns the mvcc version of this Benefit Usage.
 	 *
-	 * @return the mvcc version of this benefit usage
+	 * @return the mvcc version of this Benefit Usage
 	 */
 	@Override
 	public long getMvccVersion() {
@@ -311,9 +311,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the notes of this benefit usage.
+	 * Returns the notes of this Benefit Usage.
 	 *
-	 * @return the notes of this benefit usage
+	 * @return the notes of this Benefit Usage
 	 */
 	@Override
 	public String getNotes() {
@@ -321,9 +321,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the plan enrollment ID of this benefit usage.
+	 * Returns the plan enrollment ID of this Benefit Usage.
 	 *
-	 * @return the plan enrollment ID of this benefit usage
+	 * @return the plan enrollment ID of this Benefit Usage
 	 */
 	@Override
 	public long getPlanEnrollmentId() {
@@ -331,9 +331,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the primary key of this benefit usage.
+	 * Returns the primary key of this Benefit Usage.
 	 *
-	 * @return the primary key of this benefit usage
+	 * @return the primary key of this Benefit Usage
 	 */
 	@Override
 	public long getPrimaryKey() {
@@ -341,9 +341,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the reference of this benefit usage.
+	 * Returns the reference of this Benefit Usage.
 	 *
-	 * @return the reference of this benefit usage
+	 * @return the reference of this Benefit Usage
 	 */
 	@Override
 	public String getReference() {
@@ -351,9 +351,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the service date of this benefit usage.
+	 * Returns the service date of this Benefit Usage.
 	 *
-	 * @return the service date of this benefit usage
+	 * @return the service date of this Benefit Usage
 	 */
 	@Override
 	public Date getServiceDate() {
@@ -361,9 +361,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the source reference of this benefit usage.
+	 * Returns the source reference of this Benefit Usage.
 	 *
-	 * @return the source reference of this benefit usage
+	 * @return the source reference of this Benefit Usage
 	 */
 	@Override
 	public String getSourceReference() {
@@ -371,9 +371,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the source type of this benefit usage.
+	 * Returns the source type of this Benefit Usage.
 	 *
-	 * @return the source type of this benefit usage
+	 * @return the source type of this Benefit Usage
 	 */
 	@Override
 	public String getSourceType() {
@@ -381,9 +381,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the status of this benefit usage.
+	 * Returns the status of this Benefit Usage.
 	 *
-	 * @return the status of this benefit usage
+	 * @return the status of this Benefit Usage
 	 */
 	@Override
 	public int getStatus() {
@@ -391,9 +391,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the status by user ID of this benefit usage.
+	 * Returns the status by user ID of this Benefit Usage.
 	 *
-	 * @return the status by user ID of this benefit usage
+	 * @return the status by user ID of this Benefit Usage
 	 */
 	@Override
 	public long getStatusByUserId() {
@@ -401,9 +401,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the status by user name of this benefit usage.
+	 * Returns the status by user name of this Benefit Usage.
 	 *
-	 * @return the status by user name of this benefit usage
+	 * @return the status by user name of this Benefit Usage
 	 */
 	@Override
 	public String getStatusByUserName() {
@@ -411,9 +411,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the status by user uuid of this benefit usage.
+	 * Returns the status by user uuid of this Benefit Usage.
 	 *
-	 * @return the status by user uuid of this benefit usage
+	 * @return the status by user uuid of this Benefit Usage
 	 */
 	@Override
 	public String getStatusByUserUuid() {
@@ -421,9 +421,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the status date of this benefit usage.
+	 * Returns the status date of this Benefit Usage.
 	 *
-	 * @return the status date of this benefit usage
+	 * @return the status date of this Benefit Usage
 	 */
 	@Override
 	public Date getStatusDate() {
@@ -436,9 +436,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the class primary key of the trash entry for this benefit usage.
+	 * Returns the class primary key of the trash entry for this Benefit Usage.
 	 *
-	 * @return the class primary key of the trash entry for this benefit usage
+	 * @return the class primary key of the trash entry for this Benefit Usage
 	 */
 	@Override
 	public long getTrashEntryClassPK() {
@@ -446,9 +446,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the user ID of this benefit usage.
+	 * Returns the user ID of this Benefit Usage.
 	 *
-	 * @return the user ID of this benefit usage
+	 * @return the user ID of this Benefit Usage
 	 */
 	@Override
 	public long getUserId() {
@@ -456,9 +456,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the user name of this benefit usage.
+	 * Returns the user name of this Benefit Usage.
 	 *
-	 * @return the user name of this benefit usage
+	 * @return the user name of this Benefit Usage
 	 */
 	@Override
 	public String getUserName() {
@@ -466,9 +466,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the user uuid of this benefit usage.
+	 * Returns the user uuid of this Benefit Usage.
 	 *
-	 * @return the user uuid of this benefit usage
+	 * @return the user uuid of this Benefit Usage
 	 */
 	@Override
 	public String getUserUuid() {
@@ -476,9 +476,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns the uuid of this benefit usage.
+	 * Returns the uuid of this Benefit Usage.
 	 *
-	 * @return the uuid of this benefit usage
+	 * @return the uuid of this Benefit Usage
 	 */
 	@Override
 	public String getUuid() {
@@ -486,9 +486,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is approved.
+	 * Returns <code>true</code> if this Benefit Usage is approved.
 	 *
-	 * @return <code>true</code> if this benefit usage is approved; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is approved; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isApproved() {
@@ -496,9 +496,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is denied.
+	 * Returns <code>true</code> if this Benefit Usage is denied.
 	 *
-	 * @return <code>true</code> if this benefit usage is denied; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is denied; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDenied() {
@@ -506,9 +506,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is a draft.
+	 * Returns <code>true</code> if this Benefit Usage is a draft.
 	 *
-	 * @return <code>true</code> if this benefit usage is a draft; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is a draft; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDraft() {
@@ -516,9 +516,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is expired.
+	 * Returns <code>true</code> if this Benefit Usage is expired.
 	 *
-	 * @return <code>true</code> if this benefit usage is expired; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is expired; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isExpired() {
@@ -526,9 +526,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is inactive.
+	 * Returns <code>true</code> if this Benefit Usage is inactive.
 	 *
-	 * @return <code>true</code> if this benefit usage is inactive; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is inactive; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInactive() {
@@ -536,9 +536,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is incomplete.
+	 * Returns <code>true</code> if this Benefit Usage is incomplete.
 	 *
-	 * @return <code>true</code> if this benefit usage is incomplete; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is incomplete; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isIncomplete() {
@@ -546,9 +546,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is in the Recycle Bin.
+	 * Returns <code>true</code> if this Benefit Usage is in the Recycle Bin.
 	 *
-	 * @return <code>true</code> if this benefit usage is in the Recycle Bin; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is in the Recycle Bin; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInTrash() {
@@ -556,9 +556,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is pending.
+	 * Returns <code>true</code> if this Benefit Usage is pending.
 	 *
-	 * @return <code>true</code> if this benefit usage is pending; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is pending; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isPending() {
@@ -566,9 +566,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is scheduled.
+	 * Returns <code>true</code> if this Benefit Usage is scheduled.
 	 *
-	 * @return <code>true</code> if this benefit usage is scheduled; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is scheduled; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isScheduled() {
@@ -581,9 +581,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the amount used cents of this benefit usage.
+	 * Sets the amount used cents of this Benefit Usage.
 	 *
-	 * @param amountUsedCents the amount used cents of this benefit usage
+	 * @param amountUsedCents the amount used cents of this Benefit Usage
 	 */
 	@Override
 	public void setAmountUsedCents(long amountUsedCents) {
@@ -591,9 +591,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the benefit type of this benefit usage.
+	 * Sets the benefit type of this Benefit Usage.
 	 *
-	 * @param benefitType the benefit type of this benefit usage
+	 * @param benefitType the benefit type of this Benefit Usage
 	 */
 	@Override
 	public void setBenefitType(String benefitType) {
@@ -601,9 +601,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the benefit usage ID of this benefit usage.
+	 * Sets the benefit usage ID of this Benefit Usage.
 	 *
-	 * @param benefitUsageId the benefit usage ID of this benefit usage
+	 * @param benefitUsageId the benefit usage ID of this Benefit Usage
 	 */
 	@Override
 	public void setBenefitUsageId(long benefitUsageId) {
@@ -611,9 +611,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the company ID of this benefit usage.
+	 * Sets the company ID of this Benefit Usage.
 	 *
-	 * @param companyId the company ID of this benefit usage
+	 * @param companyId the company ID of this Benefit Usage
 	 */
 	@Override
 	public void setCompanyId(long companyId) {
@@ -621,9 +621,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the create date of this benefit usage.
+	 * Sets the create date of this Benefit Usage.
 	 *
-	 * @param createDate the create date of this benefit usage
+	 * @param createDate the create date of this Benefit Usage
 	 */
 	@Override
 	public void setCreateDate(Date createDate) {
@@ -631,9 +631,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the ct collection ID of this benefit usage.
+	 * Sets the ct collection ID of this Benefit Usage.
 	 *
-	 * @param ctCollectionId the ct collection ID of this benefit usage
+	 * @param ctCollectionId the ct collection ID of this Benefit Usage
 	 */
 	@Override
 	public void setCtCollectionId(long ctCollectionId) {
@@ -641,9 +641,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the external reference code of this benefit usage.
+	 * Sets the external reference code of this Benefit Usage.
 	 *
-	 * @param externalReferenceCode the external reference code of this benefit usage
+	 * @param externalReferenceCode the external reference code of this Benefit Usage
 	 */
 	@Override
 	public void setExternalReferenceCode(String externalReferenceCode) {
@@ -651,9 +651,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the group ID of this benefit usage.
+	 * Sets the group ID of this Benefit Usage.
 	 *
-	 * @param groupId the group ID of this benefit usage
+	 * @param groupId the group ID of this Benefit Usage
 	 */
 	@Override
 	public void setGroupId(long groupId) {
@@ -661,9 +661,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the modified date of this benefit usage.
+	 * Sets the modified date of this Benefit Usage.
 	 *
-	 * @param modifiedDate the modified date of this benefit usage
+	 * @param modifiedDate the modified date of this Benefit Usage
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate) {
@@ -671,9 +671,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the mvcc version of this benefit usage.
+	 * Sets the mvcc version of this Benefit Usage.
 	 *
-	 * @param mvccVersion the mvcc version of this benefit usage
+	 * @param mvccVersion the mvcc version of this Benefit Usage
 	 */
 	@Override
 	public void setMvccVersion(long mvccVersion) {
@@ -681,9 +681,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the notes of this benefit usage.
+	 * Sets the notes of this Benefit Usage.
 	 *
-	 * @param notes the notes of this benefit usage
+	 * @param notes the notes of this Benefit Usage
 	 */
 	@Override
 	public void setNotes(String notes) {
@@ -691,9 +691,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the plan enrollment ID of this benefit usage.
+	 * Sets the plan enrollment ID of this Benefit Usage.
 	 *
-	 * @param planEnrollmentId the plan enrollment ID of this benefit usage
+	 * @param planEnrollmentId the plan enrollment ID of this Benefit Usage
 	 */
 	@Override
 	public void setPlanEnrollmentId(long planEnrollmentId) {
@@ -701,9 +701,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the primary key of this benefit usage.
+	 * Sets the primary key of this Benefit Usage.
 	 *
-	 * @param primaryKey the primary key of this benefit usage
+	 * @param primaryKey the primary key of this Benefit Usage
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey) {
@@ -711,9 +711,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the reference of this benefit usage.
+	 * Sets the reference of this Benefit Usage.
 	 *
-	 * @param reference the reference of this benefit usage
+	 * @param reference the reference of this Benefit Usage
 	 */
 	@Override
 	public void setReference(String reference) {
@@ -721,9 +721,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the service date of this benefit usage.
+	 * Sets the service date of this Benefit Usage.
 	 *
-	 * @param serviceDate the service date of this benefit usage
+	 * @param serviceDate the service date of this Benefit Usage
 	 */
 	@Override
 	public void setServiceDate(Date serviceDate) {
@@ -731,9 +731,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the source reference of this benefit usage.
+	 * Sets the source reference of this Benefit Usage.
 	 *
-	 * @param sourceReference the source reference of this benefit usage
+	 * @param sourceReference the source reference of this Benefit Usage
 	 */
 	@Override
 	public void setSourceReference(String sourceReference) {
@@ -741,9 +741,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the source type of this benefit usage.
+	 * Sets the source type of this Benefit Usage.
 	 *
-	 * @param sourceType the source type of this benefit usage
+	 * @param sourceType the source type of this Benefit Usage
 	 */
 	@Override
 	public void setSourceType(String sourceType) {
@@ -751,9 +751,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the status of this benefit usage.
+	 * Sets the status of this Benefit Usage.
 	 *
-	 * @param status the status of this benefit usage
+	 * @param status the status of this Benefit Usage
 	 */
 	@Override
 	public void setStatus(int status) {
@@ -761,9 +761,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the status by user ID of this benefit usage.
+	 * Sets the status by user ID of this Benefit Usage.
 	 *
-	 * @param statusByUserId the status by user ID of this benefit usage
+	 * @param statusByUserId the status by user ID of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserId(long statusByUserId) {
@@ -771,9 +771,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the status by user name of this benefit usage.
+	 * Sets the status by user name of this Benefit Usage.
 	 *
-	 * @param statusByUserName the status by user name of this benefit usage
+	 * @param statusByUserName the status by user name of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserName(String statusByUserName) {
@@ -781,9 +781,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the status by user uuid of this benefit usage.
+	 * Sets the status by user uuid of this Benefit Usage.
 	 *
-	 * @param statusByUserUuid the status by user uuid of this benefit usage
+	 * @param statusByUserUuid the status by user uuid of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserUuid(String statusByUserUuid) {
@@ -791,9 +791,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the status date of this benefit usage.
+	 * Sets the status date of this Benefit Usage.
 	 *
-	 * @param statusDate the status date of this benefit usage
+	 * @param statusDate the status date of this Benefit Usage
 	 */
 	@Override
 	public void setStatusDate(Date statusDate) {
@@ -801,9 +801,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the user ID of this benefit usage.
+	 * Sets the user ID of this Benefit Usage.
 	 *
-	 * @param userId the user ID of this benefit usage
+	 * @param userId the user ID of this Benefit Usage
 	 */
 	@Override
 	public void setUserId(long userId) {
@@ -811,9 +811,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the user name of this benefit usage.
+	 * Sets the user name of this Benefit Usage.
 	 *
-	 * @param userName the user name of this benefit usage
+	 * @param userName the user name of this Benefit Usage
 	 */
 	@Override
 	public void setUserName(String userName) {
@@ -821,9 +821,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the user uuid of this benefit usage.
+	 * Sets the user uuid of this Benefit Usage.
 	 *
-	 * @param userUuid the user uuid of this benefit usage
+	 * @param userUuid the user uuid of this Benefit Usage
 	 */
 	@Override
 	public void setUserUuid(String userUuid) {
@@ -831,9 +831,9 @@ public class BenefitUsageWrapper
 	}
 
 	/**
-	 * Sets the uuid of this benefit usage.
+	 * Sets the uuid of this Benefit Usage.
 	 *
-	 * @param uuid the uuid of this benefit usage
+	 * @param uuid the uuid of this Benefit Usage
 	 */
 	@Override
 	public void setUuid(String uuid) {

@@ -44,7 +44,7 @@ public interface InsurancePlanService extends BaseService {
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this interface directly. Add custom service methods to <code>com.clarityvisionsolutions.insurance.benefits.tracker.service.impl.InsurancePlanServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the insurance plan remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link InsurancePlanServiceUtil} if injection and service tracking are not available.
+	 * Never modify this interface directly. Add custom service methods to <code>com.clarityvisionsolutions.insurance.benefits.tracker.service.impl.InsurancePlanServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the Insurance Plan remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link InsurancePlanServiceUtil} if injection and service tracking are not available.
 	 */
 
 	/**

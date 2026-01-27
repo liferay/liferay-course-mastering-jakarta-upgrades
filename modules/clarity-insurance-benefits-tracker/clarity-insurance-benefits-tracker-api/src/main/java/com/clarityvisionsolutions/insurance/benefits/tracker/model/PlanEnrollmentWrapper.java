@@ -218,9 +218,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the company ID of this plan enrollment.
+	 * Returns the company ID of this Plan Enrollment.
 	 *
-	 * @return the company ID of this plan enrollment
+	 * @return the company ID of this Plan Enrollment
 	 */
 	@Override
 	public long getCompanyId() {
@@ -228,9 +228,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the container model ID of this plan enrollment.
+	 * Returns the container model ID of this Plan Enrollment.
 	 *
-	 * @return the container model ID of this plan enrollment
+	 * @return the container model ID of this Plan Enrollment
 	 */
 	@Override
 	public long getContainerModelId() {
@@ -238,9 +238,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the container name of this plan enrollment.
+	 * Returns the container name of this Plan Enrollment.
 	 *
-	 * @return the container name of this plan enrollment
+	 * @return the container name of this Plan Enrollment
 	 */
 	@Override
 	public String getContainerModelName() {
@@ -248,9 +248,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the create date of this plan enrollment.
+	 * Returns the create date of this Plan Enrollment.
 	 *
-	 * @return the create date of this plan enrollment
+	 * @return the create date of this Plan Enrollment
 	 */
 	@Override
 	public Date getCreateDate() {
@@ -258,9 +258,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the ct collection ID of this plan enrollment.
+	 * Returns the ct collection ID of this Plan Enrollment.
 	 *
-	 * @return the ct collection ID of this plan enrollment
+	 * @return the ct collection ID of this Plan Enrollment
 	 */
 	@Override
 	public long getCtCollectionId() {
@@ -268,9 +268,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the end date of this plan enrollment.
+	 * Returns the end date of this Plan Enrollment.
 	 *
-	 * @return the end date of this plan enrollment
+	 * @return the end date of this Plan Enrollment
 	 */
 	@Override
 	public Date getEndDate() {
@@ -278,9 +278,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the enrollment status of this plan enrollment.
+	 * Returns the enrollment status of this Plan Enrollment.
 	 *
-	 * @return the enrollment status of this plan enrollment
+	 * @return the enrollment status of this Plan Enrollment
 	 */
 	@Override
 	public int getEnrollmentStatus() {
@@ -288,9 +288,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the external reference code of this plan enrollment.
+	 * Returns the external reference code of this Plan Enrollment.
 	 *
-	 * @return the external reference code of this plan enrollment
+	 * @return the external reference code of this Plan Enrollment
 	 */
 	@Override
 	public String getExternalReferenceCode() {
@@ -298,9 +298,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the group ID of this plan enrollment.
+	 * Returns the group ID of this Plan Enrollment.
 	 *
-	 * @return the group ID of this plan enrollment
+	 * @return the group ID of this Plan Enrollment
 	 */
 	@Override
 	public long getGroupId() {
@@ -308,9 +308,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the group number of this plan enrollment.
+	 * Returns the group number of this Plan Enrollment.
 	 *
-	 * @return the group number of this plan enrollment
+	 * @return the group number of this Plan Enrollment
 	 */
 	@Override
 	public String getGroupNumber() {
@@ -318,9 +318,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the insurance plan ID of this plan enrollment.
+	 * Returns the insurance plan ID of this Plan Enrollment.
 	 *
-	 * @return the insurance plan ID of this plan enrollment
+	 * @return the insurance plan ID of this Plan Enrollment
 	 */
 	@Override
 	public long getInsurancePlanId() {
@@ -328,9 +328,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the member ID of this plan enrollment.
+	 * Returns the member ID of this Plan Enrollment.
 	 *
-	 * @return the member ID of this plan enrollment
+	 * @return the member ID of this Plan Enrollment
 	 */
 	@Override
 	public String getMemberId() {
@@ -338,9 +338,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the member user ID of this plan enrollment.
+	 * Returns the member user ID of this Plan Enrollment.
 	 *
-	 * @return the member user ID of this plan enrollment
+	 * @return the member user ID of this Plan Enrollment
 	 */
 	@Override
 	public long getMemberUserId() {
@@ -348,9 +348,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the member user name of this plan enrollment.
+	 * Returns the member user name of this Plan Enrollment.
 	 *
-	 * @return the member user name of this plan enrollment
+	 * @return the member user name of this Plan Enrollment
 	 */
 	@Override
 	public String getMemberUserName() {
@@ -358,9 +358,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the member user uuid of this plan enrollment.
+	 * Returns the member user uuid of this Plan Enrollment.
 	 *
-	 * @return the member user uuid of this plan enrollment
+	 * @return the member user uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getMemberUserUuid() {
@@ -368,9 +368,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the modified date of this plan enrollment.
+	 * Returns the modified date of this Plan Enrollment.
 	 *
-	 * @return the modified date of this plan enrollment
+	 * @return the modified date of this Plan Enrollment
 	 */
 	@Override
 	public Date getModifiedDate() {
@@ -378,9 +378,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the mvcc version of this plan enrollment.
+	 * Returns the mvcc version of this Plan Enrollment.
 	 *
-	 * @return the mvcc version of this plan enrollment
+	 * @return the mvcc version of this Plan Enrollment
 	 */
 	@Override
 	public long getMvccVersion() {
@@ -388,9 +388,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the notes of this plan enrollment.
+	 * Returns the notes of this Plan Enrollment.
 	 *
-	 * @return the notes of this plan enrollment
+	 * @return the notes of this Plan Enrollment
 	 */
 	@Override
 	public String getNotes() {
@@ -398,9 +398,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the parent container model ID of this plan enrollment.
+	 * Returns the parent container model ID of this Plan Enrollment.
 	 *
-	 * @return the parent container model ID of this plan enrollment
+	 * @return the parent container model ID of this Plan Enrollment
 	 */
 	@Override
 	public long getParentContainerModelId() {
@@ -408,9 +408,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the plan enrollment ID of this plan enrollment.
+	 * Returns the plan enrollment ID of this Plan Enrollment.
 	 *
-	 * @return the plan enrollment ID of this plan enrollment
+	 * @return the plan enrollment ID of this Plan Enrollment
 	 */
 	@Override
 	public long getPlanEnrollmentId() {
@@ -418,9 +418,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the primary key of this plan enrollment.
+	 * Returns the primary key of this Plan Enrollment.
 	 *
-	 * @return the primary key of this plan enrollment
+	 * @return the primary key of this Plan Enrollment
 	 */
 	@Override
 	public long getPrimaryKey() {
@@ -428,9 +428,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the start date of this plan enrollment.
+	 * Returns the start date of this Plan Enrollment.
 	 *
-	 * @return the start date of this plan enrollment
+	 * @return the start date of this Plan Enrollment
 	 */
 	@Override
 	public Date getStartDate() {
@@ -438,9 +438,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the status of this plan enrollment.
+	 * Returns the status of this Plan Enrollment.
 	 *
-	 * @return the status of this plan enrollment
+	 * @return the status of this Plan Enrollment
 	 */
 	@Override
 	public int getStatus() {
@@ -448,9 +448,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the status by user ID of this plan enrollment.
+	 * Returns the status by user ID of this Plan Enrollment.
 	 *
-	 * @return the status by user ID of this plan enrollment
+	 * @return the status by user ID of this Plan Enrollment
 	 */
 	@Override
 	public long getStatusByUserId() {
@@ -458,9 +458,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the status by user name of this plan enrollment.
+	 * Returns the status by user name of this Plan Enrollment.
 	 *
-	 * @return the status by user name of this plan enrollment
+	 * @return the status by user name of this Plan Enrollment
 	 */
 	@Override
 	public String getStatusByUserName() {
@@ -468,9 +468,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the status by user uuid of this plan enrollment.
+	 * Returns the status by user uuid of this Plan Enrollment.
 	 *
-	 * @return the status by user uuid of this plan enrollment
+	 * @return the status by user uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getStatusByUserUuid() {
@@ -478,9 +478,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the status date of this plan enrollment.
+	 * Returns the status date of this Plan Enrollment.
 	 *
-	 * @return the status date of this plan enrollment
+	 * @return the status date of this Plan Enrollment
 	 */
 	@Override
 	public Date getStatusDate() {
@@ -493,9 +493,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the class primary key of the trash entry for this plan enrollment.
+	 * Returns the class primary key of the trash entry for this Plan Enrollment.
 	 *
-	 * @return the class primary key of the trash entry for this plan enrollment
+	 * @return the class primary key of the trash entry for this Plan Enrollment
 	 */
 	@Override
 	public long getTrashEntryClassPK() {
@@ -503,9 +503,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the user ID of this plan enrollment.
+	 * Returns the user ID of this Plan Enrollment.
 	 *
-	 * @return the user ID of this plan enrollment
+	 * @return the user ID of this Plan Enrollment
 	 */
 	@Override
 	public long getUserId() {
@@ -513,9 +513,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the user name of this plan enrollment.
+	 * Returns the user name of this Plan Enrollment.
 	 *
-	 * @return the user name of this plan enrollment
+	 * @return the user name of this Plan Enrollment
 	 */
 	@Override
 	public String getUserName() {
@@ -523,9 +523,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the user uuid of this plan enrollment.
+	 * Returns the user uuid of this Plan Enrollment.
 	 *
-	 * @return the user uuid of this plan enrollment
+	 * @return the user uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getUserUuid() {
@@ -533,9 +533,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns the uuid of this plan enrollment.
+	 * Returns the uuid of this Plan Enrollment.
 	 *
-	 * @return the uuid of this plan enrollment
+	 * @return the uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getUuid() {
@@ -543,9 +543,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is approved.
+	 * Returns <code>true</code> if this Plan Enrollment is approved.
 	 *
-	 * @return <code>true</code> if this plan enrollment is approved; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is approved; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isApproved() {
@@ -553,9 +553,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is denied.
+	 * Returns <code>true</code> if this Plan Enrollment is denied.
 	 *
-	 * @return <code>true</code> if this plan enrollment is denied; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is denied; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDenied() {
@@ -563,9 +563,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is a draft.
+	 * Returns <code>true</code> if this Plan Enrollment is a draft.
 	 *
-	 * @return <code>true</code> if this plan enrollment is a draft; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is a draft; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDraft() {
@@ -573,9 +573,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is expired.
+	 * Returns <code>true</code> if this Plan Enrollment is expired.
 	 *
-	 * @return <code>true</code> if this plan enrollment is expired; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is expired; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isExpired() {
@@ -583,9 +583,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is inactive.
+	 * Returns <code>true</code> if this Plan Enrollment is inactive.
 	 *
-	 * @return <code>true</code> if this plan enrollment is inactive; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is inactive; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInactive() {
@@ -593,9 +593,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is incomplete.
+	 * Returns <code>true</code> if this Plan Enrollment is incomplete.
 	 *
-	 * @return <code>true</code> if this plan enrollment is incomplete; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is incomplete; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isIncomplete() {
@@ -603,9 +603,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is in the Recycle Bin.
+	 * Returns <code>true</code> if this Plan Enrollment is in the Recycle Bin.
 	 *
-	 * @return <code>true</code> if this plan enrollment is in the Recycle Bin; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is in the Recycle Bin; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInTrash() {
@@ -613,9 +613,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is pending.
+	 * Returns <code>true</code> if this Plan Enrollment is pending.
 	 *
-	 * @return <code>true</code> if this plan enrollment is pending; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is pending; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isPending() {
@@ -623,9 +623,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is scheduled.
+	 * Returns <code>true</code> if this Plan Enrollment is scheduled.
 	 *
-	 * @return <code>true</code> if this plan enrollment is scheduled; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is scheduled; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isScheduled() {
@@ -638,9 +638,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the company ID of this plan enrollment.
+	 * Sets the company ID of this Plan Enrollment.
 	 *
-	 * @param companyId the company ID of this plan enrollment
+	 * @param companyId the company ID of this Plan Enrollment
 	 */
 	@Override
 	public void setCompanyId(long companyId) {
@@ -648,9 +648,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the container model ID of this plan enrollment.
+	 * Sets the container model ID of this Plan Enrollment.
 	 *
-	 * @param containerModelId the container model ID of this plan enrollment
+	 * @param containerModelId the container model ID of this Plan Enrollment
 	 */
 	@Override
 	public void setContainerModelId(long containerModelId) {
@@ -658,9 +658,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the create date of this plan enrollment.
+	 * Sets the create date of this Plan Enrollment.
 	 *
-	 * @param createDate the create date of this plan enrollment
+	 * @param createDate the create date of this Plan Enrollment
 	 */
 	@Override
 	public void setCreateDate(Date createDate) {
@@ -668,9 +668,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the ct collection ID of this plan enrollment.
+	 * Sets the ct collection ID of this Plan Enrollment.
 	 *
-	 * @param ctCollectionId the ct collection ID of this plan enrollment
+	 * @param ctCollectionId the ct collection ID of this Plan Enrollment
 	 */
 	@Override
 	public void setCtCollectionId(long ctCollectionId) {
@@ -678,9 +678,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the end date of this plan enrollment.
+	 * Sets the end date of this Plan Enrollment.
 	 *
-	 * @param endDate the end date of this plan enrollment
+	 * @param endDate the end date of this Plan Enrollment
 	 */
 	@Override
 	public void setEndDate(Date endDate) {
@@ -688,9 +688,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the enrollment status of this plan enrollment.
+	 * Sets the enrollment status of this Plan Enrollment.
 	 *
-	 * @param enrollmentStatus the enrollment status of this plan enrollment
+	 * @param enrollmentStatus the enrollment status of this Plan Enrollment
 	 */
 	@Override
 	public void setEnrollmentStatus(int enrollmentStatus) {
@@ -698,9 +698,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the external reference code of this plan enrollment.
+	 * Sets the external reference code of this Plan Enrollment.
 	 *
-	 * @param externalReferenceCode the external reference code of this plan enrollment
+	 * @param externalReferenceCode the external reference code of this Plan Enrollment
 	 */
 	@Override
 	public void setExternalReferenceCode(String externalReferenceCode) {
@@ -708,9 +708,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the group ID of this plan enrollment.
+	 * Sets the group ID of this Plan Enrollment.
 	 *
-	 * @param groupId the group ID of this plan enrollment
+	 * @param groupId the group ID of this Plan Enrollment
 	 */
 	@Override
 	public void setGroupId(long groupId) {
@@ -718,9 +718,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the group number of this plan enrollment.
+	 * Sets the group number of this Plan Enrollment.
 	 *
-	 * @param groupNumber the group number of this plan enrollment
+	 * @param groupNumber the group number of this Plan Enrollment
 	 */
 	@Override
 	public void setGroupNumber(String groupNumber) {
@@ -728,9 +728,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the insurance plan ID of this plan enrollment.
+	 * Sets the insurance plan ID of this Plan Enrollment.
 	 *
-	 * @param insurancePlanId the insurance plan ID of this plan enrollment
+	 * @param insurancePlanId the insurance plan ID of this Plan Enrollment
 	 */
 	@Override
 	public void setInsurancePlanId(long insurancePlanId) {
@@ -738,9 +738,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the member ID of this plan enrollment.
+	 * Sets the member ID of this Plan Enrollment.
 	 *
-	 * @param memberId the member ID of this plan enrollment
+	 * @param memberId the member ID of this Plan Enrollment
 	 */
 	@Override
 	public void setMemberId(String memberId) {
@@ -748,9 +748,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the member user ID of this plan enrollment.
+	 * Sets the member user ID of this Plan Enrollment.
 	 *
-	 * @param memberUserId the member user ID of this plan enrollment
+	 * @param memberUserId the member user ID of this Plan Enrollment
 	 */
 	@Override
 	public void setMemberUserId(long memberUserId) {
@@ -758,9 +758,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the member user name of this plan enrollment.
+	 * Sets the member user name of this Plan Enrollment.
 	 *
-	 * @param memberUserName the member user name of this plan enrollment
+	 * @param memberUserName the member user name of this Plan Enrollment
 	 */
 	@Override
 	public void setMemberUserName(String memberUserName) {
@@ -768,9 +768,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the member user uuid of this plan enrollment.
+	 * Sets the member user uuid of this Plan Enrollment.
 	 *
-	 * @param memberUserUuid the member user uuid of this plan enrollment
+	 * @param memberUserUuid the member user uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setMemberUserUuid(String memberUserUuid) {
@@ -778,9 +778,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the modified date of this plan enrollment.
+	 * Sets the modified date of this Plan Enrollment.
 	 *
-	 * @param modifiedDate the modified date of this plan enrollment
+	 * @param modifiedDate the modified date of this Plan Enrollment
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate) {
@@ -788,9 +788,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the mvcc version of this plan enrollment.
+	 * Sets the mvcc version of this Plan Enrollment.
 	 *
-	 * @param mvccVersion the mvcc version of this plan enrollment
+	 * @param mvccVersion the mvcc version of this Plan Enrollment
 	 */
 	@Override
 	public void setMvccVersion(long mvccVersion) {
@@ -798,9 +798,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the notes of this plan enrollment.
+	 * Sets the notes of this Plan Enrollment.
 	 *
-	 * @param notes the notes of this plan enrollment
+	 * @param notes the notes of this Plan Enrollment
 	 */
 	@Override
 	public void setNotes(String notes) {
@@ -808,9 +808,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the parent container model ID of this plan enrollment.
+	 * Sets the parent container model ID of this Plan Enrollment.
 	 *
-	 * @param parentContainerModelId the parent container model ID of this plan enrollment
+	 * @param parentContainerModelId the parent container model ID of this Plan Enrollment
 	 */
 	@Override
 	public void setParentContainerModelId(long parentContainerModelId) {
@@ -818,9 +818,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the plan enrollment ID of this plan enrollment.
+	 * Sets the plan enrollment ID of this Plan Enrollment.
 	 *
-	 * @param planEnrollmentId the plan enrollment ID of this plan enrollment
+	 * @param planEnrollmentId the plan enrollment ID of this Plan Enrollment
 	 */
 	@Override
 	public void setPlanEnrollmentId(long planEnrollmentId) {
@@ -828,9 +828,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the primary key of this plan enrollment.
+	 * Sets the primary key of this Plan Enrollment.
 	 *
-	 * @param primaryKey the primary key of this plan enrollment
+	 * @param primaryKey the primary key of this Plan Enrollment
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey) {
@@ -838,9 +838,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the start date of this plan enrollment.
+	 * Sets the start date of this Plan Enrollment.
 	 *
-	 * @param startDate the start date of this plan enrollment
+	 * @param startDate the start date of this Plan Enrollment
 	 */
 	@Override
 	public void setStartDate(Date startDate) {
@@ -848,9 +848,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the status of this plan enrollment.
+	 * Sets the status of this Plan Enrollment.
 	 *
-	 * @param status the status of this plan enrollment
+	 * @param status the status of this Plan Enrollment
 	 */
 	@Override
 	public void setStatus(int status) {
@@ -858,9 +858,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the status by user ID of this plan enrollment.
+	 * Sets the status by user ID of this Plan Enrollment.
 	 *
-	 * @param statusByUserId the status by user ID of this plan enrollment
+	 * @param statusByUserId the status by user ID of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserId(long statusByUserId) {
@@ -868,9 +868,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the status by user name of this plan enrollment.
+	 * Sets the status by user name of this Plan Enrollment.
 	 *
-	 * @param statusByUserName the status by user name of this plan enrollment
+	 * @param statusByUserName the status by user name of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserName(String statusByUserName) {
@@ -878,9 +878,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the status by user uuid of this plan enrollment.
+	 * Sets the status by user uuid of this Plan Enrollment.
 	 *
-	 * @param statusByUserUuid the status by user uuid of this plan enrollment
+	 * @param statusByUserUuid the status by user uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserUuid(String statusByUserUuid) {
@@ -888,9 +888,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the status date of this plan enrollment.
+	 * Sets the status date of this Plan Enrollment.
 	 *
-	 * @param statusDate the status date of this plan enrollment
+	 * @param statusDate the status date of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusDate(Date statusDate) {
@@ -898,9 +898,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the user ID of this plan enrollment.
+	 * Sets the user ID of this Plan Enrollment.
 	 *
-	 * @param userId the user ID of this plan enrollment
+	 * @param userId the user ID of this Plan Enrollment
 	 */
 	@Override
 	public void setUserId(long userId) {
@@ -908,9 +908,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the user name of this plan enrollment.
+	 * Sets the user name of this Plan Enrollment.
 	 *
-	 * @param userName the user name of this plan enrollment
+	 * @param userName the user name of this Plan Enrollment
 	 */
 	@Override
 	public void setUserName(String userName) {
@@ -918,9 +918,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the user uuid of this plan enrollment.
+	 * Sets the user uuid of this Plan Enrollment.
 	 *
-	 * @param userUuid the user uuid of this plan enrollment
+	 * @param userUuid the user uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setUserUuid(String userUuid) {
@@ -928,9 +928,9 @@ public class PlanEnrollmentWrapper
 	}
 
 	/**
-	 * Sets the uuid of this plan enrollment.
+	 * Sets the uuid of this Plan Enrollment.
 	 *
-	 * @param uuid the uuid of this plan enrollment
+	 * @param uuid the uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setUuid(String uuid) {

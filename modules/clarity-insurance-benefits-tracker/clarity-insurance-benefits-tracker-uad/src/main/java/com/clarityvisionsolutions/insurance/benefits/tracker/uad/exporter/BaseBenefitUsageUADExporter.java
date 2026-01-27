@@ -16,7 +16,7 @@ import com.liferay.user.associated.data.exporter.DynamicQueryUADExporter;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * Provides the base implementation for the benefit usage UAD exporter.
+ * Provides the base implementation for the Benefit Usage UAD exporter.
  *
  * <p>
  * This implementation exists only as a container for the default methods

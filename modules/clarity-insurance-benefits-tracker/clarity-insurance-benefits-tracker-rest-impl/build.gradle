@@ -1,0 +1,8 @@
+dependencies {
+	api project(":modules:clarity-insurance-benefits-tracker:clarity-insurance-benefits-tracker-api")
+	api project(":modules:clarity-insurance-benefits-tracker:clarity-insurance-benefits-tracker-rest-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+group = "com.clarityvisionsolutions.insurance.benefits.tracker.rest"

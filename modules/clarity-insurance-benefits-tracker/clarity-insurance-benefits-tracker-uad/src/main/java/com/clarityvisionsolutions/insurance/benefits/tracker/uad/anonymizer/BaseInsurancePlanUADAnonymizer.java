@@ -19,7 +19,7 @@ import com.liferay.user.associated.data.anonymizer.DynamicQueryUADAnonymizer;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * Provides the base implementation for the insurance plan UAD anonymizer.
+ * Provides the base implementation for the Insurance Plan UAD anonymizer.
  *
  * <p>
  * This implementation exists only as a container for the default methods

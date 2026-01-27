@@ -41,559 +41,559 @@ public interface PlanEnrollmentModel
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this interface directly. All methods that expect a plan enrollment model instance should use the {@link PlanEnrollment} interface instead.
+	 * Never modify or reference this interface directly. All methods that expect a Plan Enrollment model instance should use the {@link PlanEnrollment} interface instead.
 	 */
 
 	/**
-	 * Returns the primary key of this plan enrollment.
+	 * Returns the primary key of this Plan Enrollment.
 	 *
-	 * @return the primary key of this plan enrollment
+	 * @return the primary key of this Plan Enrollment
 	 */
 	@Override
 	public long getPrimaryKey();
 
 	/**
-	 * Sets the primary key of this plan enrollment.
+	 * Sets the primary key of this Plan Enrollment.
 	 *
-	 * @param primaryKey the primary key of this plan enrollment
+	 * @param primaryKey the primary key of this Plan Enrollment
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey);
 
 	/**
-	 * Returns the mvcc version of this plan enrollment.
+	 * Returns the mvcc version of this Plan Enrollment.
 	 *
-	 * @return the mvcc version of this plan enrollment
+	 * @return the mvcc version of this Plan Enrollment
 	 */
 	@Override
 	public long getMvccVersion();
 
 	/**
-	 * Sets the mvcc version of this plan enrollment.
+	 * Sets the mvcc version of this Plan Enrollment.
 	 *
-	 * @param mvccVersion the mvcc version of this plan enrollment
+	 * @param mvccVersion the mvcc version of this Plan Enrollment
 	 */
 	@Override
 	public void setMvccVersion(long mvccVersion);
 
 	/**
-	 * Returns the ct collection ID of this plan enrollment.
+	 * Returns the ct collection ID of this Plan Enrollment.
 	 *
-	 * @return the ct collection ID of this plan enrollment
+	 * @return the ct collection ID of this Plan Enrollment
 	 */
 	@Override
 	public long getCtCollectionId();
 
 	/**
-	 * Sets the ct collection ID of this plan enrollment.
+	 * Sets the ct collection ID of this Plan Enrollment.
 	 *
-	 * @param ctCollectionId the ct collection ID of this plan enrollment
+	 * @param ctCollectionId the ct collection ID of this Plan Enrollment
 	 */
 	@Override
 	public void setCtCollectionId(long ctCollectionId);
 
 	/**
-	 * Returns the uuid of this plan enrollment.
+	 * Returns the uuid of this Plan Enrollment.
 	 *
-	 * @return the uuid of this plan enrollment
+	 * @return the uuid of this Plan Enrollment
 	 */
 	@AutoEscape
 	@Override
 	public String getUuid();
 
 	/**
-	 * Sets the uuid of this plan enrollment.
+	 * Sets the uuid of this Plan Enrollment.
 	 *
-	 * @param uuid the uuid of this plan enrollment
+	 * @param uuid the uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setUuid(String uuid);
 
 	/**
-	 * Returns the external reference code of this plan enrollment.
+	 * Returns the external reference code of this Plan Enrollment.
 	 *
-	 * @return the external reference code of this plan enrollment
+	 * @return the external reference code of this Plan Enrollment
 	 */
 	@AutoEscape
 	@Override
 	public String getExternalReferenceCode();
 
 	/**
-	 * Sets the external reference code of this plan enrollment.
+	 * Sets the external reference code of this Plan Enrollment.
 	 *
-	 * @param externalReferenceCode the external reference code of this plan enrollment
+	 * @param externalReferenceCode the external reference code of this Plan Enrollment
 	 */
 	@Override
 	public void setExternalReferenceCode(String externalReferenceCode);
 
 	/**
-	 * Returns the plan enrollment ID of this plan enrollment.
+	 * Returns the plan enrollment ID of this Plan Enrollment.
 	 *
-	 * @return the plan enrollment ID of this plan enrollment
+	 * @return the plan enrollment ID of this Plan Enrollment
 	 */
 	public long getPlanEnrollmentId();
 
 	/**
-	 * Sets the plan enrollment ID of this plan enrollment.
+	 * Sets the plan enrollment ID of this Plan Enrollment.
 	 *
-	 * @param planEnrollmentId the plan enrollment ID of this plan enrollment
+	 * @param planEnrollmentId the plan enrollment ID of this Plan Enrollment
 	 */
 	public void setPlanEnrollmentId(long planEnrollmentId);
 
 	/**
-	 * Returns the group ID of this plan enrollment.
+	 * Returns the group ID of this Plan Enrollment.
 	 *
-	 * @return the group ID of this plan enrollment
+	 * @return the group ID of this Plan Enrollment
 	 */
 	@Override
 	public long getGroupId();
 
 	/**
-	 * Sets the group ID of this plan enrollment.
+	 * Sets the group ID of this Plan Enrollment.
 	 *
-	 * @param groupId the group ID of this plan enrollment
+	 * @param groupId the group ID of this Plan Enrollment
 	 */
 	@Override
 	public void setGroupId(long groupId);
 
 	/**
-	 * Returns the company ID of this plan enrollment.
+	 * Returns the company ID of this Plan Enrollment.
 	 *
-	 * @return the company ID of this plan enrollment
+	 * @return the company ID of this Plan Enrollment
 	 */
 	@Override
 	public long getCompanyId();
 
 	/**
-	 * Sets the company ID of this plan enrollment.
+	 * Sets the company ID of this Plan Enrollment.
 	 *
-	 * @param companyId the company ID of this plan enrollment
+	 * @param companyId the company ID of this Plan Enrollment
 	 */
 	@Override
 	public void setCompanyId(long companyId);
 
 	/**
-	 * Returns the user ID of this plan enrollment.
+	 * Returns the user ID of this Plan Enrollment.
 	 *
-	 * @return the user ID of this plan enrollment
+	 * @return the user ID of this Plan Enrollment
 	 */
 	@Override
 	public long getUserId();
 
 	/**
-	 * Sets the user ID of this plan enrollment.
+	 * Sets the user ID of this Plan Enrollment.
 	 *
-	 * @param userId the user ID of this plan enrollment
+	 * @param userId the user ID of this Plan Enrollment
 	 */
 	@Override
 	public void setUserId(long userId);
 
 	/**
-	 * Returns the user uuid of this plan enrollment.
+	 * Returns the user uuid of this Plan Enrollment.
 	 *
-	 * @return the user uuid of this plan enrollment
+	 * @return the user uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getUserUuid();
 
 	/**
-	 * Sets the user uuid of this plan enrollment.
+	 * Sets the user uuid of this Plan Enrollment.
 	 *
-	 * @param userUuid the user uuid of this plan enrollment
+	 * @param userUuid the user uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setUserUuid(String userUuid);
 
 	/**
-	 * Returns the user name of this plan enrollment.
+	 * Returns the user name of this Plan Enrollment.
 	 *
-	 * @return the user name of this plan enrollment
+	 * @return the user name of this Plan Enrollment
 	 */
 	@AutoEscape
 	@Override
 	public String getUserName();
 
 	/**
-	 * Sets the user name of this plan enrollment.
+	 * Sets the user name of this Plan Enrollment.
 	 *
-	 * @param userName the user name of this plan enrollment
+	 * @param userName the user name of this Plan Enrollment
 	 */
 	@Override
 	public void setUserName(String userName);
 
 	/**
-	 * Returns the create date of this plan enrollment.
+	 * Returns the create date of this Plan Enrollment.
 	 *
-	 * @return the create date of this plan enrollment
+	 * @return the create date of this Plan Enrollment
 	 */
 	@Override
 	public Date getCreateDate();
 
 	/**
-	 * Sets the create date of this plan enrollment.
+	 * Sets the create date of this Plan Enrollment.
 	 *
-	 * @param createDate the create date of this plan enrollment
+	 * @param createDate the create date of this Plan Enrollment
 	 */
 	@Override
 	public void setCreateDate(Date createDate);
 
 	/**
-	 * Returns the modified date of this plan enrollment.
+	 * Returns the modified date of this Plan Enrollment.
 	 *
-	 * @return the modified date of this plan enrollment
+	 * @return the modified date of this Plan Enrollment
 	 */
 	@Override
 	public Date getModifiedDate();
 
 	/**
-	 * Sets the modified date of this plan enrollment.
+	 * Sets the modified date of this Plan Enrollment.
 	 *
-	 * @param modifiedDate the modified date of this plan enrollment
+	 * @param modifiedDate the modified date of this Plan Enrollment
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate);
 
 	/**
-	 * Returns the insurance plan ID of this plan enrollment.
+	 * Returns the insurance plan ID of this Plan Enrollment.
 	 *
-	 * @return the insurance plan ID of this plan enrollment
+	 * @return the insurance plan ID of this Plan Enrollment
 	 */
 	public long getInsurancePlanId();
 
 	/**
-	 * Sets the insurance plan ID of this plan enrollment.
+	 * Sets the insurance plan ID of this Plan Enrollment.
 	 *
-	 * @param insurancePlanId the insurance plan ID of this plan enrollment
+	 * @param insurancePlanId the insurance plan ID of this Plan Enrollment
 	 */
 	public void setInsurancePlanId(long insurancePlanId);
 
 	/**
-	 * Returns the member user ID of this plan enrollment.
+	 * Returns the member user ID of this Plan Enrollment.
 	 *
-	 * @return the member user ID of this plan enrollment
+	 * @return the member user ID of this Plan Enrollment
 	 */
 	public long getMemberUserId();
 
 	/**
-	 * Sets the member user ID of this plan enrollment.
+	 * Sets the member user ID of this Plan Enrollment.
 	 *
-	 * @param memberUserId the member user ID of this plan enrollment
+	 * @param memberUserId the member user ID of this Plan Enrollment
 	 */
 	public void setMemberUserId(long memberUserId);
 
 	/**
-	 * Returns the member user uuid of this plan enrollment.
+	 * Returns the member user uuid of this Plan Enrollment.
 	 *
-	 * @return the member user uuid of this plan enrollment
+	 * @return the member user uuid of this Plan Enrollment
 	 */
 	public String getMemberUserUuid();
 
 	/**
-	 * Sets the member user uuid of this plan enrollment.
+	 * Sets the member user uuid of this Plan Enrollment.
 	 *
-	 * @param memberUserUuid the member user uuid of this plan enrollment
+	 * @param memberUserUuid the member user uuid of this Plan Enrollment
 	 */
 	public void setMemberUserUuid(String memberUserUuid);
 
 	/**
-	 * Returns the member user name of this plan enrollment.
+	 * Returns the member user name of this Plan Enrollment.
 	 *
-	 * @return the member user name of this plan enrollment
+	 * @return the member user name of this Plan Enrollment
 	 */
 	@AutoEscape
 	public String getMemberUserName();
 
 	/**
-	 * Sets the member user name of this plan enrollment.
+	 * Sets the member user name of this Plan Enrollment.
 	 *
-	 * @param memberUserName the member user name of this plan enrollment
+	 * @param memberUserName the member user name of this Plan Enrollment
 	 */
 	public void setMemberUserName(String memberUserName);
 
 	/**
-	 * Returns the member ID of this plan enrollment.
+	 * Returns the member ID of this Plan Enrollment.
 	 *
-	 * @return the member ID of this plan enrollment
+	 * @return the member ID of this Plan Enrollment
 	 */
 	@AutoEscape
 	public String getMemberId();
 
 	/**
-	 * Sets the member ID of this plan enrollment.
+	 * Sets the member ID of this Plan Enrollment.
 	 *
-	 * @param memberId the member ID of this plan enrollment
+	 * @param memberId the member ID of this Plan Enrollment
 	 */
 	public void setMemberId(String memberId);
 
 	/**
-	 * Returns the group number of this plan enrollment.
+	 * Returns the group number of this Plan Enrollment.
 	 *
-	 * @return the group number of this plan enrollment
+	 * @return the group number of this Plan Enrollment
 	 */
 	@AutoEscape
 	public String getGroupNumber();
 
 	/**
-	 * Sets the group number of this plan enrollment.
+	 * Sets the group number of this Plan Enrollment.
 	 *
-	 * @param groupNumber the group number of this plan enrollment
+	 * @param groupNumber the group number of this Plan Enrollment
 	 */
 	public void setGroupNumber(String groupNumber);
 
 	/**
-	 * Returns the start date of this plan enrollment.
+	 * Returns the start date of this Plan Enrollment.
 	 *
-	 * @return the start date of this plan enrollment
+	 * @return the start date of this Plan Enrollment
 	 */
 	public Date getStartDate();
 
 	/**
-	 * Sets the start date of this plan enrollment.
+	 * Sets the start date of this Plan Enrollment.
 	 *
-	 * @param startDate the start date of this plan enrollment
+	 * @param startDate the start date of this Plan Enrollment
 	 */
 	public void setStartDate(Date startDate);
 
 	/**
-	 * Returns the end date of this plan enrollment.
+	 * Returns the end date of this Plan Enrollment.
 	 *
-	 * @return the end date of this plan enrollment
+	 * @return the end date of this Plan Enrollment
 	 */
 	public Date getEndDate();
 
 	/**
-	 * Sets the end date of this plan enrollment.
+	 * Sets the end date of this Plan Enrollment.
 	 *
-	 * @param endDate the end date of this plan enrollment
+	 * @param endDate the end date of this Plan Enrollment
 	 */
 	public void setEndDate(Date endDate);
 
 	/**
-	 * Returns the enrollment status of this plan enrollment.
+	 * Returns the enrollment status of this Plan Enrollment.
 	 *
-	 * @return the enrollment status of this plan enrollment
+	 * @return the enrollment status of this Plan Enrollment
 	 */
 	public int getEnrollmentStatus();
 
 	/**
-	 * Sets the enrollment status of this plan enrollment.
+	 * Sets the enrollment status of this Plan Enrollment.
 	 *
-	 * @param enrollmentStatus the enrollment status of this plan enrollment
+	 * @param enrollmentStatus the enrollment status of this Plan Enrollment
 	 */
 	public void setEnrollmentStatus(int enrollmentStatus);
 
 	/**
-	 * Returns the notes of this plan enrollment.
+	 * Returns the notes of this Plan Enrollment.
 	 *
-	 * @return the notes of this plan enrollment
+	 * @return the notes of this Plan Enrollment
 	 */
 	@AutoEscape
 	public String getNotes();
 
 	/**
-	 * Sets the notes of this plan enrollment.
+	 * Sets the notes of this Plan Enrollment.
 	 *
-	 * @param notes the notes of this plan enrollment
+	 * @param notes the notes of this Plan Enrollment
 	 */
 	public void setNotes(String notes);
 
 	/**
-	 * Returns the status of this plan enrollment.
+	 * Returns the status of this Plan Enrollment.
 	 *
-	 * @return the status of this plan enrollment
+	 * @return the status of this Plan Enrollment
 	 */
 	@Override
 	public int getStatus();
 
 	/**
-	 * Sets the status of this plan enrollment.
+	 * Sets the status of this Plan Enrollment.
 	 *
-	 * @param status the status of this plan enrollment
+	 * @param status the status of this Plan Enrollment
 	 */
 	@Override
 	public void setStatus(int status);
 
 	/**
-	 * Returns the status by user ID of this plan enrollment.
+	 * Returns the status by user ID of this Plan Enrollment.
 	 *
-	 * @return the status by user ID of this plan enrollment
+	 * @return the status by user ID of this Plan Enrollment
 	 */
 	@Override
 	public long getStatusByUserId();
 
 	/**
-	 * Sets the status by user ID of this plan enrollment.
+	 * Sets the status by user ID of this Plan Enrollment.
 	 *
-	 * @param statusByUserId the status by user ID of this plan enrollment
+	 * @param statusByUserId the status by user ID of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserId(long statusByUserId);
 
 	/**
-	 * Returns the status by user uuid of this plan enrollment.
+	 * Returns the status by user uuid of this Plan Enrollment.
 	 *
-	 * @return the status by user uuid of this plan enrollment
+	 * @return the status by user uuid of this Plan Enrollment
 	 */
 	@Override
 	public String getStatusByUserUuid();
 
 	/**
-	 * Sets the status by user uuid of this plan enrollment.
+	 * Sets the status by user uuid of this Plan Enrollment.
 	 *
-	 * @param statusByUserUuid the status by user uuid of this plan enrollment
+	 * @param statusByUserUuid the status by user uuid of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserUuid(String statusByUserUuid);
 
 	/**
-	 * Returns the status by user name of this plan enrollment.
+	 * Returns the status by user name of this Plan Enrollment.
 	 *
-	 * @return the status by user name of this plan enrollment
+	 * @return the status by user name of this Plan Enrollment
 	 */
 	@AutoEscape
 	@Override
 	public String getStatusByUserName();
 
 	/**
-	 * Sets the status by user name of this plan enrollment.
+	 * Sets the status by user name of this Plan Enrollment.
 	 *
-	 * @param statusByUserName the status by user name of this plan enrollment
+	 * @param statusByUserName the status by user name of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusByUserName(String statusByUserName);
 
 	/**
-	 * Returns the status date of this plan enrollment.
+	 * Returns the status date of this Plan Enrollment.
 	 *
-	 * @return the status date of this plan enrollment
+	 * @return the status date of this Plan Enrollment
 	 */
 	@Override
 	public Date getStatusDate();
 
 	/**
-	 * Sets the status date of this plan enrollment.
+	 * Sets the status date of this Plan Enrollment.
 	 *
-	 * @param statusDate the status date of this plan enrollment
+	 * @param statusDate the status date of this Plan Enrollment
 	 */
 	@Override
 	public void setStatusDate(Date statusDate);
 
 	/**
-	 * Returns the class primary key of the trash entry for this plan enrollment.
+	 * Returns the class primary key of the trash entry for this Plan Enrollment.
 	 *
-	 * @return the class primary key of the trash entry for this plan enrollment
+	 * @return the class primary key of the trash entry for this Plan Enrollment
 	 */
 	@Override
 	public long getTrashEntryClassPK();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is in the Recycle Bin.
+	 * Returns <code>true</code> if this Plan Enrollment is in the Recycle Bin.
 	 *
-	 * @return <code>true</code> if this plan enrollment is in the Recycle Bin; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is in the Recycle Bin; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInTrash();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is approved.
+	 * Returns <code>true</code> if this Plan Enrollment is approved.
 	 *
-	 * @return <code>true</code> if this plan enrollment is approved; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is approved; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isApproved();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is denied.
+	 * Returns <code>true</code> if this Plan Enrollment is denied.
 	 *
-	 * @return <code>true</code> if this plan enrollment is denied; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is denied; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDenied();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is a draft.
+	 * Returns <code>true</code> if this Plan Enrollment is a draft.
 	 *
-	 * @return <code>true</code> if this plan enrollment is a draft; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is a draft; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDraft();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is expired.
+	 * Returns <code>true</code> if this Plan Enrollment is expired.
 	 *
-	 * @return <code>true</code> if this plan enrollment is expired; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is expired; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isExpired();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is inactive.
+	 * Returns <code>true</code> if this Plan Enrollment is inactive.
 	 *
-	 * @return <code>true</code> if this plan enrollment is inactive; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is inactive; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInactive();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is incomplete.
+	 * Returns <code>true</code> if this Plan Enrollment is incomplete.
 	 *
-	 * @return <code>true</code> if this plan enrollment is incomplete; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is incomplete; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isIncomplete();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is pending.
+	 * Returns <code>true</code> if this Plan Enrollment is pending.
 	 *
-	 * @return <code>true</code> if this plan enrollment is pending; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is pending; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isPending();
 
 	/**
-	 * Returns <code>true</code> if this plan enrollment is scheduled.
+	 * Returns <code>true</code> if this Plan Enrollment is scheduled.
 	 *
-	 * @return <code>true</code> if this plan enrollment is scheduled; <code>false</code> otherwise
+	 * @return <code>true</code> if this Plan Enrollment is scheduled; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isScheduled();
 
 	/**
-	 * Returns the container model ID of this plan enrollment.
+	 * Returns the container model ID of this Plan Enrollment.
 	 *
-	 * @return the container model ID of this plan enrollment
+	 * @return the container model ID of this Plan Enrollment
 	 */
 	@Override
 	public long getContainerModelId();
 
 	/**
-	 * Sets the container model ID of this plan enrollment.
+	 * Sets the container model ID of this Plan Enrollment.
 	 *
-	 * @param containerModelId the container model ID of this plan enrollment
+	 * @param containerModelId the container model ID of this Plan Enrollment
 	 */
 	@Override
 	public void setContainerModelId(long containerModelId);
 
 	/**
-	 * Returns the container name of this plan enrollment.
+	 * Returns the container name of this Plan Enrollment.
 	 *
-	 * @return the container name of this plan enrollment
+	 * @return the container name of this Plan Enrollment
 	 */
 	@Override
 	public String getContainerModelName();
 
 	/**
-	 * Returns the parent container model ID of this plan enrollment.
+	 * Returns the parent container model ID of this Plan Enrollment.
 	 *
-	 * @return the parent container model ID of this plan enrollment
+	 * @return the parent container model ID of this Plan Enrollment
 	 */
 	@Override
 	public long getParentContainerModelId();
 
 	/**
-	 * Sets the parent container model ID of this plan enrollment.
+	 * Sets the parent container model ID of this Plan Enrollment.
 	 *
-	 * @param parentContainerModelId the parent container model ID of this plan enrollment
+	 * @param parentContainerModelId the parent container model ID of this Plan Enrollment
 	 */
 	@Override
 	public void setParentContainerModelId(long parentContainerModelId);

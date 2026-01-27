@@ -5,6 +5,7 @@
 
 package com.clarityvisionsolutions.insurance.benefits.tracker.service.impl;
 
+import com.clarityvisionsolutions.insurance.benefits.tracker.model.BenefitUsage;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.PlanEnrollmentLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.base.InsurancePlanLocalServiceBaseImpl;
 
@@ -241,6 +242,21 @@ public class InsurancePlanLocalServiceImpl extends InsurancePlanLocalServiceBase
 		});
 
 		adq.performActions();
+	}
+
+	@Override
+	public InsurancePlan getInsurancePlanByExternalReferenceCode(final String externalReferenceCode) {
+		DynamicQuery dq = insurancePlanLocalService.dynamicQuery();
+
+		dq.add(RestrictionsFactoryUtil.eq("externalReferenceCode", externalReferenceCode));
+
+		List<InsurancePlan> results = insurancePlanPersistence.findWithDynamicQuery(dq);
+
+		if (results.size() > 0) {
+			return results.get(0);
+		}
+
+		return null;
 	}
 
 	@Override

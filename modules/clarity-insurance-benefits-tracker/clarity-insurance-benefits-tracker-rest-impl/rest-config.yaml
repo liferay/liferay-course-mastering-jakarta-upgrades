@@ -1,0 +1,11 @@
+apiDir: "../clarity-insurance-benefits-tracker-rest-api/src/main/java"
+apiPackagePath: "com.clarityvisionsolutions.insurance.benefits.tracker.rest"
+application:
+    baseURI: "/clarity-insurance-benefits-tracker-rest"
+    className: "ClarityInsuranceBenefitsTrackerRestApplication"
+    name: "ClarityInsuranceBenefitsTrackerRest"
+author: "dnebinger"
+clientDir: "../clarity-insurance-benefits-tracker-rest-client/src/main/java"
+compatibilityVersion: 6
+forcePredictableOperationId: true
+testDir: "../clarity-insurance-benefits-tracker-rest-test/src/testIntegration/java"

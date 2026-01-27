@@ -40,492 +40,492 @@ public interface BenefitUsageModel
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this interface directly. All methods that expect a benefit usage model instance should use the {@link BenefitUsage} interface instead.
+	 * Never modify or reference this interface directly. All methods that expect a Benefit Usage model instance should use the {@link BenefitUsage} interface instead.
 	 */
 
 	/**
-	 * Returns the primary key of this benefit usage.
+	 * Returns the primary key of this Benefit Usage.
 	 *
-	 * @return the primary key of this benefit usage
+	 * @return the primary key of this Benefit Usage
 	 */
 	@Override
 	public long getPrimaryKey();
 
 	/**
-	 * Sets the primary key of this benefit usage.
+	 * Sets the primary key of this Benefit Usage.
 	 *
-	 * @param primaryKey the primary key of this benefit usage
+	 * @param primaryKey the primary key of this Benefit Usage
 	 */
 	@Override
 	public void setPrimaryKey(long primaryKey);
 
 	/**
-	 * Returns the mvcc version of this benefit usage.
+	 * Returns the mvcc version of this Benefit Usage.
 	 *
-	 * @return the mvcc version of this benefit usage
+	 * @return the mvcc version of this Benefit Usage
 	 */
 	@Override
 	public long getMvccVersion();
 
 	/**
-	 * Sets the mvcc version of this benefit usage.
+	 * Sets the mvcc version of this Benefit Usage.
 	 *
-	 * @param mvccVersion the mvcc version of this benefit usage
+	 * @param mvccVersion the mvcc version of this Benefit Usage
 	 */
 	@Override
 	public void setMvccVersion(long mvccVersion);
 
 	/**
-	 * Returns the ct collection ID of this benefit usage.
+	 * Returns the ct collection ID of this Benefit Usage.
 	 *
-	 * @return the ct collection ID of this benefit usage
+	 * @return the ct collection ID of this Benefit Usage
 	 */
 	@Override
 	public long getCtCollectionId();
 
 	/**
-	 * Sets the ct collection ID of this benefit usage.
+	 * Sets the ct collection ID of this Benefit Usage.
 	 *
-	 * @param ctCollectionId the ct collection ID of this benefit usage
+	 * @param ctCollectionId the ct collection ID of this Benefit Usage
 	 */
 	@Override
 	public void setCtCollectionId(long ctCollectionId);
 
 	/**
-	 * Returns the uuid of this benefit usage.
+	 * Returns the uuid of this Benefit Usage.
 	 *
-	 * @return the uuid of this benefit usage
+	 * @return the uuid of this Benefit Usage
 	 */
 	@AutoEscape
 	@Override
 	public String getUuid();
 
 	/**
-	 * Sets the uuid of this benefit usage.
+	 * Sets the uuid of this Benefit Usage.
 	 *
-	 * @param uuid the uuid of this benefit usage
+	 * @param uuid the uuid of this Benefit Usage
 	 */
 	@Override
 	public void setUuid(String uuid);
 
 	/**
-	 * Returns the external reference code of this benefit usage.
+	 * Returns the external reference code of this Benefit Usage.
 	 *
-	 * @return the external reference code of this benefit usage
+	 * @return the external reference code of this Benefit Usage
 	 */
 	@AutoEscape
 	@Override
 	public String getExternalReferenceCode();
 
 	/**
-	 * Sets the external reference code of this benefit usage.
+	 * Sets the external reference code of this Benefit Usage.
 	 *
-	 * @param externalReferenceCode the external reference code of this benefit usage
+	 * @param externalReferenceCode the external reference code of this Benefit Usage
 	 */
 	@Override
 	public void setExternalReferenceCode(String externalReferenceCode);
 
 	/**
-	 * Returns the benefit usage ID of this benefit usage.
+	 * Returns the benefit usage ID of this Benefit Usage.
 	 *
-	 * @return the benefit usage ID of this benefit usage
+	 * @return the benefit usage ID of this Benefit Usage
 	 */
 	public long getBenefitUsageId();
 
 	/**
-	 * Sets the benefit usage ID of this benefit usage.
+	 * Sets the benefit usage ID of this Benefit Usage.
 	 *
-	 * @param benefitUsageId the benefit usage ID of this benefit usage
+	 * @param benefitUsageId the benefit usage ID of this Benefit Usage
 	 */
 	public void setBenefitUsageId(long benefitUsageId);
 
 	/**
-	 * Returns the group ID of this benefit usage.
+	 * Returns the group ID of this Benefit Usage.
 	 *
-	 * @return the group ID of this benefit usage
+	 * @return the group ID of this Benefit Usage
 	 */
 	@Override
 	public long getGroupId();
 
 	/**
-	 * Sets the group ID of this benefit usage.
+	 * Sets the group ID of this Benefit Usage.
 	 *
-	 * @param groupId the group ID of this benefit usage
+	 * @param groupId the group ID of this Benefit Usage
 	 */
 	@Override
 	public void setGroupId(long groupId);
 
 	/**
-	 * Returns the company ID of this benefit usage.
+	 * Returns the company ID of this Benefit Usage.
 	 *
-	 * @return the company ID of this benefit usage
+	 * @return the company ID of this Benefit Usage
 	 */
 	@Override
 	public long getCompanyId();
 
 	/**
-	 * Sets the company ID of this benefit usage.
+	 * Sets the company ID of this Benefit Usage.
 	 *
-	 * @param companyId the company ID of this benefit usage
+	 * @param companyId the company ID of this Benefit Usage
 	 */
 	@Override
 	public void setCompanyId(long companyId);
 
 	/**
-	 * Returns the user ID of this benefit usage.
+	 * Returns the user ID of this Benefit Usage.
 	 *
-	 * @return the user ID of this benefit usage
+	 * @return the user ID of this Benefit Usage
 	 */
 	@Override
 	public long getUserId();
 
 	/**
-	 * Sets the user ID of this benefit usage.
+	 * Sets the user ID of this Benefit Usage.
 	 *
-	 * @param userId the user ID of this benefit usage
+	 * @param userId the user ID of this Benefit Usage
 	 */
 	@Override
 	public void setUserId(long userId);
 
 	/**
-	 * Returns the user uuid of this benefit usage.
+	 * Returns the user uuid of this Benefit Usage.
 	 *
-	 * @return the user uuid of this benefit usage
+	 * @return the user uuid of this Benefit Usage
 	 */
 	@Override
 	public String getUserUuid();
 
 	/**
-	 * Sets the user uuid of this benefit usage.
+	 * Sets the user uuid of this Benefit Usage.
 	 *
-	 * @param userUuid the user uuid of this benefit usage
+	 * @param userUuid the user uuid of this Benefit Usage
 	 */
 	@Override
 	public void setUserUuid(String userUuid);
 
 	/**
-	 * Returns the user name of this benefit usage.
+	 * Returns the user name of this Benefit Usage.
 	 *
-	 * @return the user name of this benefit usage
+	 * @return the user name of this Benefit Usage
 	 */
 	@AutoEscape
 	@Override
 	public String getUserName();
 
 	/**
-	 * Sets the user name of this benefit usage.
+	 * Sets the user name of this Benefit Usage.
 	 *
-	 * @param userName the user name of this benefit usage
+	 * @param userName the user name of this Benefit Usage
 	 */
 	@Override
 	public void setUserName(String userName);
 
 	/**
-	 * Returns the create date of this benefit usage.
+	 * Returns the create date of this Benefit Usage.
 	 *
-	 * @return the create date of this benefit usage
+	 * @return the create date of this Benefit Usage
 	 */
 	@Override
 	public Date getCreateDate();
 
 	/**
-	 * Sets the create date of this benefit usage.
+	 * Sets the create date of this Benefit Usage.
 	 *
-	 * @param createDate the create date of this benefit usage
+	 * @param createDate the create date of this Benefit Usage
 	 */
 	@Override
 	public void setCreateDate(Date createDate);
 
 	/**
-	 * Returns the modified date of this benefit usage.
+	 * Returns the modified date of this Benefit Usage.
 	 *
-	 * @return the modified date of this benefit usage
+	 * @return the modified date of this Benefit Usage
 	 */
 	@Override
 	public Date getModifiedDate();
 
 	/**
-	 * Sets the modified date of this benefit usage.
+	 * Sets the modified date of this Benefit Usage.
 	 *
-	 * @param modifiedDate the modified date of this benefit usage
+	 * @param modifiedDate the modified date of this Benefit Usage
 	 */
 	@Override
 	public void setModifiedDate(Date modifiedDate);
 
 	/**
-	 * Returns the plan enrollment ID of this benefit usage.
+	 * Returns the plan enrollment ID of this Benefit Usage.
 	 *
-	 * @return the plan enrollment ID of this benefit usage
+	 * @return the plan enrollment ID of this Benefit Usage
 	 */
 	public long getPlanEnrollmentId();
 
 	/**
-	 * Sets the plan enrollment ID of this benefit usage.
+	 * Sets the plan enrollment ID of this Benefit Usage.
 	 *
-	 * @param planEnrollmentId the plan enrollment ID of this benefit usage
+	 * @param planEnrollmentId the plan enrollment ID of this Benefit Usage
 	 */
 	public void setPlanEnrollmentId(long planEnrollmentId);
 
 	/**
-	 * Returns the benefit type of this benefit usage.
+	 * Returns the benefit type of this Benefit Usage.
 	 *
-	 * @return the benefit type of this benefit usage
+	 * @return the benefit type of this Benefit Usage
 	 */
 	@AutoEscape
 	public String getBenefitType();
 
 	/**
-	 * Sets the benefit type of this benefit usage.
+	 * Sets the benefit type of this Benefit Usage.
 	 *
-	 * @param benefitType the benefit type of this benefit usage
+	 * @param benefitType the benefit type of this Benefit Usage
 	 */
 	public void setBenefitType(String benefitType);
 
 	/**
-	 * Returns the amount used cents of this benefit usage.
+	 * Returns the amount used cents of this Benefit Usage.
 	 *
-	 * @return the amount used cents of this benefit usage
+	 * @return the amount used cents of this Benefit Usage
 	 */
 	public long getAmountUsedCents();
 
 	/**
-	 * Sets the amount used cents of this benefit usage.
+	 * Sets the amount used cents of this Benefit Usage.
 	 *
-	 * @param amountUsedCents the amount used cents of this benefit usage
+	 * @param amountUsedCents the amount used cents of this Benefit Usage
 	 */
 	public void setAmountUsedCents(long amountUsedCents);
 
 	/**
-	 * Returns the service date of this benefit usage.
+	 * Returns the service date of this Benefit Usage.
 	 *
-	 * @return the service date of this benefit usage
+	 * @return the service date of this Benefit Usage
 	 */
 	public Date getServiceDate();
 
 	/**
-	 * Sets the service date of this benefit usage.
+	 * Sets the service date of this Benefit Usage.
 	 *
-	 * @param serviceDate the service date of this benefit usage
+	 * @param serviceDate the service date of this Benefit Usage
 	 */
 	public void setServiceDate(Date serviceDate);
 
 	/**
-	 * Returns the reference of this benefit usage.
+	 * Returns the reference of this Benefit Usage.
 	 *
-	 * @return the reference of this benefit usage
+	 * @return the reference of this Benefit Usage
 	 */
 	@AutoEscape
 	public String getReference();
 
 	/**
-	 * Sets the reference of this benefit usage.
+	 * Sets the reference of this Benefit Usage.
 	 *
-	 * @param reference the reference of this benefit usage
+	 * @param reference the reference of this Benefit Usage
 	 */
 	public void setReference(String reference);
 
 	/**
-	 * Returns the notes of this benefit usage.
+	 * Returns the notes of this Benefit Usage.
 	 *
-	 * @return the notes of this benefit usage
+	 * @return the notes of this Benefit Usage
 	 */
 	@AutoEscape
 	public String getNotes();
 
 	/**
-	 * Sets the notes of this benefit usage.
+	 * Sets the notes of this Benefit Usage.
 	 *
-	 * @param notes the notes of this benefit usage
+	 * @param notes the notes of this Benefit Usage
 	 */
 	public void setNotes(String notes);
 
 	/**
-	 * Returns the source type of this benefit usage.
+	 * Returns the source type of this Benefit Usage.
 	 *
-	 * @return the source type of this benefit usage
+	 * @return the source type of this Benefit Usage
 	 */
 	@AutoEscape
 	public String getSourceType();
 
 	/**
-	 * Sets the source type of this benefit usage.
+	 * Sets the source type of this Benefit Usage.
 	 *
-	 * @param sourceType the source type of this benefit usage
+	 * @param sourceType the source type of this Benefit Usage
 	 */
 	public void setSourceType(String sourceType);
 
 	/**
-	 * Returns the source reference of this benefit usage.
+	 * Returns the source reference of this Benefit Usage.
 	 *
-	 * @return the source reference of this benefit usage
+	 * @return the source reference of this Benefit Usage
 	 */
 	@AutoEscape
 	public String getSourceReference();
 
 	/**
-	 * Sets the source reference of this benefit usage.
+	 * Sets the source reference of this Benefit Usage.
 	 *
-	 * @param sourceReference the source reference of this benefit usage
+	 * @param sourceReference the source reference of this Benefit Usage
 	 */
 	public void setSourceReference(String sourceReference);
 
 	/**
-	 * Returns the status of this benefit usage.
+	 * Returns the status of this Benefit Usage.
 	 *
-	 * @return the status of this benefit usage
+	 * @return the status of this Benefit Usage
 	 */
 	@Override
 	public int getStatus();
 
 	/**
-	 * Sets the status of this benefit usage.
+	 * Sets the status of this Benefit Usage.
 	 *
-	 * @param status the status of this benefit usage
+	 * @param status the status of this Benefit Usage
 	 */
 	@Override
 	public void setStatus(int status);
 
 	/**
-	 * Returns the status by user ID of this benefit usage.
+	 * Returns the status by user ID of this Benefit Usage.
 	 *
-	 * @return the status by user ID of this benefit usage
+	 * @return the status by user ID of this Benefit Usage
 	 */
 	@Override
 	public long getStatusByUserId();
 
 	/**
-	 * Sets the status by user ID of this benefit usage.
+	 * Sets the status by user ID of this Benefit Usage.
 	 *
-	 * @param statusByUserId the status by user ID of this benefit usage
+	 * @param statusByUserId the status by user ID of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserId(long statusByUserId);
 
 	/**
-	 * Returns the status by user uuid of this benefit usage.
+	 * Returns the status by user uuid of this Benefit Usage.
 	 *
-	 * @return the status by user uuid of this benefit usage
+	 * @return the status by user uuid of this Benefit Usage
 	 */
 	@Override
 	public String getStatusByUserUuid();
 
 	/**
-	 * Sets the status by user uuid of this benefit usage.
+	 * Sets the status by user uuid of this Benefit Usage.
 	 *
-	 * @param statusByUserUuid the status by user uuid of this benefit usage
+	 * @param statusByUserUuid the status by user uuid of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserUuid(String statusByUserUuid);
 
 	/**
-	 * Returns the status by user name of this benefit usage.
+	 * Returns the status by user name of this Benefit Usage.
 	 *
-	 * @return the status by user name of this benefit usage
+	 * @return the status by user name of this Benefit Usage
 	 */
 	@AutoEscape
 	@Override
 	public String getStatusByUserName();
 
 	/**
-	 * Sets the status by user name of this benefit usage.
+	 * Sets the status by user name of this Benefit Usage.
 	 *
-	 * @param statusByUserName the status by user name of this benefit usage
+	 * @param statusByUserName the status by user name of this Benefit Usage
 	 */
 	@Override
 	public void setStatusByUserName(String statusByUserName);
 
 	/**
-	 * Returns the status date of this benefit usage.
+	 * Returns the status date of this Benefit Usage.
 	 *
-	 * @return the status date of this benefit usage
+	 * @return the status date of this Benefit Usage
 	 */
 	@Override
 	public Date getStatusDate();
 
 	/**
-	 * Sets the status date of this benefit usage.
+	 * Sets the status date of this Benefit Usage.
 	 *
-	 * @param statusDate the status date of this benefit usage
+	 * @param statusDate the status date of this Benefit Usage
 	 */
 	@Override
 	public void setStatusDate(Date statusDate);
 
 	/**
-	 * Returns the class primary key of the trash entry for this benefit usage.
+	 * Returns the class primary key of the trash entry for this Benefit Usage.
 	 *
-	 * @return the class primary key of the trash entry for this benefit usage
+	 * @return the class primary key of the trash entry for this Benefit Usage
 	 */
 	@Override
 	public long getTrashEntryClassPK();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is in the Recycle Bin.
+	 * Returns <code>true</code> if this Benefit Usage is in the Recycle Bin.
 	 *
-	 * @return <code>true</code> if this benefit usage is in the Recycle Bin; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is in the Recycle Bin; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInTrash();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is approved.
+	 * Returns <code>true</code> if this Benefit Usage is approved.
 	 *
-	 * @return <code>true</code> if this benefit usage is approved; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is approved; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isApproved();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is denied.
+	 * Returns <code>true</code> if this Benefit Usage is denied.
 	 *
-	 * @return <code>true</code> if this benefit usage is denied; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is denied; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDenied();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is a draft.
+	 * Returns <code>true</code> if this Benefit Usage is a draft.
 	 *
-	 * @return <code>true</code> if this benefit usage is a draft; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is a draft; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isDraft();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is expired.
+	 * Returns <code>true</code> if this Benefit Usage is expired.
 	 *
-	 * @return <code>true</code> if this benefit usage is expired; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is expired; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isExpired();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is inactive.
+	 * Returns <code>true</code> if this Benefit Usage is inactive.
 	 *
-	 * @return <code>true</code> if this benefit usage is inactive; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is inactive; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isInactive();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is incomplete.
+	 * Returns <code>true</code> if this Benefit Usage is incomplete.
 	 *
-	 * @return <code>true</code> if this benefit usage is incomplete; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is incomplete; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isIncomplete();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is pending.
+	 * Returns <code>true</code> if this Benefit Usage is pending.
 	 *
-	 * @return <code>true</code> if this benefit usage is pending; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is pending; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isPending();
 
 	/**
-	 * Returns <code>true</code> if this benefit usage is scheduled.
+	 * Returns <code>true</code> if this Benefit Usage is scheduled.
 	 *
-	 * @return <code>true</code> if this benefit usage is scheduled; <code>false</code> otherwise
+	 * @return <code>true</code> if this Benefit Usage is scheduled; <code>false</code> otherwise
 	 */
 	@Override
 	public boolean isScheduled();

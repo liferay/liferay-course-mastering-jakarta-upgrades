@@ -16,7 +16,7 @@ import com.liferay.user.associated.data.exporter.DynamicQueryUADExporter;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * Provides the base implementation for the plan enrollment UAD exporter.
+ * Provides the base implementation for the Plan Enrollment UAD exporter.
  *
  * <p>
  * This implementation exists only as a container for the default methods

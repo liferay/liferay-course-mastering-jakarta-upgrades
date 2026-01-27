@@ -34,14 +34,14 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Adds the insurance plan to the database. Also notifies the appropriate model listeners.
+	 * Adds the Insurance Plan to the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect InsurancePlanLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param insurancePlan the insurance plan
-	 * @return the insurance plan that was added
+	 * @param insurancePlan the Insurance Plan
+	 * @return the Insurance Plan that was added
 	 */
 	@Override
 	public InsurancePlan addInsurancePlan(InsurancePlan insurancePlan) {
@@ -152,10 +152,10 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Creates a new insurance plan with the primary key. Does not add the insurance plan to the database.
+	 * Creates a new Insurance Plan with the primary key. Does not add the Insurance Plan to the database.
 	 *
-	 * @param insurancePlanId the primary key for the new insurance plan
-	 * @return the new insurance plan
+	 * @param insurancePlanId the primary key for the new Insurance Plan
+	 * @return the new Insurance Plan
 	 */
 	@Override
 	public InsurancePlan createInsurancePlan(long insurancePlanId) {
@@ -188,14 +188,14 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Deletes the insurance plan from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Insurance Plan from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect InsurancePlanLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param insurancePlan the insurance plan
-	 * @return the insurance plan that was removed
+	 * @param insurancePlan the Insurance Plan
+	 * @return the Insurance Plan that was removed
 	 * @throws PortalException
 	 */
 	@Override
@@ -206,15 +206,15 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Deletes the insurance plan with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Insurance Plan with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect InsurancePlanLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param insurancePlanId the primary key of the insurance plan
-	 * @return the insurance plan that was removed
-	 * @throws PortalException if a insurance plan with the primary key could not be found
+	 * @param insurancePlanId the primary key of the Insurance Plan
+	 * @return the Insurance Plan that was removed
+	 * @throws PortalException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan deleteInsurancePlan(long insurancePlanId)
@@ -352,11 +352,11 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the insurance plan matching the UUID and group.
+	 * Returns the Insurance Plan matching the UUID and group.
 	 *
-	 * @param uuid the insurance plan's UUID
+	 * @param uuid the Insurance Plan's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching insurance plan, or <code>null</code> if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan, or <code>null</code> if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan fetchInsurancePlanByUuidAndGroupId(
@@ -391,17 +391,25 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the insurance plan with the primary key.
+	 * Returns the Insurance Plan with the primary key.
 	 *
-	 * @param insurancePlanId the primary key of the insurance plan
-	 * @return the insurance plan
-	 * @throws PortalException if a insurance plan with the primary key could not be found
+	 * @param insurancePlanId the primary key of the Insurance Plan
+	 * @return the Insurance Plan
+	 * @throws PortalException if a Insurance Plan with the primary key could not be found
 	 */
 	@Override
 	public InsurancePlan getInsurancePlan(long insurancePlanId)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _insurancePlanLocalService.getInsurancePlan(insurancePlanId);
+	}
+
+	@Override
+	public InsurancePlan getInsurancePlanByExternalReferenceCode(
+		String externalReferenceCode) {
+
+		return _insurancePlanLocalService.
+			getInsurancePlanByExternalReferenceCode(externalReferenceCode);
 	}
 
 	@Override
@@ -415,12 +423,12 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the insurance plan matching the UUID and group.
+	 * Returns the Insurance Plan matching the UUID and group.
 	 *
-	 * @param uuid the insurance plan's UUID
+	 * @param uuid the Insurance Plan's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching insurance plan
-	 * @throws PortalException if a matching insurance plan could not be found
+	 * @return the matching Insurance Plan
+	 * @throws PortalException if a matching Insurance Plan could not be found
 	 */
 	@Override
 	public InsurancePlan getInsurancePlanByUuidAndGroupId(
@@ -432,15 +440,15 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns a range of all the insurance plans.
+	 * Returns a range of all the Insurance Plans.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>com.clarityvisionsolutions.insurance.benefits.tracker.model.impl.InsurancePlanModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
-	 * @return the range of insurance plans
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
+	 * @return the range of Insurance Plans
 	 */
 	@Override
 	public java.util.List<InsurancePlan> getInsurancePlans(int start, int end) {
@@ -477,11 +485,11 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns all the insurance plans matching the UUID and company.
+	 * Returns all the Insurance Plans matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the insurance plans
+	 * @param uuid the UUID of the Insurance Plans
 	 * @param companyId the primary key of the company
-	 * @return the matching insurance plans, or an empty list if no matches were found
+	 * @return the matching Insurance Plans, or an empty list if no matches were found
 	 */
 	@Override
 	public java.util.List<InsurancePlan> getInsurancePlansByUuidAndCompanyId(
@@ -492,14 +500,14 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns a range of insurance plans matching the UUID and company.
+	 * Returns a range of Insurance Plans matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the insurance plans
+	 * @param uuid the UUID of the Insurance Plans
 	 * @param companyId the primary key of the company
-	 * @param start the lower bound of the range of insurance plans
-	 * @param end the upper bound of the range of insurance plans (not inclusive)
+	 * @param start the lower bound of the range of Insurance Plans
+	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the range of matching insurance plans, or an empty list if no matches were found
+	 * @return the range of matching Insurance Plans, or an empty list if no matches were found
 	 */
 	@Override
 	public java.util.List<InsurancePlan> getInsurancePlansByUuidAndCompanyId(
@@ -512,9 +520,9 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the number of insurance plans.
+	 * Returns the number of Insurance Plans.
 	 *
-	 * @return the number of insurance plans
+	 * @return the number of Insurance Plans
 	 */
 	@Override
 	public int getInsurancePlansCount() {
@@ -611,14 +619,14 @@ public class InsurancePlanLocalServiceWrapper
 	}
 
 	/**
-	 * Updates the insurance plan in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 * Updates the Insurance Plan in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect InsurancePlanLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param insurancePlan the insurance plan
-	 * @return the insurance plan that was updated
+	 * @param insurancePlan the Insurance Plan
+	 * @return the Insurance Plan that was updated
 	 */
 	@Override
 	public InsurancePlan updateInsurancePlan(InsurancePlan insurancePlan) {

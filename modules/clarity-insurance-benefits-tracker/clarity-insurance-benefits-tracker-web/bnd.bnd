@@ -1,0 +1,7 @@
+Bundle-Name: Clarity Vision Solutions :: Insurance Benefits Tracker :: Web
+Bundle-SymbolicName: com.clarityvisionsolutions.insurance.benefits.tracker.web
+Bundle-Version: 1.0.0
+
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

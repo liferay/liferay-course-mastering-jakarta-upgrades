@@ -34,14 +34,14 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Adds the benefit usage to the database. Also notifies the appropriate model listeners.
+	 * Adds the Benefit Usage to the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect BenefitUsageLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param benefitUsage the benefit usage
-	 * @return the benefit usage that was added
+	 * @param benefitUsage the Benefit Usage
+	 * @return the Benefit Usage that was added
 	 */
 	@Override
 	public BenefitUsage addBenefitUsage(BenefitUsage benefitUsage) {
@@ -82,10 +82,10 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Creates a new benefit usage with the primary key. Does not add the benefit usage to the database.
+	 * Creates a new Benefit Usage with the primary key. Does not add the Benefit Usage to the database.
 	 *
-	 * @param benefitUsageId the primary key for the new benefit usage
-	 * @return the new benefit usage
+	 * @param benefitUsageId the primary key for the new Benefit Usage
+	 * @return the new Benefit Usage
 	 */
 	@Override
 	public BenefitUsage createBenefitUsage(long benefitUsageId) {
@@ -104,14 +104,14 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Deletes the benefit usage from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Benefit Usage from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect BenefitUsageLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param benefitUsage the benefit usage
-	 * @return the benefit usage that was removed
+	 * @param benefitUsage the Benefit Usage
+	 * @return the Benefit Usage that was removed
 	 * @throws PortalException
 	 */
 	@Override
@@ -122,15 +122,15 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Deletes the benefit usage with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Deletes the Benefit Usage with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect BenefitUsageLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param benefitUsageId the primary key of the benefit usage
-	 * @return the benefit usage that was removed
-	 * @throws PortalException if a benefit usage with the primary key could not be found
+	 * @param benefitUsageId the primary key of the Benefit Usage
+	 * @return the Benefit Usage that was removed
+	 * @throws PortalException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage deleteBenefitUsage(long benefitUsageId)
@@ -282,11 +282,11 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the benefit usage matching the UUID and group.
+	 * Returns the Benefit Usage matching the UUID and group.
 	 *
-	 * @param uuid the benefit usage's UUID
+	 * @param uuid the Benefit Usage's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching benefit usage, or <code>null</code> if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage, or <code>null</code> if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage fetchBenefitUsageByUuidAndGroupId(
@@ -304,17 +304,25 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the benefit usage with the primary key.
+	 * Returns the Benefit Usage with the primary key.
 	 *
-	 * @param benefitUsageId the primary key of the benefit usage
-	 * @return the benefit usage
-	 * @throws PortalException if a benefit usage with the primary key could not be found
+	 * @param benefitUsageId the primary key of the Benefit Usage
+	 * @return the Benefit Usage
+	 * @throws PortalException if a Benefit Usage with the primary key could not be found
 	 */
 	@Override
 	public BenefitUsage getBenefitUsage(long benefitUsageId)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _benefitUsageLocalService.getBenefitUsage(benefitUsageId);
+	}
+
+	@Override
+	public BenefitUsage getBenefitUsageByExternalReferenceCode(
+		String externalReferenceCode) {
+
+		return _benefitUsageLocalService.getBenefitUsageByExternalReferenceCode(
+			externalReferenceCode);
 	}
 
 	@Override
@@ -327,12 +335,12 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the benefit usage matching the UUID and group.
+	 * Returns the Benefit Usage matching the UUID and group.
 	 *
-	 * @param uuid the benefit usage's UUID
+	 * @param uuid the Benefit Usage's UUID
 	 * @param groupId the primary key of the group
-	 * @return the matching benefit usage
-	 * @throws PortalException if a matching benefit usage could not be found
+	 * @return the matching Benefit Usage
+	 * @throws PortalException if a matching Benefit Usage could not be found
 	 */
 	@Override
 	public BenefitUsage getBenefitUsageByUuidAndGroupId(
@@ -344,15 +352,15 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns a range of all the benefit usages.
+	 * Returns a range of all the Benefit Usages.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>com.clarityvisionsolutions.insurance.benefits.tracker.model.impl.BenefitUsageModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
-	 * @return the range of benefit usages
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
+	 * @return the range of Benefit Usages
 	 */
 	@Override
 	public java.util.List<BenefitUsage> getBenefitUsages(int start, int end) {
@@ -380,11 +388,11 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns all the benefit usages matching the UUID and company.
+	 * Returns all the Benefit Usages matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the benefit usages
+	 * @param uuid the UUID of the Benefit Usages
 	 * @param companyId the primary key of the company
-	 * @return the matching benefit usages, or an empty list if no matches were found
+	 * @return the matching Benefit Usages, or an empty list if no matches were found
 	 */
 	@Override
 	public java.util.List<BenefitUsage> getBenefitUsagesByUuidAndCompanyId(
@@ -395,14 +403,14 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns a range of benefit usages matching the UUID and company.
+	 * Returns a range of Benefit Usages matching the UUID and company.
 	 *
-	 * @param uuid the UUID of the benefit usages
+	 * @param uuid the UUID of the Benefit Usages
 	 * @param companyId the primary key of the company
-	 * @param start the lower bound of the range of benefit usages
-	 * @param end the upper bound of the range of benefit usages (not inclusive)
+	 * @param start the lower bound of the range of Benefit Usages
+	 * @param end the upper bound of the range of Benefit Usages (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the range of matching benefit usages, or an empty list if no matches were found
+	 * @return the range of matching Benefit Usages, or an empty list if no matches were found
 	 */
 	@Override
 	public java.util.List<BenefitUsage> getBenefitUsagesByUuidAndCompanyId(
@@ -415,9 +423,9 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Returns the number of benefit usages.
+	 * Returns the number of Benefit Usages.
 	 *
-	 * @return the number of benefit usages
+	 * @return the number of Benefit Usages
 	 */
 	@Override
 	public int getBenefitUsagesCount() {
@@ -541,14 +549,14 @@ public class BenefitUsageLocalServiceWrapper
 	}
 
 	/**
-	 * Updates the benefit usage in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 * Updates the Benefit Usage in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
 	 * <p>
 	 * <strong>Important:</strong> Inspect BenefitUsageLocalServiceImpl for overloaded versions of the method. If provided, use these entry points to the API, as the implementation logic may require the additional parameters defined there.
 	 * </p>
 	 *
-	 * @param benefitUsage the benefit usage
-	 * @return the benefit usage that was updated
+	 * @param benefitUsage the Benefit Usage
+	 * @return the Benefit Usage that was updated
 	 */
 	@Override
 	public BenefitUsage updateBenefitUsage(BenefitUsage benefitUsage) {

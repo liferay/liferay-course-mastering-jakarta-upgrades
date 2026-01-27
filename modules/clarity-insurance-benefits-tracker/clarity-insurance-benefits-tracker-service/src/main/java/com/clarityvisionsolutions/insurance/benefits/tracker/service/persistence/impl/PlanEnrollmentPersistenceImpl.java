@@ -78,7 +78,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * The persistence implementation for the plan enrollment service.
+ * The persistence implementation for the Plan Enrollment service.
  *
  * <p>
  * Caching information and settings can be found in <code>portal.properties</code>
@@ -95,7 +95,7 @@ public class PlanEnrollmentPersistenceImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. Always use <code>PlanEnrollmentUtil</code> to access the plan enrollment persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify or reference this class directly. Always use <code>PlanEnrollmentUtil</code> to access the Plan Enrollment persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
 	public static final String FINDER_CLASS_NAME_ENTITY =
 		PlanEnrollmentImpl.class.getName();
@@ -114,10 +114,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByUuid;
 
 	/**
-	 * Returns all the plan enrollments where uuid = &#63;.
+	 * Returns all the Plan Enrollments where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid(String uuid) {
@@ -125,16 +125,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where uuid = &#63;.
+	 * Returns a range of all the Plan Enrollments where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid(String uuid, int start, int end) {
@@ -142,17 +142,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where uuid = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid(
@@ -163,18 +163,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where uuid = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where uuid = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param uuid the uuid
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid(
@@ -290,12 +290,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where uuid = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUuid_First(
@@ -322,11 +322,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where uuid = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUuid_First(
@@ -342,12 +342,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where uuid = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUuid_Last(
@@ -374,11 +374,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where uuid = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUuid_Last(
@@ -401,13 +401,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where uuid = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where uuid = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param uuid the uuid
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByUuid_PrevAndNext(
@@ -565,7 +565,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where uuid = &#63; from the database.
+	 * Removes all the Plan Enrollments where uuid = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 */
@@ -579,10 +579,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where uuid = &#63;.
+	 * Returns the number of Plan Enrollments where uuid = &#63;.
 	 *
 	 * @param uuid the uuid
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByUuid(String uuid) {
@@ -655,12 +655,12 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathFetchByUUID_G;
 
 	/**
-	 * Returns the plan enrollment where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
+	 * Returns the Plan Enrollment where uuid = &#63; and groupId = &#63; or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUUID_G(String uuid, long groupId)
@@ -692,11 +692,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Plan Enrollment where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUUID_G(String uuid, long groupId) {
@@ -704,12 +704,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Plan Enrollment where uuid = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUUID_G(
@@ -813,11 +813,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes the plan enrollment where uuid = &#63; and groupId = &#63; from the database.
+	 * Removes the Plan Enrollment where uuid = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the plan enrollment that was removed
+	 * @return the Plan Enrollment that was removed
 	 */
 	@Override
 	public PlanEnrollment removeByUUID_G(String uuid, long groupId)
@@ -829,11 +829,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where uuid = &#63; and groupId = &#63;.
+	 * Returns the number of Plan Enrollments where uuid = &#63; and groupId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param groupId the group ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByUUID_G(String uuid, long groupId) {
@@ -860,11 +860,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByUuid_C;
 
 	/**
-	 * Returns all the plan enrollments where uuid = &#63; and companyId = &#63;.
+	 * Returns all the Plan Enrollments where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid_C(String uuid, long companyId) {
@@ -873,7 +873,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where uuid = &#63; and companyId = &#63;.
+	 * Returns a range of all the Plan Enrollments where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -881,9 +881,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid_C(
@@ -893,7 +893,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -901,10 +901,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid_C(
@@ -916,7 +916,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where uuid = &#63; and companyId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where uuid = &#63; and companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -924,11 +924,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUuid_C(
@@ -1052,13 +1052,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUuid_C_First(
@@ -1089,12 +1089,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUuid_C_First(
@@ -1112,13 +1112,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUuid_C_Last(
@@ -1149,12 +1149,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUuid_C_Last(
@@ -1178,14 +1178,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where uuid = &#63; and companyId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param uuid the uuid
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByUuid_C_PrevAndNext(
@@ -1350,7 +1350,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where uuid = &#63; and companyId = &#63; from the database.
+	 * Removes all the Plan Enrollments where uuid = &#63; and companyId = &#63; from the database.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
@@ -1367,11 +1367,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where uuid = &#63; and companyId = &#63;.
+	 * Returns the number of Plan Enrollments where uuid = &#63; and companyId = &#63;.
 	 *
 	 * @param uuid the uuid
 	 * @param companyId the company ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByUuid_C(String uuid, long companyId) {
@@ -1453,10 +1453,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByGroupId;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupId(long groupId) {
@@ -1465,16 +1465,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupId(
@@ -1484,17 +1484,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupId(
@@ -1505,18 +1505,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupId(
@@ -1621,12 +1621,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByGroupId_First(
@@ -1653,11 +1653,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByGroupId_First(
@@ -1674,12 +1674,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByGroupId_Last(
@@ -1706,11 +1706,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByGroupId_Last(
@@ -1733,13 +1733,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByGroupId_PrevAndNext(
@@ -1884,10 +1884,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupId(long groupId) {
@@ -1896,16 +1896,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupId(
@@ -1915,17 +1915,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param groupId the group ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupId(
@@ -2016,13 +2016,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByGroupId_PrevAndNext(
@@ -2215,7 +2215,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 */
@@ -2230,10 +2230,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByGroupId(long groupId) {
@@ -2285,10 +2285,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63;.
 	 *
 	 * @param groupId the group ID
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByGroupId(long groupId) {
@@ -2340,10 +2340,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByCompanyId;
 
 	/**
-	 * Returns all the plan enrollments where companyId = &#63;.
+	 * Returns all the Plan Enrollments where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByCompanyId(long companyId) {
@@ -2352,16 +2352,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where companyId = &#63;.
+	 * Returns a range of all the Plan Enrollments where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByCompanyId(
@@ -2371,17 +2371,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByCompanyId(
@@ -2392,18 +2392,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param companyId the company ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByCompanyId(
@@ -2508,12 +2508,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByCompanyId_First(
@@ -2540,11 +2540,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByCompanyId_First(
@@ -2561,12 +2561,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByCompanyId_Last(
@@ -2593,11 +2593,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByCompanyId_Last(
@@ -2620,13 +2620,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where companyId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where companyId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param companyId the company ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByCompanyId_PrevAndNext(
@@ -2771,7 +2771,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where companyId = &#63; from the database.
+	 * Removes all the Plan Enrollments where companyId = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 */
@@ -2786,10 +2786,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where companyId = &#63;.
+	 * Returns the number of Plan Enrollments where companyId = &#63;.
 	 *
 	 * @param companyId the company ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByCompanyId(long companyId) {
@@ -2848,11 +2848,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByG_S;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_S(long groupId, int status) {
@@ -2861,7 +2861,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -2869,9 +2869,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_S(
@@ -2881,7 +2881,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -2889,10 +2889,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_S(
@@ -2903,7 +2903,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -2911,11 +2911,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_S(
@@ -3026,13 +3026,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_S_First(
@@ -3063,12 +3063,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_S_First(
@@ -3086,13 +3086,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_S_Last(
@@ -3123,12 +3123,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_S_Last(
@@ -3152,14 +3152,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_S_PrevAndNext(
@@ -3311,11 +3311,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_S(long groupId, int status) {
@@ -3324,7 +3324,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -3332,9 +3332,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_S(
@@ -3344,7 +3344,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -3352,10 +3352,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_S(
@@ -3450,14 +3450,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_S_PrevAndNext(
@@ -3657,7 +3657,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and status = &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -3674,11 +3674,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_S(long groupId, int status) {
@@ -3734,11 +3734,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_S(long groupId, int status) {
@@ -3796,11 +3796,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_NotS;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_NotS(long groupId, int status) {
@@ -3809,7 +3809,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -3817,9 +3817,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_NotS(
@@ -3829,7 +3829,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -3837,10 +3837,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_NotS(
@@ -3852,7 +3852,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -3860,11 +3860,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_NotS(
@@ -3965,13 +3965,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_NotS_First(
@@ -4002,12 +4002,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_NotS_First(
@@ -4025,13 +4025,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_NotS_Last(
@@ -4062,12 +4062,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_NotS_Last(
@@ -4091,14 +4091,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_NotS_PrevAndNext(
@@ -4250,11 +4250,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_NotS(long groupId, int status) {
@@ -4263,7 +4263,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -4271,9 +4271,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_NotS(
@@ -4283,7 +4283,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -4291,10 +4291,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_NotS(
@@ -4389,14 +4389,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_NotS_PrevAndNext(
@@ -4596,7 +4596,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
@@ -4613,11 +4613,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_NotS(long groupId, int status) {
@@ -4673,11 +4673,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_NotS(long groupId, int status) {
@@ -4736,11 +4736,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByIP_S;
 
 	/**
-	 * Returns all the plan enrollments where insurancePlanId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_S(long insurancePlanId, int status) {
@@ -4750,7 +4750,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where insurancePlanId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -4758,9 +4758,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_S(
@@ -4770,7 +4770,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -4778,10 +4778,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_S(
@@ -4793,7 +4793,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -4801,11 +4801,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_S(
@@ -4917,13 +4917,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByIP_S_First(
@@ -4954,12 +4954,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByIP_S_First(
@@ -4977,13 +4977,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByIP_S_Last(
@@ -5014,12 +5014,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByIP_S_Last(
@@ -5043,14 +5043,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where insurancePlanId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByIP_S_PrevAndNext(
@@ -5202,7 +5202,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where insurancePlanId = &#63; and status = &#63; from the database.
+	 * Removes all the Plan Enrollments where insurancePlanId = &#63; and status = &#63; from the database.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
@@ -5219,11 +5219,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where insurancePlanId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByIP_S(long insurancePlanId, int status) {
@@ -5288,11 +5288,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByIP_NotS;
 
 	/**
-	 * Returns all the plan enrollments where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_NotS(
@@ -5304,7 +5304,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5312,9 +5312,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_NotS(
@@ -5324,7 +5324,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5332,10 +5332,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_NotS(
@@ -5347,7 +5347,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5355,11 +5355,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByIP_NotS(
@@ -5461,13 +5461,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByIP_NotS_First(
@@ -5498,12 +5498,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByIP_NotS_First(
@@ -5521,13 +5521,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByIP_NotS_Last(
@@ -5558,12 +5558,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByIP_NotS_Last(
@@ -5587,14 +5587,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByIP_NotS_PrevAndNext(
@@ -5746,7 +5746,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where insurancePlanId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
@@ -5763,11 +5763,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where insurancePlanId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments where insurancePlanId = &#63; and status &ne; &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByIP_NotS(long insurancePlanId, int status) {
@@ -5833,13 +5833,13 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByG_IP_M_S;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_S(
@@ -5851,7 +5851,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5861,9 +5861,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_S(
@@ -5875,7 +5875,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5885,10 +5885,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_S(
@@ -5902,7 +5902,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -5912,11 +5912,11 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_S(
@@ -6042,15 +6042,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_IP_M_S_First(
@@ -6087,14 +6087,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_IP_M_S_First(
@@ -6113,15 +6113,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_IP_M_S_Last(
@@ -6158,14 +6158,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_IP_M_S_Last(
@@ -6191,16 +6191,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_IP_M_S_PrevAndNext(
@@ -6361,13 +6361,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_S(
@@ -6379,7 +6379,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -6389,9 +6389,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_S(
@@ -6403,7 +6403,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -6413,10 +6413,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_S(
@@ -6522,16 +6522,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_IP_M_S_PrevAndNext(
@@ -6741,7 +6741,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
@@ -6762,13 +6762,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_IP_M_S(
@@ -6836,13 +6836,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_IP_M_S(
@@ -6917,13 +6917,13 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_IP_M_NotS;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_NotS(
@@ -6935,7 +6935,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -6945,9 +6945,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_NotS(
@@ -6959,7 +6959,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -6969,10 +6969,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_NotS(
@@ -6986,7 +6986,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -6996,11 +6996,11 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_IP_M_NotS(
@@ -7114,15 +7114,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_IP_M_NotS_First(
@@ -7159,14 +7159,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_IP_M_NotS_First(
@@ -7185,15 +7185,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_IP_M_NotS_Last(
@@ -7230,14 +7230,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_IP_M_NotS_Last(
@@ -7263,16 +7263,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_IP_M_NotS_PrevAndNext(
@@ -7433,13 +7433,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_NotS(
@@ -7451,7 +7451,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -7461,9 +7461,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_NotS(
@@ -7475,7 +7475,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -7485,10 +7485,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_IP_M_NotS(
@@ -7594,16 +7594,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_IP_M_NotS_PrevAndNext(
@@ -7813,7 +7813,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
@@ -7834,13 +7834,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_IP_M_NotS(
@@ -7908,13 +7908,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param insurancePlanId the insurance plan ID
 	 * @param memberUserId the member user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_IP_M_NotS(
@@ -7990,11 +7990,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByC_S;
 
 	/**
-	 * Returns all the plan enrollments where companyId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_S(long companyId, int status) {
@@ -8003,7 +8003,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where companyId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8011,9 +8011,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_S(
@@ -8023,7 +8023,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8031,10 +8031,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_S(
@@ -8046,7 +8046,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8054,11 +8054,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_S(
@@ -8169,13 +8169,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByC_S_First(
@@ -8206,12 +8206,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByC_S_First(
@@ -8229,13 +8229,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByC_S_Last(
@@ -8266,12 +8266,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByC_S_Last(
@@ -8295,14 +8295,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where companyId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where companyId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByC_S_PrevAndNext(
@@ -8454,7 +8454,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where companyId = &#63; and status = &#63; from the database.
+	 * Removes all the Plan Enrollments where companyId = &#63; and status = &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -8471,11 +8471,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where companyId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments where companyId = &#63; and status = &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByC_S(long companyId, int status) {
@@ -8540,11 +8540,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByC_NotS;
 
 	/**
-	 * Returns all the plan enrollments where companyId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_NotS(long companyId, int status) {
@@ -8553,7 +8553,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where companyId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8561,9 +8561,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_NotS(
@@ -8573,7 +8573,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8581,10 +8581,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_NotS(
@@ -8596,7 +8596,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where companyId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -8604,11 +8604,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByC_NotS(
@@ -8709,13 +8709,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByC_NotS_First(
@@ -8746,12 +8746,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByC_NotS_First(
@@ -8769,13 +8769,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByC_NotS_Last(
@@ -8806,12 +8806,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByC_NotS_Last(
@@ -8835,14 +8835,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where companyId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param companyId the company ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByC_NotS_PrevAndNext(
@@ -8994,7 +8994,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where companyId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Plan Enrollments where companyId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
@@ -9011,11 +9011,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where companyId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments where companyId = &#63; and status &ne; &#63;.
 	 *
 	 * @param companyId the company ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByC_NotS(long companyId, int status) {
@@ -9082,12 +9082,12 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_S;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -9099,7 +9099,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9108,9 +9108,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -9120,7 +9120,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9129,10 +9129,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -9144,7 +9144,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9153,11 +9153,11 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -9273,14 +9273,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_U_S_First(
@@ -9314,13 +9314,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_U_S_First(
@@ -9338,14 +9338,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_U_S_Last(
@@ -9379,13 +9379,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_U_S_Last(
@@ -9409,15 +9409,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_U_S_PrevAndNext(
@@ -9573,12 +9573,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -9590,7 +9590,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9599,9 +9599,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -9611,7 +9611,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9620,10 +9620,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -9723,15 +9723,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_U_S_PrevAndNext(
@@ -9935,12 +9935,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -9952,7 +9952,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9961,9 +9961,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -9973,7 +9973,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -9982,10 +9982,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_S(
@@ -10095,7 +10095,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10104,7 +10104,7 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -10116,7 +10116,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10125,9 +10125,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -10137,7 +10137,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10146,10 +10146,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -10161,7 +10161,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;, optionally using the finder cache.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10170,11 +10170,11 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_S(
@@ -10309,7 +10309,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and userId = &#63; and status = &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -10327,12 +10327,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int status) {
@@ -10392,12 +10392,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_U_S(long groupId, long userId, int[] statuses) {
@@ -10478,12 +10478,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int status) {
@@ -10536,12 +10536,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param statuses the statuses
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_S(long groupId, long userId, int[] statuses) {
@@ -10627,12 +10627,12 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathWithPaginationCountByG_U_NotS;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_NotS(
@@ -10644,7 +10644,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10653,9 +10653,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_NotS(
@@ -10665,7 +10665,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10674,10 +10674,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_NotS(
@@ -10689,7 +10689,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -10698,11 +10698,11 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByG_U_NotS(
@@ -10808,14 +10808,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_U_NotS_First(
@@ -10849,13 +10849,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_U_NotS_First(
@@ -10873,14 +10873,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByG_U_NotS_Last(
@@ -10914,13 +10914,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByG_U_NotS_Last(
@@ -10944,15 +10944,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByG_U_NotS_PrevAndNext(
@@ -11108,12 +11108,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_NotS(
@@ -11125,7 +11125,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -11134,9 +11134,9 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_NotS(
@@ -11146,7 +11146,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -11155,10 +11155,10 @@ public class PlanEnrollmentPersistenceImpl
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByG_U_NotS(
@@ -11258,15 +11258,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByG_U_NotS_PrevAndNext(
@@ -11470,7 +11470,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
@@ -11488,12 +11488,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByG_U_NotS(long groupId, long userId, int status) {
@@ -11553,12 +11553,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param userId the user ID
 	 * @param status the status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByG_U_NotS(long groupId, long userId, int status) {
@@ -11624,10 +11624,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByUserId;
 
 	/**
-	 * Returns all the plan enrollments where userId = &#63;.
+	 * Returns all the Plan Enrollments where userId = &#63;.
 	 *
 	 * @param userId the user ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserId(long userId) {
@@ -11635,16 +11635,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where userId = &#63;.
+	 * Returns a range of all the Plan Enrollments where userId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param userId the user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserId(long userId, int start, int end) {
@@ -11652,17 +11652,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where userId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where userId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param userId the user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserId(
@@ -11673,18 +11673,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where userId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where userId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param userId the user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserId(
@@ -11789,12 +11789,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where userId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where userId = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUserId_First(
@@ -11821,11 +11821,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where userId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where userId = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUserId_First(
@@ -11842,12 +11842,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where userId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where userId = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUserId_Last(
@@ -11874,11 +11874,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where userId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where userId = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUserId_Last(
@@ -11901,13 +11901,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where userId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where userId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param userId the user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByUserId_PrevAndNext(
@@ -12052,7 +12052,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where userId = &#63; from the database.
+	 * Removes all the Plan Enrollments where userId = &#63; from the database.
 	 *
 	 * @param userId the user ID
 	 */
@@ -12067,10 +12067,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where userId = &#63;.
+	 * Returns the number of Plan Enrollments where userId = &#63;.
 	 *
 	 * @param userId the user ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByUserId(long userId) {
@@ -12129,11 +12129,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByUserIdEnrollmentStatus;
 
 	/**
-	 * Returns all the plan enrollments where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns all the Plan Enrollments where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserIdEnrollmentStatus(
@@ -12145,7 +12145,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns a range of all the Plan Enrollments where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12153,9 +12153,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserIdEnrollmentStatus(
@@ -12166,7 +12166,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12174,10 +12174,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserIdEnrollmentStatus(
@@ -12189,7 +12189,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12197,11 +12197,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByUserIdEnrollmentStatus(
@@ -12316,13 +12316,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUserIdEnrollmentStatus_First(
@@ -12353,12 +12353,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUserIdEnrollmentStatus_First(
@@ -12376,13 +12376,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByUserIdEnrollmentStatus_Last(
@@ -12413,12 +12413,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByUserIdEnrollmentStatus_Last(
@@ -12442,14 +12442,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where userId = &#63; and enrollmentStatus = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByUserIdEnrollmentStatus_PrevAndNext(
@@ -12601,7 +12601,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where userId = &#63; and enrollmentStatus = &#63; from the database.
+	 * Removes all the Plan Enrollments where userId = &#63; and enrollmentStatus = &#63; from the database.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
@@ -12620,11 +12620,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where userId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the number of Plan Enrollments where userId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param userId the user ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByUserIdEnrollmentStatus(
@@ -12695,11 +12695,11 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByGroupIdEnrollmentStatus;
 
 	/**
-	 * Returns all the plan enrollments where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupIdEnrollmentStatus(
@@ -12711,7 +12711,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns a range of all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12719,9 +12719,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupIdEnrollmentStatus(
@@ -12732,7 +12732,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12740,10 +12740,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupIdEnrollmentStatus(
@@ -12755,7 +12755,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -12763,11 +12763,11 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByGroupIdEnrollmentStatus(
@@ -12882,13 +12882,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByGroupIdEnrollmentStatus_First(
@@ -12919,12 +12919,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByGroupIdEnrollmentStatus_First(
@@ -12942,13 +12942,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByGroupIdEnrollmentStatus_Last(
@@ -12979,12 +12979,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByGroupIdEnrollmentStatus_Last(
@@ -13008,14 +13008,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByGroupIdEnrollmentStatus_PrevAndNext(
@@ -13167,11 +13167,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the matching plan enrollments that the user has permission to view
+	 * @return the matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
@@ -13183,7 +13183,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -13191,9 +13191,9 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments that the user has permission to view
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
@@ -13204,7 +13204,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments that the user has permissions to view where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
@@ -13212,10 +13212,10 @@ public class PlanEnrollmentPersistenceImpl
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments that the user has permission to view
+	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
@@ -13311,14 +13311,14 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set of plan enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] filterFindByGroupIdEnrollmentStatus_PrevAndNext(
@@ -13518,7 +13518,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where groupId = &#63; and enrollmentStatus = &#63; from the database.
+	 * Removes all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63; from the database.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
@@ -13537,11 +13537,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the number of Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByGroupIdEnrollmentStatus(
@@ -13600,11 +13600,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
+	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
 	 *
 	 * @param groupId the group ID
 	 * @param enrollmentStatus the enrollment status
-	 * @return the number of matching plan enrollments that the user has permission to view
+	 * @return the number of matching Plan Enrollments that the user has permission to view
 	 */
 	@Override
 	public int filterCountByGroupIdEnrollmentStatus(
@@ -13667,10 +13667,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByMemberUserId;
 
 	/**
-	 * Returns all the plan enrollments where memberUserId = &#63;.
+	 * Returns all the Plan Enrollments where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberUserId(long memberUserId) {
@@ -13679,16 +13679,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where memberUserId = &#63;.
+	 * Returns a range of all the Plan Enrollments where memberUserId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberUserId the member user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberUserId(
@@ -13698,17 +13698,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where memberUserId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where memberUserId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberUserId the member user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberUserId(
@@ -13720,18 +13720,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where memberUserId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where memberUserId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberUserId the member user ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberUserId(
@@ -13836,12 +13836,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where memberUserId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByMemberUserId_First(
@@ -13869,11 +13869,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where memberUserId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByMemberUserId_First(
@@ -13891,12 +13891,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where memberUserId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByMemberUserId_Last(
@@ -13924,11 +13924,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where memberUserId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByMemberUserId_Last(
@@ -13952,13 +13952,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where memberUserId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where memberUserId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param memberUserId the member user ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByMemberUserId_PrevAndNext(
@@ -14104,7 +14104,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where memberUserId = &#63; from the database.
+	 * Removes all the Plan Enrollments where memberUserId = &#63; from the database.
 	 *
 	 * @param memberUserId the member user ID
 	 */
@@ -14119,10 +14119,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where memberUserId = &#63;.
+	 * Returns the number of Plan Enrollments where memberUserId = &#63;.
 	 *
 	 * @param memberUserId the member user ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByMemberUserId(long memberUserId) {
@@ -14181,10 +14181,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByMemberId;
 
 	/**
-	 * Returns all the plan enrollments where memberId = &#63;.
+	 * Returns all the Plan Enrollments where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberId(String memberId) {
@@ -14193,16 +14193,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where memberId = &#63;.
+	 * Returns a range of all the Plan Enrollments where memberId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberId the member ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberId(
@@ -14212,17 +14212,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where memberId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where memberId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberId the member ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberId(
@@ -14233,18 +14233,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where memberId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where memberId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param memberId the member ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByMemberId(
@@ -14362,12 +14362,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where memberId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByMemberId_First(
@@ -14395,11 +14395,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where memberId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByMemberId_First(
@@ -14416,12 +14416,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where memberId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByMemberId_Last(
@@ -14449,11 +14449,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where memberId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByMemberId_Last(
@@ -14476,13 +14476,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where memberId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where memberId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param memberId the member ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByMemberId_PrevAndNext(
@@ -14640,7 +14640,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where memberId = &#63; from the database.
+	 * Removes all the Plan Enrollments where memberId = &#63; from the database.
 	 *
 	 * @param memberId the member ID
 	 */
@@ -14655,10 +14655,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where memberId = &#63;.
+	 * Returns the number of Plan Enrollments where memberId = &#63;.
 	 *
 	 * @param memberId the member ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByMemberId(String memberId) {
@@ -14733,10 +14733,10 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathCountByInsurancePlan;
 
 	/**
-	 * Returns all the plan enrollments where insurancePlanId = &#63;.
+	 * Returns all the Plan Enrollments where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
-	 * @return the matching plan enrollments
+	 * @return the matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByInsurancePlan(long insurancePlanId) {
@@ -14745,16 +14745,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments where insurancePlanId = &#63;.
+	 * Returns a range of all the Plan Enrollments where insurancePlanId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param insurancePlanId the insurance plan ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of matching plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByInsurancePlan(
@@ -14764,17 +14764,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param insurancePlanId the insurance plan ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByInsurancePlan(
@@ -14786,18 +14786,18 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments where insurancePlanId = &#63;.
+	 * Returns an ordered range of all the Plan Enrollments where insurancePlanId = &#63;.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
 	 * @param insurancePlanId the insurance plan ID
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of matching plan enrollments
+	 * @return the ordered range of matching Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findByInsurancePlan(
@@ -14905,12 +14905,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByInsurancePlan_First(
@@ -14938,11 +14938,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the first plan enrollment in the ordered set where insurancePlanId = &#63;.
+	 * Returns the first Plan Enrollment in the ordered set where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the first matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the first matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByInsurancePlan_First(
@@ -14960,12 +14960,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByInsurancePlan_Last(
@@ -14993,11 +14993,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the last plan enrollment in the ordered set where insurancePlanId = &#63;.
+	 * Returns the last Plan Enrollment in the ordered set where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the last matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the last matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByInsurancePlan_Last(
@@ -15021,13 +15021,13 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollments before and after the current plan enrollment in the ordered set where insurancePlanId = &#63;.
+	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set where insurancePlanId = &#63;.
 	 *
-	 * @param planEnrollmentId the primary key of the current plan enrollment
+	 * @param planEnrollmentId the primary key of the current Plan Enrollment
 	 * @param insurancePlanId the insurance plan ID
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @return the previous, current, and next Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment[] findByInsurancePlan_PrevAndNext(
@@ -15174,7 +15174,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments where insurancePlanId = &#63; from the database.
+	 * Removes all the Plan Enrollments where insurancePlanId = &#63; from the database.
 	 *
 	 * @param insurancePlanId the insurance plan ID
 	 */
@@ -15190,10 +15190,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where insurancePlanId = &#63;.
+	 * Returns the number of Plan Enrollments where insurancePlanId = &#63;.
 	 *
 	 * @param insurancePlanId the insurance plan ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByInsurancePlan(long insurancePlanId) {
@@ -15250,12 +15250,12 @@ public class PlanEnrollmentPersistenceImpl
 	private FinderPath _finderPathFetchByERC_G;
 
 	/**
-	 * Returns the plan enrollment where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
+	 * Returns the Plan Enrollment where externalReferenceCode = &#63; and groupId = &#63; or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment findByERC_G(
@@ -15289,11 +15289,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	 * Returns the Plan Enrollment where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByERC_G(
@@ -15303,12 +15303,12 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	 * Returns the Plan Enrollment where externalReferenceCode = &#63; and groupId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the matching plan enrollment, or <code>null</code> if a matching plan enrollment could not be found
+	 * @return the matching Plan Enrollment, or <code>null</code> if a matching Plan Enrollment could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByERC_G(
@@ -15414,11 +15414,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes the plan enrollment where externalReferenceCode = &#63; and groupId = &#63; from the database.
+	 * Removes the Plan Enrollment where externalReferenceCode = &#63; and groupId = &#63; from the database.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the plan enrollment that was removed
+	 * @return the Plan Enrollment that was removed
 	 */
 	@Override
 	public PlanEnrollment removeByERC_G(
@@ -15432,11 +15432,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments where externalReferenceCode = &#63; and groupId = &#63;.
+	 * Returns the number of Plan Enrollments where externalReferenceCode = &#63; and groupId = &#63;.
 	 *
 	 * @param externalReferenceCode the external reference code
 	 * @param groupId the group ID
-	 * @return the number of matching plan enrollments
+	 * @return the number of matching Plan Enrollments
 	 */
 	@Override
 	public int countByERC_G(String externalReferenceCode, long groupId) {
@@ -15475,9 +15475,9 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Caches the plan enrollment in the entity cache if it is enabled.
+	 * Caches the Plan Enrollment in the entity cache if it is enabled.
 	 *
-	 * @param planEnrollment the plan enrollment
+	 * @param planEnrollment the Plan Enrollment
 	 */
 	@Override
 	public void cacheResult(PlanEnrollment planEnrollment) {
@@ -15509,9 +15509,9 @@ public class PlanEnrollmentPersistenceImpl
 	private int _valueObjectFinderCacheListThreshold;
 
 	/**
-	 * Caches the plan enrollments in the entity cache if it is enabled.
+	 * Caches the Plan Enrollments in the entity cache if it is enabled.
 	 *
-	 * @param planEnrollments the plan enrollments
+	 * @param planEnrollments the Plan Enrollments
 	 */
 	@Override
 	public void cacheResult(List<PlanEnrollment> planEnrollments) {
@@ -15538,7 +15538,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for all plan enrollments.
+	 * Clears the cache for all Plan Enrollments.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -15552,7 +15552,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Clears the cache for the plan enrollment.
+	 * Clears the cache for the Plan Enrollment.
 	 *
 	 * <p>
 	 * The <code>EntityCache</code> and <code>FinderCache</code> are both cleared by this method.
@@ -15605,10 +15605,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Creates a new plan enrollment with the primary key. Does not add the plan enrollment to the database.
+	 * Creates a new Plan Enrollment with the primary key. Does not add the Plan Enrollment to the database.
 	 *
-	 * @param planEnrollmentId the primary key for the new plan enrollment
-	 * @return the new plan enrollment
+	 * @param planEnrollmentId the primary key for the new Plan Enrollment
+	 * @return the new Plan Enrollment
 	 */
 	@Override
 	public PlanEnrollment create(long planEnrollmentId) {
@@ -15627,11 +15627,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes the plan enrollment with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Plan Enrollment with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment that was removed
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment remove(long planEnrollmentId)
@@ -15641,11 +15641,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes the plan enrollment with the primary key from the database. Also notifies the appropriate model listeners.
+	 * Removes the Plan Enrollment with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param primaryKey the primary key of the plan enrollment
-	 * @return the plan enrollment that was removed
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @param primaryKey the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment that was removed
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment remove(Serializable primaryKey)
@@ -15789,7 +15789,7 @@ public class PlanEnrollmentPersistenceImpl
 			if (isNew) {
 				if (ercPlanEnrollment != null) {
 					throw new DuplicatePlanEnrollmentExternalReferenceCodeException(
-						"Duplicate plan enrollment with external reference code " +
+						"Duplicate Plan Enrollment with external reference code " +
 							planEnrollment.getExternalReferenceCode() +
 								" and group " + planEnrollment.getGroupId());
 				}
@@ -15800,7 +15800,7 @@ public class PlanEnrollmentPersistenceImpl
 						ercPlanEnrollment.getPlanEnrollmentId())) {
 
 					throw new DuplicatePlanEnrollmentExternalReferenceCodeException(
-						"Duplicate plan enrollment with external reference code " +
+						"Duplicate Plan Enrollment with external reference code " +
 							planEnrollment.getExternalReferenceCode() +
 								" and group " + planEnrollment.getGroupId());
 				}
@@ -15872,11 +15872,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
+	 * Returns the Plan Enrollment with the primary key or throws a <code>com.liferay.portal.kernel.exception.NoSuchModelException</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the plan enrollment
-	 * @return the plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @param primaryKey the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment findByPrimaryKey(Serializable primaryKey)
@@ -15897,11 +15897,11 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment with the primary key or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
+	 * Returns the Plan Enrollment with the primary key or throws a <code>NoSuchPlanEnrollmentException</code> if it could not be found.
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment
-	 * @throws NoSuchPlanEnrollmentException if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment
+	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment findByPrimaryKey(long planEnrollmentId)
@@ -15911,10 +15911,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Plan Enrollment with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param primaryKey the primary key of the plan enrollment
-	 * @return the plan enrollment, or <code>null</code> if a plan enrollment with the primary key could not be found
+	 * @param primaryKey the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment, or <code>null</code> if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByPrimaryKey(Serializable primaryKey) {
@@ -15959,10 +15959,10 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the plan enrollment with the primary key or returns <code>null</code> if it could not be found.
+	 * Returns the Plan Enrollment with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param planEnrollmentId the primary key of the plan enrollment
-	 * @return the plan enrollment, or <code>null</code> if a plan enrollment with the primary key could not be found
+	 * @param planEnrollmentId the primary key of the Plan Enrollment
+	 * @return the Plan Enrollment, or <code>null</code> if a Plan Enrollment with the primary key could not be found
 	 */
 	@Override
 	public PlanEnrollment fetchByPrimaryKey(long planEnrollmentId) {
@@ -16096,9 +16096,9 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns all the plan enrollments.
+	 * Returns all the Plan Enrollments.
 	 *
-	 * @return the plan enrollments
+	 * @return the Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findAll() {
@@ -16106,15 +16106,15 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns a range of all the plan enrollments.
+	 * Returns a range of all the Plan Enrollments.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
-	 * @return the range of plan enrollments
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
+	 * @return the range of Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findAll(int start, int end) {
@@ -16122,16 +16122,16 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments.
+	 * Returns an ordered range of all the Plan Enrollments.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of plan enrollments
+	 * @return the ordered range of Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findAll(
@@ -16142,17 +16142,17 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns an ordered range of all the plan enrollments.
+	 * Returns an ordered range of all the Plan Enrollments.
 	 *
 	 * <p>
 	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
 	 * </p>
 	 *
-	 * @param start the lower bound of the range of plan enrollments
-	 * @param end the upper bound of the range of plan enrollments (not inclusive)
+	 * @param start the lower bound of the range of Plan Enrollments
+	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
 	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	 * @param useFinderCache whether to use the finder cache
-	 * @return the ordered range of plan enrollments
+	 * @return the ordered range of Plan Enrollments
 	 */
 	@Override
 	public List<PlanEnrollment> findAll(
@@ -16236,7 +16236,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Removes all the plan enrollments from the database.
+	 * Removes all the Plan Enrollments from the database.
 	 *
 	 */
 	@Override
@@ -16247,9 +16247,9 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Returns the number of plan enrollments.
+	 * Returns the number of Plan Enrollments.
 	 *
-	 * @return the number of plan enrollments
+	 * @return the number of Plan Enrollments
 	 */
 	@Override
 	public int countAll() {
@@ -16390,7 +16390,7 @@ public class PlanEnrollmentPersistenceImpl
 	}
 
 	/**
-	 * Initializes the plan enrollment persistence.
+	 * Initializes the Plan Enrollment persistence.
 	 */
 	@Activate
 	public void activate() {

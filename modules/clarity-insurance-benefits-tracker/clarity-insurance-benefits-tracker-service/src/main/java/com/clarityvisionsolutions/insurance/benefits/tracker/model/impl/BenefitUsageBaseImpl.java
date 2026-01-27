@@ -26,7 +26,7 @@ public abstract class BenefitUsageBaseImpl
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify or reference this class directly. All methods that expect a benefit usage model instance should use the <code>BenefitUsage</code> interface instead.
+	 * Never modify or reference this class directly. All methods that expect a Benefit Usage model instance should use the <code>BenefitUsage</code> interface instead.
 	 */
 	@Override
 	public void persist() {

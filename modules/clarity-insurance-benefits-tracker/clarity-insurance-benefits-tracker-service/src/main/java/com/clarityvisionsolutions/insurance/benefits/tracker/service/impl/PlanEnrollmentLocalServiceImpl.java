@@ -265,6 +265,21 @@ public class PlanEnrollmentLocalServiceImpl
 	}
 
 	@Override
+	public PlanEnrollment getPlanEnrollmentByExternalReferenceCode(final String externalReferenceCode) {
+		DynamicQuery dq = planEnrollmentLocalService.dynamicQuery();
+
+		dq.add(RestrictionsFactoryUtil.eq("externalReferenceCode", externalReferenceCode));
+
+		List<PlanEnrollment> results = planEnrollmentPersistence.findWithDynamicQuery(dq);
+
+		if (results.size() > 0) {
+			return results.get(0);
+		}
+
+		return null;
+	}
+
+	@Override
 	public List<PlanEnrollment> getPlanEnrollments(final long insurancePlanId, final int status, final int start, final int max) {
 		if (status == WorkflowConstants.STATUS_ANY) {
 			return planEnrollmentPersistence.findByInsurancePlan(insurancePlanId, start, max);
