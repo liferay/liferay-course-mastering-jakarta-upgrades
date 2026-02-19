@@ -1,0 +1,19 @@
+{
+	"dependencies": {
+		"@clayui/css": "3.x",
+		"react": "18.x",
+		"react-dom": "18.x",
+		"recharts": "2.x"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "4.x",
+		"vite": "5.x"
+	},
+	"name": "clarity-insurance-benefits-tracker-dashboard",
+	"private": true,
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite"
+	},
+	"version": "1.0.0"
+}

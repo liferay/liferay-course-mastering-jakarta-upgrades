@@ -1,0 +1,15 @@
+assemble:
+    - from: build/static
+      into: static
+clarity-insurance-benefits-tracker-dashboard:
+    friendlyURLMapping: insurance-benefit-tracker-dashboard
+    htmlElementName: insurance-benefit-tracker-dashboard
+    instanceable: true
+    name: Insurance Benefit Tracker Dashboard
+    portletCategoryName: category.client-extensions
+    type: customElement
+    cssURLs:
+        - assets/style-*.css
+    urls:
+        - index.*.js
+    useESM: true
