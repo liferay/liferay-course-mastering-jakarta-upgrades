@@ -248,6 +248,11 @@ public class ServletDataImpl implements ServletData {
 							PlanEnrollmentResourceImpl.class,
 							"getPlanEnrollmentBenefitUsagesPage"));
 					put(
+						"query#planEnrollmentUsageDetail",
+						new ObjectValuePair<>(
+							PlanEnrollmentResourceImpl.class,
+							"getPlanEnrollmentUsageDetail"));
+					put(
 						"query#planEnrollmentByExternalReferenceCode",
 						new ObjectValuePair<>(
 							PlanEnrollmentResourceImpl.class,
@@ -269,12 +274,17 @@ public class ServletDataImpl implements ServletData {
 							PlanEnrollmentResourceImpl.class,
 							"getPlanEnrollmentBenefitUsagesPage"));
 					put(
+						"query#PlanEnrollment.usageDetail",
+						new ObjectValuePair<>(
+							PlanEnrollmentResourceImpl.class,
+							"getPlanEnrollmentUsageDetail"));
+					put(
 						"query#InsurancePlan.planEnrollments",
 						new ObjectValuePair<>(
 							InsurancePlanResourceImpl.class,
 							"getInsurancePlanPlanEnrollmentsPage"));
 					put(
-						"query#BenefitUsage.planEnrollment",
+						"query#BenefitUsageDetails.planEnrollment",
 						new ObjectValuePair<>(
 							PlanEnrollmentResourceImpl.class,
 							"getPlanEnrollment"));

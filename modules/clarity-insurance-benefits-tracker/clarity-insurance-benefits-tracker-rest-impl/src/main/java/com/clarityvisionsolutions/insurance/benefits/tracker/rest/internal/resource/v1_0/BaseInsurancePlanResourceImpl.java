@@ -814,18 +814,19 @@ public abstract class BaseInsurancePlanResourceImpl
 			"createStrategy", "INSERT");
 
 		if (StringUtil.equalsIgnoreCase(createStrategy, "INSERT")) {
-			insurancePlanUnsafeFunction = insurancePlan -> {
-				postInsurancePlan(
-					_parseLong((String)parameters.get("insurancePlanId")),
-					(PlanEnrollment)parameters.get("planEnrollment"));
-
-				return null;
-			};
-
 			if (parameters.containsKey("siteId")) {
 				insurancePlanUnsafeFunction =
 					insurancePlan -> postSiteInsurancePlan(
 						(Long)parameters.get("siteId"), insurancePlan);
+			}
+			else {
+				insurancePlanUnsafeFunction = insurancePlan -> {
+					postInsurancePlan(
+						_parseLong((String)parameters.get("insurancePlanId")),
+						(PlanEnrollment)parameters.get("planEnrollment"));
+
+					return null;
+				};
 			}
 		}
 
@@ -894,13 +895,6 @@ public abstract class BaseInsurancePlanResourceImpl
 			new MultivaluedHashMap<String, Object>(multivaluedMap));
 	}
 
-	@Override
-	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
-		throws Exception {
-
-		return null;
-	}
-
 	public String getResourceName() {
 		return "InsurancePlan";
 	}
@@ -964,16 +958,12 @@ public abstract class BaseInsurancePlanResourceImpl
 
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "PARTIAL_UPDATE")) {
 			insurancePlanUnsafeFunction = insurancePlan -> patchInsurancePlan(
-				insurancePlan.getId() != null ? insurancePlan.getId() :
-					_parseLong((String)parameters.get("insurancePlanId")),
-				insurancePlan);
+				insurancePlan.getId(), insurancePlan);
 		}
 
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "UPDATE")) {
 			insurancePlanUnsafeFunction = insurancePlan -> putInsurancePlan(
-				insurancePlan.getId() != null ? insurancePlan.getId() :
-					_parseLong((String)parameters.get("insurancePlanId")),
-				insurancePlan);
+				insurancePlan.getId(), insurancePlan);
 		}
 
 		if (insurancePlanUnsafeFunction == null) {
@@ -1001,6 +991,13 @@ public abstract class BaseInsurancePlanResourceImpl
 		if (value != null) {
 			return Long.parseLong(value);
 		}
+
+		return null;
+	}
+
+	@Override
+	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
+		throws Exception {
 
 		return null;
 	}

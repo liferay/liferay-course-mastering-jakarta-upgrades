@@ -81,13 +81,23 @@ public class PlanEnrollmentServiceImpl extends PlanEnrollmentServiceBaseImpl {
 	}
 
 	@Override
-	public List<PlanEnrollment> getGroupMemberPlanEnrollments(final long groupId, final long planEnrollmentId, final long memberId, final int status) throws PortalException {
+	public List<PlanEnrollment> getGroupMemberPlanEnrollments(final long groupId, final long insurancePlanId, final long memberUserId, final int status) throws PortalException {
 
 		if (status == WorkflowConstants.STATUS_ANY) {
-			return planEnrollmentPersistence.filterFindByG_IP_M_NotS(groupId, planEnrollmentId, memberId, WorkflowConstants.STATUS_IN_TRASH);
+			return planEnrollmentPersistence.filterFindByG_IP_M_NotS(groupId, insurancePlanId, memberUserId, WorkflowConstants.STATUS_IN_TRASH);
 		}
 
-		return planEnrollmentPersistence.filterFindByG_IP_M_S(groupId, planEnrollmentId, memberId, status);
+		return planEnrollmentPersistence.filterFindByG_IP_M_S(groupId, insurancePlanId, memberUserId, status);
+	}
+
+	@Override
+	public List<PlanEnrollment> getMemberPlanEnrollments(final long groupId, final long memberUserId, final int enrollmentStatus) throws PortalException {
+
+		_portletResourcePermission.check(
+				getPermissionChecker(), groupId,
+				ActionKeys.VIEW);
+
+		return planEnrollmentLocalService.getMemberPlanEnrollments(groupId, memberUserId, enrollmentStatus);
 	}
 
 	/**

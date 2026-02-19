@@ -19,7 +19,7 @@ import org.osgi.service.component.annotations.Component;
 		"javax.portlet.display-name=ClarityInsuranceBenefitsTrackerWeb",
 		"javax.portlet.init-param.mvc-command-names-default-views=/insurance-plans/view",
 		"javax.portlet.init-param.template-path=/META-INF/resources/",
-		"javax.portlet.init-param.view-template=/view-ips.jsp",
+		"javax.portlet.init-param.view-template=/insurance-plans/view.jsp",
 		"javax.portlet.name=" + InsuranceBenefitsTrackerPortletKeys.IBT_PLANS_ADMIN,
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user",

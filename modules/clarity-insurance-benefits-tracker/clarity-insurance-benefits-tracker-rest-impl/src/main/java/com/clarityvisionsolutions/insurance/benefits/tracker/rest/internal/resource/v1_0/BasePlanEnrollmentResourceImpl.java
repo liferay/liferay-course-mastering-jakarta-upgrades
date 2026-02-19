@@ -1,6 +1,7 @@
 package com.clarityvisionsolutions.insurance.benefits.tracker.rest.internal.resource.v1_0;
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsage;
+import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsageDetails;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.PlanEnrollment;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0.PlanEnrollmentResource;
 
@@ -236,6 +237,38 @@ public abstract class BasePlanEnrollmentResourceImpl
 		throws Exception {
 
 		return Page.of(Collections.emptyList());
+	}
+
+	/**
+	 * Invoke this method with the command line:
+	 *
+	 * curl -X 'GET' 'http://localhost:8080/o/clarity-insurance-benefits-tracker-rest/v1.0/plan-enrollment/{planEnrollmentId}/usage-details'  -u 'test@liferay.com:test'
+	 */
+	@io.swagger.v3.oas.annotations.Parameters(
+		value = {
+			@io.swagger.v3.oas.annotations.Parameter(
+				in = io.swagger.v3.oas.annotations.enums.ParameterIn.PATH,
+				name = "planEnrollmentId"
+			)
+		}
+	)
+	@io.swagger.v3.oas.annotations.tags.Tags(
+		value = {
+			@io.swagger.v3.oas.annotations.tags.Tag(name = "PlanEnrollment")
+		}
+	)
+	@javax.ws.rs.GET
+	@javax.ws.rs.Path("/plan-enrollment/{planEnrollmentId}/usage-details")
+	@javax.ws.rs.Produces({"application/json", "application/xml"})
+	@Override
+	public BenefitUsageDetails getPlanEnrollmentUsageDetail(
+			@io.swagger.v3.oas.annotations.Parameter(hidden = true)
+			@javax.validation.constraints.NotNull
+			@javax.ws.rs.PathParam("planEnrollmentId")
+			Long planEnrollmentId)
+		throws Exception {
+
+		return new BenefitUsageDetails();
 	}
 
 	/**
@@ -799,13 +832,6 @@ public abstract class BasePlanEnrollmentResourceImpl
 			new MultivaluedHashMap<String, Object>(multivaluedMap));
 	}
 
-	@Override
-	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
-		throws Exception {
-
-		return null;
-	}
-
 	public String getResourceName() {
 		return "PlanEnrollment";
 	}
@@ -870,16 +896,12 @@ public abstract class BasePlanEnrollmentResourceImpl
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "PARTIAL_UPDATE")) {
 			planEnrollmentUnsafeFunction =
 				planEnrollment -> patchPlanEnrollment(
-					planEnrollment.getId() != null ? planEnrollment.getId() :
-						_parseLong((String)parameters.get("planEnrollmentId")),
-					planEnrollment);
+					planEnrollment.getId(), planEnrollment);
 		}
 
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "UPDATE")) {
 			planEnrollmentUnsafeFunction = planEnrollment -> putPlanEnrollment(
-				planEnrollment.getId() != null ? planEnrollment.getId() :
-					_parseLong((String)parameters.get("planEnrollmentId")),
-				planEnrollment);
+				planEnrollment.getId(), planEnrollment);
 		}
 
 		if (planEnrollmentUnsafeFunction == null) {
@@ -907,6 +929,13 @@ public abstract class BasePlanEnrollmentResourceImpl
 		if (value != null) {
 			return Long.parseLong(value);
 		}
+
+		return null;
+	}
+
+	@Override
+	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
+		throws Exception {
 
 		return null;
 	}

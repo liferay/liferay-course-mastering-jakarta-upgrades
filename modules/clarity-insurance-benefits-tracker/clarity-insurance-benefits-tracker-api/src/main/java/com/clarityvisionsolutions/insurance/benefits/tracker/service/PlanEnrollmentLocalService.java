@@ -322,6 +322,10 @@ public interface PlanEnrollmentLocalService
 		throws PortalException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<PlanEnrollment> getMemberPlanEnrollments(
+		long groupId, long memberUserId, int status);
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public int getPlanEnrollmentCounts(long insurancePlanId, int status);
 
 	/**

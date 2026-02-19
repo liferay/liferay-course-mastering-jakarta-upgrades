@@ -420,6 +420,14 @@ public class PlanEnrollmentLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<PlanEnrollment> getMemberPlanEnrollments(
+			long groupId, long memberUserId, int status) {
+
+		return _planEnrollmentLocalService.getMemberPlanEnrollments(
+			groupId, memberUserId, status);
+	}
+
+	@Override
 	public int getPlanEnrollmentCounts(long insurancePlanId, int status) {
 		return _planEnrollmentLocalService.getPlanEnrollmentCounts(
 			insurancePlanId, status);

@@ -2,6 +2,7 @@ package com.clarityvisionsolutions.insurance.benefits.tracker.rest.internal.reso
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.constants.InsuranceBenefitsTrackerConstants;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsage;
+import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsageDetails;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.PlanEnrollment;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.internal.dto.v1_0.converter.BenefitUsageDTOConverter;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.internal.dto.v1_0.converter.PlanEnrollmentDTOConverter;
@@ -10,18 +11,22 @@ import com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0.
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.BenefitUsageLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.BenefitUsageService;
+import com.clarityvisionsolutions.insurance.benefits.tracker.service.InsurancePlanLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.PlanEnrollmentLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.PlanEnrollmentService;
 import com.liferay.headless.common.spi.service.context.ServiceContextBuilder;
+import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.exception.DuplicateExternalReferenceCodeException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.search.Field;
 import com.liferay.portal.kernel.security.permission.ActionKeys;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.HashMapBuilder;
 import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.vulcan.pagination.Page;
 import com.liferay.portal.vulcan.pagination.Pagination;
 import com.liferay.portal.vulcan.util.LocalDateTimeUtil;
@@ -33,9 +38,7 @@ import org.osgi.service.component.annotations.ServiceScope;
 import javax.ws.rs.core.Response;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.Collections;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author dnebinger
@@ -78,13 +81,36 @@ public class PlanEnrollmentResourceImpl extends BasePlanEnrollmentResourceImpl {
 	@Override
 	public Page<PlanEnrollment> getSitePlanEnrollmentsPage(
 			Long siteId,
-			String search,
+			String keywords,
 			com.liferay.portal.vulcan.aggregation.Aggregation aggregation,
 			com.liferay.portal.kernel.search.filter.Filter filter,
 			Pagination pagination,
 			com.liferay.portal.kernel.search.Sort[]
 					sorts)
 			throws Exception {
+
+		String search = Validator.isNull(keywords) ? "Enrollment for " + contextUser.getFullName() : keywords;
+
+		List<com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment> enrollments = _planEnrollmentService.getMemberPlanEnrollments(siteId,
+				contextUser.getUserId(), 1);
+		_log.info("Found " + (enrollments != null ? enrollments.size() : 0) + " enrollments to return for site " + siteId + " and user " + contextUser.getUserId());
+
+		if (enrollments.size() > 0) {
+			List<PlanEnrollment> items = new ArrayList<>();
+			for (com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment enrollment : enrollments) {
+				items.add(_planEnrollmentDTOConverter.toDTO(_getActions(enrollment), enrollment));
+			}
+			return Page.of(
+					HashMapBuilder.put(
+							"get",
+							addAction(
+									ActionKeys.VIEW, "getSitePlanEnrollmentsPage",
+									InsuranceBenefitsTrackerConstants.RESOURCE_NAME,
+									siteId)
+					).build(),
+					new ArrayList<>(), items, pagination, items.size());
+
+		}
 
 		return SearchUtil.search(
 				HashMapBuilder.put(
@@ -255,6 +281,86 @@ public class PlanEnrollmentResourceImpl extends BasePlanEnrollmentResourceImpl {
 		return _benefitUsageDTOConverter.toDTO(_getActions(model), model);
 	}
 
+	@Override
+	public BenefitUsageDetails getPlanEnrollmentUsageDetail(
+			Long planEnrollmentId)
+			throws Exception {
+
+		_log.info("Need to get the benefit usage data for plan enrollment " + planEnrollmentId);
+
+		// Get the plan enrollment (permission check via remote service)
+
+		com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment enrollment =
+			_planEnrollmentService.getPlanEnrollment(planEnrollmentId);
+
+		// Get the insurance plan for allowance caps
+
+		com.clarityvisionsolutions.insurance.benefits.tracker.model.InsurancePlan insurancePlan =
+			_insurancePlanLocalService.getInsurancePlan(
+				enrollment.getInsurancePlanId());
+
+		// Get all benefit usages for this enrollment
+
+		List<com.clarityvisionsolutions.insurance.benefits.tracker.model.BenefitUsage> benefitUsages =
+			_benefitUsageLocalService.getBenefitUsagesByPlanEnrollmentStatus(
+				planEnrollmentId, WorkflowConstants.STATUS_APPROVED,
+				QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+
+		// Aggregate by benefitType
+
+		long examUsed = 0;
+		long framesUsed = 0;
+		long lensesUsed = 0;
+		long contactsUsed = 0;
+
+		for (com.clarityvisionsolutions.insurance.benefits.tracker.model.BenefitUsage bu : benefitUsages) {
+			switch (bu.getBenefitType()) {
+				case "exam":
+					examUsed += bu.getAmountUsedCents();
+
+					break;
+				case "frames":
+					framesUsed += bu.getAmountUsedCents();
+
+					break;
+				case "lenses":
+					lensesUsed += bu.getAmountUsedCents();
+
+					break;
+				case "contacts":
+					contactsUsed += bu.getAmountUsedCents();
+
+					break;
+			}
+		}
+
+		// Build and return the DTO
+
+		BenefitUsageDetails details = new BenefitUsageDetails();
+
+		details.setPlanEnrollmentId(enrollment.getPlanEnrollmentId());
+		details.setInsurancePlanId(enrollment.getInsurancePlanId());
+		details.setPlanName(insurancePlan.getPlanName());
+		details.setProviderName(insurancePlan.getProviderName());
+		details.setStartDate(enrollment.getStartDate());
+		details.setEndDate(enrollment.getEndDate());
+		details.setEnrollmentStatus(enrollment.getEnrollmentStatus());
+		details.setAnnualExamAllowanceCents(
+			insurancePlan.getAnnualExamAllowanceCents());
+		details.setAnnualFramesAllowanceCents(
+			insurancePlan.getAnnualFramesAllowanceCents());
+		details.setAnnualLensesAllowanceCents(
+			insurancePlan.getAnnualLensesAllowanceCents());
+		details.setAnnualContactsAllowanceCents(
+			insurancePlan.getAnnualContactsAllowanceCents());
+		details.setExamUsedCents(examUsed);
+		details.setFramesUsedCents(framesUsed);
+		details.setLensesUsedCents(lensesUsed);
+		details.setContactsUsedCents(contactsUsed);
+
+		return details;
+	}
+
 	private Map<String, Map<String, String>> _getActions(
 			com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment model) {
 
@@ -297,8 +403,12 @@ public class PlanEnrollmentResourceImpl extends BasePlanEnrollmentResourceImpl {
 
 	@Reference
 	private BenefitUsageLocalService _benefitUsageLocalService;
+
 	@Reference
 	private BenefitUsageService _benefitUsageService;
+
+	@Reference
+	private InsurancePlanLocalService _insurancePlanLocalService;
 
 	@Reference
 	private BenefitUsageDTOConverter _benefitUsageDTOConverter;

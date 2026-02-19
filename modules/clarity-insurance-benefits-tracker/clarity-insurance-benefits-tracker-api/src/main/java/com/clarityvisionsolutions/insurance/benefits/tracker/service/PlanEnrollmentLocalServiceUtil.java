@@ -375,6 +375,13 @@ public class PlanEnrollmentLocalServiceUtil {
 		return getService().getPlanEnrollmentByUuidAndGroupId(uuid, groupId);
 	}
 
+	public static List<PlanEnrollment> getMemberPlanEnrollments(
+			long groupId, long memberUserId, int status) {
+
+		return getService().getMemberPlanEnrollments(
+			groupId, memberUserId, status);
+	}
+
 	public static int getPlanEnrollmentCounts(
 		long insurancePlanId, int status) {
 

@@ -72,7 +72,7 @@ public class BenefitUsageLocalServiceImpl
 										final String notes, final String sourceType, final String sourceReference, final ServiceContext serviceContext) throws PortalException {
 
 		// verify the enrollment exists
-		PlanEnrollment enrollment = _planEnrollmentLocalService.getPlanEnrollment(planEnrollmentId);
+		PlanEnrollment enrollment = planEnrollmentPersistence.findByPrimaryKey(planEnrollmentId);
 
 		BenefitUsage usage = benefitUsageLocalService.createBenefitUsage(counterLocalService.increment(BenefitUsage.class.getName()));
 
@@ -405,7 +405,7 @@ public class BenefitUsageLocalServiceImpl
 			visible = true;
 		}
 
-		PlanEnrollment enrollment = _planEnrollmentLocalService.getPlanEnrollment(usage.getPlanEnrollmentId());
+		PlanEnrollment enrollment = planEnrollmentPersistence.findByPrimaryKey(usage.getPlanEnrollmentId());
 
 		AssetEntry assetEntry = _assetEntryLocalService.updateEntry(userId, usage.getGroupId(), usage.getCreateDate(),
 				usage.getModifiedDate(), BenefitUsage.class.getName(), usage.getBenefitUsageId(), usage.getUuid(), 0, assetCategoryIds,
@@ -542,9 +542,6 @@ public class BenefitUsageLocalServiceImpl
 
 	@Reference
 	private WorkflowInstanceLinkLocalService _workflowInstanceLinkLocalService;
-
-	@Reference
-	private PlanEnrollmentLocalService _planEnrollmentLocalService;
 
 	private static final Log _log = LogFactoryUtil.getLog(BenefitUsageLocalServiceImpl.class);
 }

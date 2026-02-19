@@ -8,13 +8,9 @@ package com.clarityvisionsolutions.insurance.benefits.tracker.web.plans.admin.po
 import com.clarityvisionsolutions.insurance.benefits.tracker.constants.InsuranceBenefitsTrackerPortletKeys;
 import com.clarityvisionsolutions.insurance.benefits.tracker.model.InsurancePlan;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.InsurancePlanService;
-import com.liferay.bookmarks.exception.NoSuchFolderException;
-import com.liferay.bookmarks.model.BookmarksEntry;
-import com.liferay.bookmarks.model.BookmarksFolder;
 import com.liferay.change.tracking.spi.history.util.CTTimelineUtil;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
-import com.liferay.portal.kernel.portlet.toolbar.contributor.PortletToolbarContributor;
 import com.liferay.portal.kernel.security.auth.PrincipalException;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
@@ -36,7 +32,6 @@ import java.util.List;
 @Component(
 	property = {
 		"javax.portlet.name=" + InsuranceBenefitsTrackerPortletKeys.IBT_PLANS_ADMIN,
-		"javax.portlet.name=" + InsuranceBenefitsTrackerPortletKeys.IBT_ENROLLMENT_ADMIN,
 		"mvc.command.name=/", "mvc.command.name=/insurance-plans/view"
 	},
 	service = MVCRenderCommand.class

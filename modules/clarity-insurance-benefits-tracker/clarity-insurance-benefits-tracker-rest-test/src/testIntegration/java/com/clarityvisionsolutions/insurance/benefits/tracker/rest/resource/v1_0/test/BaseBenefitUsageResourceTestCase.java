@@ -240,7 +240,7 @@ public abstract class BaseBenefitUsageResourceTestCase {
 							put("benefitUsageId", benefitUsage1.getId());
 						}
 					},
-					new GraphQLField("id"))),
+					getGraphQLFields())),
 			"JSONArray/errors");
 
 		Assert.assertTrue(errorsJSONArray1.length() > 0);
@@ -279,7 +279,7 @@ public abstract class BaseBenefitUsageResourceTestCase {
 								put("benefitUsageId", benefitUsage2.getId());
 							}
 						},
-						new GraphQLField("id")))),
+						getGraphQLFields()))),
 			"JSONArray/errors");
 
 		Assert.assertTrue(errorsJSONArray2.length() > 0);
@@ -559,7 +559,7 @@ public abstract class BaseBenefitUsageResourceTestCase {
 			testGraphQLGetSiteBenefitUsageByExternalReferenceCode_addBenefitUsage()
 		throws Exception {
 
-		return testGraphQLBenefitUsage_addBenefitUsage();
+		return testGraphQLSiteBenefitUsage_addBenefitUsage();
 	}
 
 	@Test
@@ -618,6 +618,13 @@ public abstract class BaseBenefitUsageResourceTestCase {
 	}
 
 	protected BenefitUsage testGraphQLBenefitUsage_addBenefitUsage()
+		throws Exception {
+
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	protected BenefitUsage testGraphQLSiteBenefitUsage_addBenefitUsage()
 		throws Exception {
 
 		throw new UnsupportedOperationException(
@@ -879,6 +886,10 @@ public abstract class BaseBenefitUsageResourceTestCase {
 
 	protected List<GraphQLField> getGraphQLFields() throws Exception {
 		List<GraphQLField> graphQLFields = new ArrayList<>();
+
+		graphQLFields.add(new GraphQLField("externalReferenceCode"));
+
+		graphQLFields.add(new GraphQLField("id"));
 
 		graphQLFields.add(new GraphQLField("siteId"));
 

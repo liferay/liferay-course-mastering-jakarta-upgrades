@@ -417,13 +417,6 @@ public abstract class BaseBenefitUsageResourceImpl
 			new MultivaluedHashMap<String, Object>(multivaluedMap));
 	}
 
-	@Override
-	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
-		throws Exception {
-
-		return null;
-	}
-
 	public String getResourceName() {
 		return "BenefitUsage";
 	}
@@ -480,16 +473,12 @@ public abstract class BaseBenefitUsageResourceImpl
 
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "PARTIAL_UPDATE")) {
 			benefitUsageUnsafeFunction = benefitUsage -> patchBenefitUsage(
-				benefitUsage.getId() != null ? benefitUsage.getId() :
-					_parseLong((String)parameters.get("benefitUsageId")),
-				benefitUsage);
+				benefitUsage.getId(), benefitUsage);
 		}
 
 		if (StringUtil.equalsIgnoreCase(updateStrategy, "UPDATE")) {
 			benefitUsageUnsafeFunction = benefitUsage -> putBenefitUsage(
-				benefitUsage.getId() != null ? benefitUsage.getId() :
-					_parseLong((String)parameters.get("benefitUsageId")),
-				benefitUsage);
+				benefitUsage.getId(), benefitUsage);
 		}
 
 		if (benefitUsageUnsafeFunction == null) {
@@ -513,10 +502,9 @@ public abstract class BaseBenefitUsageResourceImpl
 		}
 	}
 
-	private Long _parseLong(String value) {
-		if (value != null) {
-			return Long.parseLong(value);
-		}
+	@Override
+	public EntityModel getEntityModel(MultivaluedMap multivaluedMap)
+		throws Exception {
 
 		return null;
 	}

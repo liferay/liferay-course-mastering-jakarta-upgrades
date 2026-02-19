@@ -1,6 +1,7 @@
 package com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0;
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsage;
+import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsageDetails;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.PlanEnrollment;
 
 import com.liferay.portal.kernel.service.GroupLocalService;
@@ -57,6 +58,10 @@ public interface PlanEnrollmentResource {
 			com.liferay.portal.kernel.search.filter.Filter filter,
 			Pagination pagination,
 			com.liferay.portal.kernel.search.Sort[] sorts)
+		throws Exception;
+
+	public BenefitUsageDetails getPlanEnrollmentUsageDetail(
+			Long planEnrollmentId)
 		throws Exception;
 
 	public PlanEnrollment getSitePlanEnrollmentByExternalReferenceCode(

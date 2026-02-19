@@ -50,11 +50,19 @@ public class PlanEnrollmentServiceUtil {
 	}
 
 	public static List<PlanEnrollment> getGroupMemberPlanEnrollments(
-			long groupId, long planEnrollmentId, long memberId, int status)
+			long groupId, long insurancePlanId, long memberUserId, int status)
 		throws PortalException {
 
 		return getService().getGroupMemberPlanEnrollments(
-			groupId, planEnrollmentId, memberId, status);
+			groupId, insurancePlanId, memberUserId, status);
+	}
+
+	public static List<PlanEnrollment> getMemberPlanEnrollments(
+			long groupId, long memberUserId, int status)
+		throws PortalException {
+
+		return getService().getMemberPlanEnrollments(
+			groupId, memberUserId, status);
 	}
 
 	/**

@@ -1,6 +1,7 @@
 package com.clarityvisionsolutions.insurance.benefits.tracker.rest.internal.graphql.query.v1_0;
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsage;
+import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.BenefitUsageDetails;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.InsurancePlan;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.dto.v1_0.PlanEnrollment;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0.BenefitUsageResource;
@@ -10,6 +11,8 @@ import com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0.
 import com.liferay.petra.function.UnsafeConsumer;
 import com.liferay.petra.function.UnsafeFunction;
 import com.liferay.portal.kernel.service.GroupLocalService;
+import com.liferay.portal.kernel.service.ResourceActionLocalService;
+import com.liferay.portal.kernel.service.ResourcePermissionLocalService;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.vulcan.accept.language.AcceptLanguage;
 import com.liferay.portal.vulcan.aggregation.Aggregation;
@@ -252,6 +255,24 @@ public class Query {
 	/**
 	 * Invoke this method with the command line:
 	 *
+	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {planEnrollmentUsageDetail(planEnrollmentId: ___){planEnrollmentId, insurancePlanId, planName, providerName, startDate, endDate, enrollmentStatus, annualExamAllowanceCents, annualFramesAllowanceCents, annualLensesAllowanceCents, annualContactsAllowanceCents, examUsedCents, framesUsedCents, lensesUsedCents, contactsUsedCents}}"}' -u 'test@liferay.com:test'
+	 */
+	@GraphQLField
+	public BenefitUsageDetails planEnrollmentUsageDetail(
+			@GraphQLName("planEnrollmentId") Long planEnrollmentId)
+		throws Exception {
+
+		return _applyComponentServiceObjects(
+			_planEnrollmentResourceComponentServiceObjects,
+			this::_populateResourceContext,
+			planEnrollmentResource ->
+				planEnrollmentResource.getPlanEnrollmentUsageDetail(
+					planEnrollmentId));
+	}
+
+	/**
+	 * Invoke this method with the command line:
+	 *
 	 * curl -H 'Content-Type: text/plain; charset=utf-8' -X 'POST' 'http://localhost:8080/o/graphql' -d $'{"query": "query {planEnrollmentByExternalReferenceCode(externalReferenceCode: ___, siteKey: ___){actions, id, externalReferenceCode, siteId, creator, dateCreated, dateModified, insurancePlanId, insurancePlanERC, member, memberId, groupNumber, startDate, endDate, enrollmentStatus, notes, status}}"}' -u 'test@liferay.com:test'
 	 */
 	@GraphQLField
@@ -358,6 +379,29 @@ public class Query {
 
 	}
 
+	@GraphQLTypeExtension(PlanEnrollment.class)
+	public class GetPlanEnrollmentUsageDetailTypeExtension {
+
+		public GetPlanEnrollmentUsageDetailTypeExtension(
+			PlanEnrollment planEnrollment) {
+
+			_planEnrollment = planEnrollment;
+		}
+
+		@GraphQLField
+		public BenefitUsageDetails usageDetail() throws Exception {
+			return _applyComponentServiceObjects(
+				_planEnrollmentResourceComponentServiceObjects,
+				Query.this::_populateResourceContext,
+				planEnrollmentResource ->
+					planEnrollmentResource.getPlanEnrollmentUsageDetail(
+						_planEnrollment.getId()));
+		}
+
+		private PlanEnrollment _planEnrollment;
+
+	}
+
 	@GraphQLTypeExtension(InsurancePlan.class)
 	public class GetInsurancePlanPlanEnrollmentsPageTypeExtension {
 
@@ -396,11 +440,13 @@ public class Query {
 
 	}
 
-	@GraphQLTypeExtension(BenefitUsage.class)
+	@GraphQLTypeExtension(BenefitUsageDetails.class)
 	public class GetPlanEnrollmentTypeExtension {
 
-		public GetPlanEnrollmentTypeExtension(BenefitUsage benefitUsage) {
-			_benefitUsage = benefitUsage;
+		public GetPlanEnrollmentTypeExtension(
+			BenefitUsageDetails benefitUsageDetails) {
+
+			_benefitUsageDetails = benefitUsageDetails;
 		}
 
 		@GraphQLField
@@ -410,10 +456,10 @@ public class Query {
 				Query.this::_populateResourceContext,
 				planEnrollmentResource ->
 					planEnrollmentResource.getPlanEnrollment(
-						_benefitUsage.getPlanEnrollmentId()));
+						_benefitUsageDetails.getPlanEnrollmentId()));
 		}
 
-		private BenefitUsage _benefitUsage;
+		private BenefitUsageDetails _benefitUsageDetails;
 
 	}
 
@@ -562,6 +608,10 @@ public class Query {
 		benefitUsageResource.setContextUriInfo(_uriInfo);
 		benefitUsageResource.setContextUser(_user);
 		benefitUsageResource.setGroupLocalService(_groupLocalService);
+		benefitUsageResource.setResourceActionLocalService(
+			_resourceActionLocalService);
+		benefitUsageResource.setResourcePermissionLocalService(
+			_resourcePermissionLocalService);
 		benefitUsageResource.setRoleLocalService(_roleLocalService);
 	}
 
@@ -577,6 +627,10 @@ public class Query {
 		insurancePlanResource.setContextUriInfo(_uriInfo);
 		insurancePlanResource.setContextUser(_user);
 		insurancePlanResource.setGroupLocalService(_groupLocalService);
+		insurancePlanResource.setResourceActionLocalService(
+			_resourceActionLocalService);
+		insurancePlanResource.setResourcePermissionLocalService(
+			_resourcePermissionLocalService);
 		insurancePlanResource.setRoleLocalService(_roleLocalService);
 	}
 
@@ -593,6 +647,10 @@ public class Query {
 		planEnrollmentResource.setContextUriInfo(_uriInfo);
 		planEnrollmentResource.setContextUser(_user);
 		planEnrollmentResource.setGroupLocalService(_groupLocalService);
+		planEnrollmentResource.setResourceActionLocalService(
+			_resourceActionLocalService);
+		planEnrollmentResource.setResourcePermissionLocalService(
+			_resourcePermissionLocalService);
 		planEnrollmentResource.setRoleLocalService(_roleLocalService);
 	}
 
@@ -613,6 +671,8 @@ public class Query {
 	private GroupLocalService _groupLocalService;
 	private HttpServletRequest _httpServletRequest;
 	private HttpServletResponse _httpServletResponse;
+	private ResourceActionLocalService _resourceActionLocalService;
+	private ResourcePermissionLocalService _resourcePermissionLocalService;
 	private RoleLocalService _roleLocalService;
 	private BiFunction<Object, String, com.liferay.portal.kernel.search.Sort[]>
 		_sortsBiFunction;

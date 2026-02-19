@@ -1,6 +1,7 @@
 package com.clarityvisionsolutions.insurance.benefits.tracker.rest.resource.v1_0.test;
 
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.client.dto.v1_0.BenefitUsage;
+import com.clarityvisionsolutions.insurance.benefits.tracker.rest.client.dto.v1_0.BenefitUsageDetails;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.client.dto.v1_0.PlanEnrollment;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.client.http.HttpInvoker;
 import com.clarityvisionsolutions.insurance.benefits.tracker.rest.client.pagination.Page;
@@ -21,6 +22,7 @@ import com.liferay.petra.function.transform.TransformUtil;
 import com.liferay.petra.reflect.ReflectionUtil;
 import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.json.JSONArray;
+import com.liferay.portal.kernel.json.JSONDeserializer;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.json.JSONUtil;
@@ -30,6 +32,7 @@ import com.liferay.portal.kernel.test.util.GroupTestUtil;
 import com.liferay.portal.kernel.test.util.RandomTestUtil;
 import com.liferay.portal.kernel.test.util.UserTestUtil;
 import com.liferay.portal.kernel.util.ArrayUtil;
+import com.liferay.portal.kernel.util.DateUtil;
 import com.liferay.portal.kernel.util.FastDateFormatFactoryUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
@@ -57,6 +60,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.TimeZone;
 
 import javax.annotation.Generated;
 
@@ -244,7 +248,7 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 							put("planEnrollmentId", planEnrollment1.getId());
 						}
 					},
-					new GraphQLField("id"))),
+					getGraphQLFields())),
 			"JSONArray/errors");
 
 		Assert.assertTrue(errorsJSONArray1.length() > 0);
@@ -285,7 +289,7 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 									planEnrollment2.getId());
 							}
 						},
-						new GraphQLField("id")))),
+						getGraphQLFields()))),
 			"JSONArray/errors");
 
 		Assert.assertTrue(errorsJSONArray2.length() > 0);
@@ -872,6 +876,89 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 	}
 
 	@Test
+	public void testGraphQLGetPlanEnrollmentBenefitUsagesPage()
+		throws Exception {
+
+		Long planEnrollmentId =
+			testGetPlanEnrollmentBenefitUsagesPage_getPlanEnrollmentId();
+
+		GraphQLField graphQLField = new GraphQLField(
+			"planEnrollmentBenefitUsages",
+			new HashMap<String, Object>() {
+				{
+					put("planEnrollmentId", planEnrollmentId);
+					put("search", null);
+					put("page", 1);
+					put("pageSize", 10);
+				}
+			},
+			new GraphQLField("items", getGraphQLFields()),
+			new GraphQLField("page"), new GraphQLField("totalCount"));
+
+		// No namespace
+
+		JSONObject planEnrollmentBenefitUsagesJSONObject =
+			JSONUtil.getValueAsJSONObject(
+				invokeGraphQLQuery(graphQLField), "JSONObject/data",
+				"JSONObject/planEnrollmentBenefitUsages");
+
+		long totalCount = planEnrollmentBenefitUsagesJSONObject.getLong(
+			"totalCount");
+
+		PlanEnrollment planEnrollment1 =
+			testGraphQLPlanEnrollment_addPlanEnrollment(
+				planEnrollmentId, randomPlanEnrollment());
+
+		PlanEnrollment planEnrollment2 =
+			testGraphQLPlanEnrollment_addPlanEnrollment(
+				planEnrollmentId, randomPlanEnrollment());
+
+		planEnrollmentBenefitUsagesJSONObject = JSONUtil.getValueAsJSONObject(
+			invokeGraphQLQuery(graphQLField), "JSONObject/data",
+			"JSONObject/planEnrollmentBenefitUsages");
+
+		Assert.assertEquals(
+			totalCount + 2,
+			planEnrollmentBenefitUsagesJSONObject.getLong("totalCount"));
+
+		assertContains(
+			planEnrollment1,
+			Arrays.asList(
+				PlanEnrollmentSerDes.toDTOs(
+					planEnrollmentBenefitUsagesJSONObject.getString("items"))));
+		assertContains(
+			planEnrollment2,
+			Arrays.asList(
+				PlanEnrollmentSerDes.toDTOs(
+					planEnrollmentBenefitUsagesJSONObject.getString("items"))));
+
+		// Using the namespace clarityInsuranceBenefitsTracker_v1_0
+
+		planEnrollmentBenefitUsagesJSONObject = JSONUtil.getValueAsJSONObject(
+			invokeGraphQLQuery(
+				new GraphQLField(
+					"clarityInsuranceBenefitsTracker_v1_0", graphQLField)),
+			"JSONObject/data",
+			"JSONObject/clarityInsuranceBenefitsTracker_v1_0",
+			"JSONObject/planEnrollmentBenefitUsages");
+
+		Assert.assertEquals(
+			totalCount + 2,
+			planEnrollmentBenefitUsagesJSONObject.getLong("totalCount"));
+
+		assertContains(
+			planEnrollment1,
+			Arrays.asList(
+				PlanEnrollmentSerDes.toDTOs(
+					planEnrollmentBenefitUsagesJSONObject.getString("items"))));
+		assertContains(
+			planEnrollment2,
+			Arrays.asList(
+				PlanEnrollmentSerDes.toDTOs(
+					planEnrollmentBenefitUsagesJSONObject.getString("items"))));
+	}
+
+	@Test
 	public void testGetSitePlanEnrollmentByExternalReferenceCode()
 		throws Exception {
 
@@ -1022,7 +1109,7 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 			testGraphQLGetSitePlanEnrollmentByExternalReferenceCode_addPlanEnrollment()
 		throws Exception {
 
-		return testGraphQLPlanEnrollment_addPlanEnrollment();
+		return testGraphQLSitePlanEnrollment_addPlanEnrollment();
 	}
 
 	@Test
@@ -1460,86 +1547,6 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 	}
 
 	@Test
-	public void testGraphQLGetSitePlanEnrollmentsPage() throws Exception {
-		Long siteId = testGetSitePlanEnrollmentsPage_getSiteId();
-
-		GraphQLField graphQLField = new GraphQLField(
-			"planEnrollments",
-			new HashMap<String, Object>() {
-				{
-					put("page", 1);
-					put("pageSize", 10);
-
-					put("siteKey", "\"" + siteId + "\"");
-				}
-			},
-			new GraphQLField("items", getGraphQLFields()),
-			new GraphQLField("page"), new GraphQLField("totalCount"));
-
-		// No namespace
-
-		JSONObject planEnrollmentsJSONObject = JSONUtil.getValueAsJSONObject(
-			invokeGraphQLQuery(graphQLField), "JSONObject/data",
-			"JSONObject/planEnrollments");
-
-		long totalCount = planEnrollmentsJSONObject.getLong("totalCount");
-
-		PlanEnrollment planEnrollment1 =
-			testGraphQLGetSitePlanEnrollmentsPage_addPlanEnrollment();
-		PlanEnrollment planEnrollment2 =
-			testGraphQLGetSitePlanEnrollmentsPage_addPlanEnrollment();
-
-		planEnrollmentsJSONObject = JSONUtil.getValueAsJSONObject(
-			invokeGraphQLQuery(graphQLField), "JSONObject/data",
-			"JSONObject/planEnrollments");
-
-		Assert.assertEquals(
-			totalCount + 2, planEnrollmentsJSONObject.getLong("totalCount"));
-
-		assertContains(
-			planEnrollment1,
-			Arrays.asList(
-				PlanEnrollmentSerDes.toDTOs(
-					planEnrollmentsJSONObject.getString("items"))));
-		assertContains(
-			planEnrollment2,
-			Arrays.asList(
-				PlanEnrollmentSerDes.toDTOs(
-					planEnrollmentsJSONObject.getString("items"))));
-
-		// Using the namespace clarityInsuranceBenefitsTracker_v1_0
-
-		planEnrollmentsJSONObject = JSONUtil.getValueAsJSONObject(
-			invokeGraphQLQuery(
-				new GraphQLField(
-					"clarityInsuranceBenefitsTracker_v1_0", graphQLField)),
-			"JSONObject/data",
-			"JSONObject/clarityInsuranceBenefitsTracker_v1_0",
-			"JSONObject/planEnrollments");
-
-		Assert.assertEquals(
-			totalCount + 2, planEnrollmentsJSONObject.getLong("totalCount"));
-
-		assertContains(
-			planEnrollment1,
-			Arrays.asList(
-				PlanEnrollmentSerDes.toDTOs(
-					planEnrollmentsJSONObject.getString("items"))));
-		assertContains(
-			planEnrollment2,
-			Arrays.asList(
-				PlanEnrollmentSerDes.toDTOs(
-					planEnrollmentsJSONObject.getString("items"))));
-	}
-
-	protected PlanEnrollment
-			testGraphQLGetSitePlanEnrollmentsPage_addPlanEnrollment()
-		throws Exception {
-
-		return testGraphQLPlanEnrollment_addPlanEnrollment();
-	}
-
-	@Test
 	public void testPatchPlanEnrollment() throws Exception {
 		PlanEnrollment postPlanEnrollment =
 			testPatchPlanEnrollment_addPlanEnrollment();
@@ -1612,11 +1619,162 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 		Assert.assertTrue(true);
 	}
 
-	protected PlanEnrollment testGraphQLPlanEnrollment_addPlanEnrollment()
+	@Test
+	public void testGetPlanEnrollmentUsageDetail() throws Exception {
+		PlanEnrollment postPlanEnrollment =
+			testGetPlanEnrollment_addPlanEnrollment();
+
+		BenefitUsageDetails postBenefitUsageDetails =
+			testGetPlanEnrollmentUsageDetail_addBenefitUsageDetails(
+				postPlanEnrollment.getId(), randomBenefitUsageDetails());
+
+		BenefitUsageDetails getBenefitUsageDetails =
+			planEnrollmentResource.getPlanEnrollmentUsageDetail(
+				postPlanEnrollment.getId());
+
+		assertEquals(postBenefitUsageDetails, getBenefitUsageDetails);
+		assertValid(getBenefitUsageDetails);
+	}
+
+	protected BenefitUsageDetails
+			testGetPlanEnrollmentUsageDetail_addBenefitUsageDetails(
+				long planEnrollmentId, BenefitUsageDetails benefitUsageDetails)
 		throws Exception {
 
 		throw new UnsupportedOperationException(
 			"This method needs to be implemented");
+	}
+
+	protected PlanEnrollment testGraphQLPlanEnrollment_addPlanEnrollment()
+		throws Exception {
+
+		return testGraphQLPlanEnrollment_addPlanEnrollment(
+			testGraphQLPlanEnrollment_getPlanEnrollmentId(),
+			randomPlanEnrollment());
+	}
+
+	protected Long testGraphQLPlanEnrollment_getPlanEnrollmentId()
+		throws Exception {
+
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	protected PlanEnrollment testGraphQLPlanEnrollment_addPlanEnrollment(
+			Long planEnrollmentId, PlanEnrollment planEnrollment)
+		throws Exception {
+
+		JSONDeserializer<PlanEnrollment> jsonDeserializer =
+			JSONFactoryUtil.createJSONDeserializer();
+
+		StringBuilder sb = new StringBuilder("{");
+
+		for (java.lang.reflect.Field field :
+				getDeclaredFields(PlanEnrollment.class)) {
+
+			if (getGraphQLValue(field.get(planEnrollment)) != null) {
+				if (sb.length() > 1) {
+					sb.append(", ");
+				}
+
+				sb.append(field.getName());
+				sb.append(": ");
+				sb.append(getGraphQLValue(field.get(planEnrollment)));
+			}
+		}
+
+		sb.append("}");
+
+		List<GraphQLField> graphQLFields = getGraphQLFields();
+
+		return jsonDeserializer.deserialize(
+			JSONUtil.getValueAsString(
+				invokeGraphQLMutation(
+					new GraphQLField(
+						"createPlanEnrollment",
+						new HashMap<String, Object>() {
+							{
+								put("planEnrollmentId", planEnrollmentId);
+								put("planEnrollment", sb.toString());
+							}
+						},
+						graphQLFields)),
+				"JSONObject/data", "JSONObject/createPlanEnrollment"),
+			PlanEnrollment.class);
+	}
+
+	protected PlanEnrollment testGraphQLSitePlanEnrollment_addPlanEnrollment()
+		throws Exception {
+
+		throw new UnsupportedOperationException(
+			"This method needs to be implemented");
+	}
+
+	protected String getGraphQLValue(Object value) throws Exception {
+		if (value == null) {
+			return null;
+		}
+		else if (value instanceof Boolean || value instanceof Number) {
+			return value.toString();
+		}
+		else if (value instanceof Date date) {
+			return "\"" +
+				DateUtil.getDate(
+					date, "yyyy-MM-dd'T'HH:mm:ss'Z'", LocaleUtil.getDefault(),
+					TimeZone.getTimeZone("UTC")) + "\"";
+		}
+		else if (value instanceof Enum<?> enm) {
+			return enm.name();
+		}
+		else if (value instanceof Map<?, ?> map) {
+			List<String> entries = new ArrayList<>();
+
+			for (Map.Entry<?, ?> entry : map.entrySet()) {
+				String graphQLValue = getGraphQLValue(entry.getValue());
+
+				if (graphQLValue != null) {
+					entries.add(entry.getKey() + ": " + graphQLValue);
+				}
+			}
+
+			return "{" + String.join(", ", entries) + "}";
+		}
+		else if (value instanceof Object[] array) {
+			List<String> entries = new ArrayList<>();
+
+			for (Object entry : array) {
+				String graphQLValue = getGraphQLValue(entry);
+
+				if (graphQLValue != null) {
+					entries.add(graphQLValue);
+				}
+			}
+
+			return "[" + String.join(", ", entries) + "]";
+		}
+		else if (value instanceof String) {
+			return "\"" + value + "\"";
+		}
+		else {
+			List<String> entries = new ArrayList<>();
+
+			Class<?> clazz = value.getClass();
+			java.lang.reflect.Field[] declaredFields = getDeclaredFields(clazz);
+
+			if (declaredFields.length == 0) {
+				declaredFields = getDeclaredFields(clazz.getSuperclass());
+			}
+
+			for (java.lang.reflect.Field field : declaredFields) {
+				String graphQLValue = getGraphQLValue(field.get(value));
+
+				if (graphQLValue != null) {
+					entries.add(field.getName() + ": " + graphQLValue);
+				}
+			}
+
+			return "{" + String.join(", ", entries) + "}";
+		}
 	}
 
 	protected void assertContains(
@@ -1672,6 +1830,15 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 		Assert.assertTrue(
 			benefitUsage1 + " does not equal " + benefitUsage2,
 			equals(benefitUsage1, benefitUsage2));
+	}
+
+	protected void assertEquals(
+		BenefitUsageDetails benefitUsageDetails1,
+		BenefitUsageDetails benefitUsageDetails2) {
+
+		Assert.assertTrue(
+			benefitUsageDetails1 + " does not equal " + benefitUsageDetails2,
+			equals(benefitUsageDetails1, benefitUsageDetails2));
 	}
 
 	protected void assertEqualsIgnoringOrder(
@@ -2020,6 +2187,157 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 		Assert.assertTrue(valid);
 	}
 
+	protected void assertValid(BenefitUsageDetails benefitUsageDetails) {
+		boolean valid = true;
+
+		for (String additionalAssertFieldName :
+				getAdditionalBenefitUsageDetailsAssertFieldNames()) {
+
+			if (Objects.equals(
+					"annualContactsAllowanceCents",
+					additionalAssertFieldName)) {
+
+				if (benefitUsageDetails.getAnnualContactsAllowanceCents() ==
+						null) {
+
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualExamAllowanceCents", additionalAssertFieldName)) {
+
+				if (benefitUsageDetails.getAnnualExamAllowanceCents() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualFramesAllowanceCents", additionalAssertFieldName)) {
+
+				if (benefitUsageDetails.getAnnualFramesAllowanceCents() ==
+						null) {
+
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualLensesAllowanceCents", additionalAssertFieldName)) {
+
+				if (benefitUsageDetails.getAnnualLensesAllowanceCents() ==
+						null) {
+
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"contactsUsedCents", additionalAssertFieldName)) {
+
+				if (benefitUsageDetails.getContactsUsedCents() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("endDate", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getEndDate() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("enrollmentStatus", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getEnrollmentStatus() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("examUsedCents", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getExamUsedCents() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("framesUsedCents", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getFramesUsedCents() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("insurancePlanId", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getInsurancePlanId() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("lensesUsedCents", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getLensesUsedCents() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("planEnrollmentId", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getPlanEnrollmentId() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("planName", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getPlanName() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("providerName", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getProviderName() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("startDate", additionalAssertFieldName)) {
+				if (benefitUsageDetails.getStartDate() == null) {
+					valid = false;
+				}
+
+				continue;
+			}
+
+			throw new IllegalArgumentException(
+				"Invalid additional assert field name " +
+					additionalAssertFieldName);
+		}
+
+		Assert.assertTrue(valid);
+	}
+
 	protected String[] getAdditionalAssertFieldNames() {
 		return new String[0];
 	}
@@ -2028,8 +2346,16 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 		return new String[0];
 	}
 
+	protected String[] getAdditionalBenefitUsageDetailsAssertFieldNames() {
+		return new String[0];
+	}
+
 	protected List<GraphQLField> getGraphQLFields() throws Exception {
 		List<GraphQLField> graphQLFields = new ArrayList<>();
+
+		graphQLFields.add(new GraphQLField("externalReferenceCode"));
+
+		graphQLFields.add(new GraphQLField("id"));
 
 		graphQLFields.add(new GraphQLField("siteId"));
 
@@ -2501,6 +2827,202 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 			if (Objects.equals("status", additionalAssertFieldName)) {
 				if (!Objects.deepEquals(
 						benefitUsage1.getStatus(), benefitUsage2.getStatus())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			throw new IllegalArgumentException(
+				"Invalid additional assert field name " +
+					additionalAssertFieldName);
+		}
+
+		return true;
+	}
+
+	protected boolean equals(
+		BenefitUsageDetails benefitUsageDetails1,
+		BenefitUsageDetails benefitUsageDetails2) {
+
+		if (benefitUsageDetails1 == benefitUsageDetails2) {
+			return true;
+		}
+
+		for (String additionalAssertFieldName :
+				getAdditionalBenefitUsageDetailsAssertFieldNames()) {
+
+			if (Objects.equals(
+					"annualContactsAllowanceCents",
+					additionalAssertFieldName)) {
+
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getAnnualContactsAllowanceCents(),
+						benefitUsageDetails2.
+							getAnnualContactsAllowanceCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualExamAllowanceCents", additionalAssertFieldName)) {
+
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getAnnualExamAllowanceCents(),
+						benefitUsageDetails2.getAnnualExamAllowanceCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualFramesAllowanceCents", additionalAssertFieldName)) {
+
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getAnnualFramesAllowanceCents(),
+						benefitUsageDetails2.getAnnualFramesAllowanceCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"annualLensesAllowanceCents", additionalAssertFieldName)) {
+
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getAnnualLensesAllowanceCents(),
+						benefitUsageDetails2.getAnnualLensesAllowanceCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals(
+					"contactsUsedCents", additionalAssertFieldName)) {
+
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getContactsUsedCents(),
+						benefitUsageDetails2.getContactsUsedCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("endDate", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getEndDate(),
+						benefitUsageDetails2.getEndDate())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("enrollmentStatus", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getEnrollmentStatus(),
+						benefitUsageDetails2.getEnrollmentStatus())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("examUsedCents", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getExamUsedCents(),
+						benefitUsageDetails2.getExamUsedCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("framesUsedCents", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getFramesUsedCents(),
+						benefitUsageDetails2.getFramesUsedCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("insurancePlanId", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getInsurancePlanId(),
+						benefitUsageDetails2.getInsurancePlanId())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("lensesUsedCents", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getLensesUsedCents(),
+						benefitUsageDetails2.getLensesUsedCents())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("planEnrollmentId", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getPlanEnrollmentId(),
+						benefitUsageDetails2.getPlanEnrollmentId())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("planName", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getPlanName(),
+						benefitUsageDetails2.getPlanName())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("providerName", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getProviderName(),
+						benefitUsageDetails2.getProviderName())) {
+
+					return false;
+				}
+
+				continue;
+			}
+
+			if (Objects.equals("startDate", additionalAssertFieldName)) {
+				if (!Objects.deepEquals(
+						benefitUsageDetails1.getStartDate(),
+						benefitUsageDetails2.getStartDate())) {
 
 					return false;
 				}
@@ -3074,7 +3596,29 @@ public abstract class BasePlanEnrollmentResourceTestCase {
 				siteId = RandomTestUtil.randomLong();
 				sourceReference = RandomTestUtil.randomString();
 				sourceType = RandomTestUtil.randomString();
-				status = RandomTestUtil.randomInteger();
+				status = RandomTestUtil.randomInt();
+			}
+		};
+	}
+
+	protected BenefitUsageDetails randomBenefitUsageDetails() throws Exception {
+		return new BenefitUsageDetails() {
+			{
+				annualContactsAllowanceCents = RandomTestUtil.randomLong();
+				annualExamAllowanceCents = RandomTestUtil.randomLong();
+				annualFramesAllowanceCents = RandomTestUtil.randomLong();
+				annualLensesAllowanceCents = RandomTestUtil.randomLong();
+				contactsUsedCents = RandomTestUtil.randomLong();
+				endDate = RandomTestUtil.nextDate();
+				enrollmentStatus = RandomTestUtil.randomInt();
+				examUsedCents = RandomTestUtil.randomLong();
+				framesUsedCents = RandomTestUtil.randomLong();
+				insurancePlanId = RandomTestUtil.randomLong();
+				lensesUsedCents = RandomTestUtil.randomLong();
+				planEnrollmentId = RandomTestUtil.randomLong();
+				planName = RandomTestUtil.randomString();
+				providerName = RandomTestUtil.randomString();
+				startDate = RandomTestUtil.nextDate();
 			}
 		};
 	}

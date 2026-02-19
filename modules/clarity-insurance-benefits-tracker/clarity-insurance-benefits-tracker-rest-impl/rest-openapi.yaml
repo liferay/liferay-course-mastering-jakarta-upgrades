@@ -285,6 +285,71 @@ components:
                     readOnly: true
                     type: integer
             type: object
+        BenefitUsageDetails:
+            description:
+                Aggregated benefit usage details for a plan enrollment, including
+                allowance caps from the insurance plan and total consumed amounts
+                per benefit category.
+            properties:
+                planEnrollmentId:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                insurancePlanId:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                planName:
+                    readOnly: true
+                    type: string
+                providerName:
+                    readOnly: true
+                    type: string
+                startDate:
+                    format: date
+                    readOnly: true
+                    type: string
+                endDate:
+                    format: date
+                    readOnly: true
+                    type: string
+                enrollmentStatus:
+                    format: int32
+                    readOnly: true
+                    type: integer
+                annualExamAllowanceCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                annualFramesAllowanceCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                annualLensesAllowanceCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                annualContactsAllowanceCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                examUsedCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                framesUsedCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                lensesUsedCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                contactsUsedCents:
+                    format: int64
+                    readOnly: true
+                    type: integer
+            type: object
 info:
     description: "Clarity Insurance Benefits Tracker REST API"
     license:
@@ -876,6 +941,27 @@ paths:
                                 $ref: "#/components/schemas/BenefitUsage"
                     description: Newly created benefit usage
             tags: [ "PlanEnrollment" ]
+    "/plan-enrollment/{planEnrollmentId}/usage-details":
+        get:
+            operationId: getPlanEnrollmentUsageDetail
+            parameters:
+                - in: path
+                  name: planEnrollmentId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/BenefitUsageDetails"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/BenefitUsageDetails"
+                    description: Aggregated benefit usage details for the enrollment
+            tags: ["PlanEnrollment"]
     "/benefit-usage/{benefitUsageId}":
         delete:
             operationId: deleteBenefitUsage

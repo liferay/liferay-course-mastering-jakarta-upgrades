@@ -9,7 +9,6 @@ import com.clarityvisionsolutions.insurance.benefits.tracker.model.BenefitUsage;
 import com.clarityvisionsolutions.insurance.benefits.tracker.model.InsurancePlan;
 import com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollment;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.BenefitUsageLocalService;
-import com.clarityvisionsolutions.insurance.benefits.tracker.service.InsurancePlanLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.base.PlanEnrollmentLocalServiceBaseImpl;
 
 import com.liferay.asset.kernel.model.AssetEntry;
@@ -68,7 +67,7 @@ public class PlanEnrollmentLocalServiceImpl
 											final Date startDate, final Date endDate, final int enrollmentStatus, final String notes, final ServiceContext serviceContext) throws PortalException {
 
 		// verify the relationships before we go forward
-		InsurancePlan plan = _insurancePlanLocalService.getInsurancePlan(insurancePlanId);
+		InsurancePlan plan = insurancePlanPersistence.findByPrimaryKey(insurancePlanId);
 		User member = userLocalService.getUser(memberUserId);
 
 		// now we can create the enrollment
@@ -277,6 +276,18 @@ public class PlanEnrollmentLocalServiceImpl
 		}
 
 		return null;
+	}
+
+	@Override
+	public List<PlanEnrollment> getMemberPlanEnrollments(final long groupId, final long memberUserId, final int enrollmentStatus) {
+
+		DynamicQuery dynamicQuery = planEnrollmentLocalService.dynamicQuery();
+
+		dynamicQuery.add(RestrictionsFactoryUtil.eq("groupId", groupId));
+		dynamicQuery.add(RestrictionsFactoryUtil.eq("memberUserId", memberUserId));
+		dynamicQuery.add(RestrictionsFactoryUtil.eq("enrollmentStatus", enrollmentStatus));
+
+		return planEnrollmentPersistence.findWithDynamicQuery(dynamicQuery);
 	}
 
 	@Override
@@ -559,7 +570,7 @@ public class PlanEnrollmentLocalServiceImpl
 			serviceContext.setCommand(Constants.ADD);
 		}
 
-		InsurancePlan insurancePlan = _insurancePlanLocalService.getInsurancePlan(enrollment.getInsurancePlanId());
+		InsurancePlan insurancePlan = insurancePlanPersistence.findByPrimaryKey(enrollment.getInsurancePlanId());
 
 		JSONObject extraDataJSONObject = JSONUtil.put(
 				"title", insurancePlan.getPlanName() + " For " + enrollment.getMemberUserName());
@@ -658,9 +669,6 @@ public class PlanEnrollmentLocalServiceImpl
 
 	@Reference
 	private WorkflowInstanceLinkLocalService _workflowInstanceLinkLocalService;
-
-	@Reference
-	private InsurancePlanLocalService _insurancePlanLocalService;
 
 	@Reference
 	private BenefitUsageLocalService _benefitUsageLocalService;
