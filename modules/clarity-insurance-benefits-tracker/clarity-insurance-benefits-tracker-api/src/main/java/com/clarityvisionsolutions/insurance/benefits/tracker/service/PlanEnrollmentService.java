@@ -57,13 +57,17 @@ public interface PlanEnrollmentService extends BaseService {
 		throws PortalException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<PlanEnrollment> getActiveGroupEnrollments(long groupId)
+		throws PortalException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<PlanEnrollment> getGroupMemberPlanEnrollments(
 			long groupId, long insurancePlanId, long memberUserId, int status)
 		throws PortalException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<PlanEnrollment> getMemberPlanEnrollments(
-			long groupId, long memberUserId, int status)
+			long groupId, long memberUserId, int enrollmentStatus)
 		throws PortalException;
 
 	/**

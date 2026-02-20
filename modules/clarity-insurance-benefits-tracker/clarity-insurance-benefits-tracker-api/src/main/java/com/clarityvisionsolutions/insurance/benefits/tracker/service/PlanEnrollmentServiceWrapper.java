@@ -50,6 +50,14 @@ public class PlanEnrollmentServiceWrapper
 	}
 
 	@Override
+	public java.util.List<PlanEnrollment> getActiveGroupEnrollments(
+			long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _planEnrollmentService.getActiveGroupEnrollments(groupId);
+	}
+
+	@Override
 	public java.util.List<PlanEnrollment> getGroupMemberPlanEnrollments(
 			long groupId, long insurancePlanId, long memberUserId, int status)
 		throws com.liferay.portal.kernel.exception.PortalException {
@@ -60,11 +68,11 @@ public class PlanEnrollmentServiceWrapper
 
 	@Override
 	public java.util.List<PlanEnrollment> getMemberPlanEnrollments(
-			long groupId, long memberUserId, int status)
+			long groupId, long memberUserId, int enrollmentStatus)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _planEnrollmentService.getMemberPlanEnrollments(
-			groupId, memberUserId, status);
+			groupId, memberUserId, enrollmentStatus);
 	}
 
 	/**

@@ -49,6 +49,12 @@ public class PlanEnrollmentServiceUtil {
 		return getService().deletePlanEnrollment(planEnrollmentId);
 	}
 
+	public static List<PlanEnrollment> getActiveGroupEnrollments(long groupId)
+		throws PortalException {
+
+		return getService().getActiveGroupEnrollments(groupId);
+	}
+
 	public static List<PlanEnrollment> getGroupMemberPlanEnrollments(
 			long groupId, long insurancePlanId, long memberUserId, int status)
 		throws PortalException {
@@ -58,11 +64,11 @@ public class PlanEnrollmentServiceUtil {
 	}
 
 	public static List<PlanEnrollment> getMemberPlanEnrollments(
-			long groupId, long memberUserId, int status)
+			long groupId, long memberUserId, int enrollmentStatus)
 		throws PortalException {
 
 		return getService().getMemberPlanEnrollments(
-			groupId, memberUserId, status);
+			groupId, memberUserId, enrollmentStatus);
 	}
 
 	/**

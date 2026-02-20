@@ -91,6 +91,16 @@ public class PlanEnrollmentServiceImpl extends PlanEnrollmentServiceBaseImpl {
 	}
 
 	@Override
+	public List<PlanEnrollment> getActiveGroupEnrollments(final long groupId) throws PortalException {
+		_portletResourcePermission.check(
+				getPermissionChecker(), groupId,
+				ActionKeys.VIEW);
+
+		return planEnrollmentLocalService.getActiveGroupEnrollments(groupId);
+	}
+
+
+	@Override
 	public List<PlanEnrollment> getMemberPlanEnrollments(final long groupId, final long memberUserId, final int enrollmentStatus) throws PortalException {
 
 		_portletResourcePermission.check(

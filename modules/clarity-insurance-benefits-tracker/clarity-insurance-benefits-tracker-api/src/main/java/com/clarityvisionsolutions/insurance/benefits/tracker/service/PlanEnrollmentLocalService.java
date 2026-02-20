@@ -256,12 +256,25 @@ public interface PlanEnrollmentLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public ActionableDynamicQuery getActionableDynamicQuery();
 
+	/**
+	 * getActiveGroupEnrollments: Returns all of the active enrollments for the given group.
+	 *
+	 * @param groupId Group to get the enrollments for.
+	 * @return The list of enrollments.
+	 */
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<PlanEnrollment> getActiveGroupEnrollments(long groupId);
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public ExportActionableDynamicQuery getExportActionableDynamicQuery(
 		PortletDataContext portletDataContext);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public IndexableActionableDynamicQuery getIndexableActionableDynamicQuery();
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<PlanEnrollment> getMemberPlanEnrollments(
+		long groupId, long memberUserId, int enrollmentStatus);
 
 	/**
 	 * Returns the OSGi service identifier.
@@ -320,10 +333,6 @@ public interface PlanEnrollmentLocalService
 	public PlanEnrollment getPlanEnrollmentByUuidAndGroupId(
 			String uuid, long groupId)
 		throws PortalException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public List<PlanEnrollment> getMemberPlanEnrollments(
-		long groupId, long memberUserId, int status);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public int getPlanEnrollmentCounts(long insurancePlanId, int status);

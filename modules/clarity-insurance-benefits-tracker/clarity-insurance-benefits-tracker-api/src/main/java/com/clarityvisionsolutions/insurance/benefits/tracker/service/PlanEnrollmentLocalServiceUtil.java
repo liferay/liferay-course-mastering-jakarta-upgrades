@@ -283,6 +283,16 @@ public class PlanEnrollmentLocalServiceUtil {
 		return getService().getActionableDynamicQuery();
 	}
 
+	/**
+	 * getActiveGroupEnrollments: Returns all of the active enrollments for the given group.
+	 *
+	 * @param groupId Group to get the enrollments for.
+	 * @return The list of enrollments.
+	 */
+	public static List<PlanEnrollment> getActiveGroupEnrollments(long groupId) {
+		return getService().getActiveGroupEnrollments(groupId);
+	}
+
 	public static com.liferay.portal.kernel.dao.orm.ExportActionableDynamicQuery
 		getExportActionableDynamicQuery(
 			com.liferay.exportimport.kernel.lar.PortletDataContext
@@ -296,6 +306,13 @@ public class PlanEnrollmentLocalServiceUtil {
 			getIndexableActionableDynamicQuery() {
 
 		return getService().getIndexableActionableDynamicQuery();
+	}
+
+	public static List<PlanEnrollment> getMemberPlanEnrollments(
+		long groupId, long memberUserId, int enrollmentStatus) {
+
+		return getService().getMemberPlanEnrollments(
+			groupId, memberUserId, enrollmentStatus);
 	}
 
 	/**
@@ -373,13 +390,6 @@ public class PlanEnrollmentLocalServiceUtil {
 		throws PortalException {
 
 		return getService().getPlanEnrollmentByUuidAndGroupId(uuid, groupId);
-	}
-
-	public static List<PlanEnrollment> getMemberPlanEnrollments(
-			long groupId, long memberUserId, int status) {
-
-		return getService().getMemberPlanEnrollments(
-			groupId, memberUserId, status);
 	}
 
 	public static int getPlanEnrollmentCounts(

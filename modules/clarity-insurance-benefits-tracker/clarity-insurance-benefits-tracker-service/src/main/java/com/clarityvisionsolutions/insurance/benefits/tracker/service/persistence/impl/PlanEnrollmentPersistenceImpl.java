@@ -1936,6 +1936,16 @@ public class PlanEnrollmentPersistenceImpl
 			return findByGroupId(groupId, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByGroupId(
+					groupId, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
+					orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -2294,6 +2304,15 @@ public class PlanEnrollmentPersistenceImpl
 	public int filterCountByGroupId(long groupId) {
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByGroupId(groupId);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByGroupId(groupId);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(2);
@@ -3366,6 +3385,16 @@ public class PlanEnrollmentPersistenceImpl
 			return findByG_S(groupId, status, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_S(
+					groupId, status, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
+					orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -3744,6 +3773,15 @@ public class PlanEnrollmentPersistenceImpl
 	public int filterCountByG_S(long groupId, int status) {
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_S(groupId, status);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_S(groupId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(3);
@@ -4305,6 +4343,16 @@ public class PlanEnrollmentPersistenceImpl
 			return findByG_NotS(groupId, status, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_NotS(
+					groupId, status, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
+					orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -4683,6 +4731,16 @@ public class PlanEnrollmentPersistenceImpl
 	public int filterCountByG_NotS(long groupId, int status) {
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_NotS(groupId, status);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_NotS(
+				groupId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(3);
@@ -6430,6 +6488,16 @@ public class PlanEnrollmentPersistenceImpl
 				orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_IP_M_S(
+					groupId, insurancePlanId, memberUserId, status,
+					QueryUtil.ALL_POS, QueryUtil.ALL_POS, orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -6851,6 +6919,16 @@ public class PlanEnrollmentPersistenceImpl
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_IP_M_S(
 				groupId, insurancePlanId, memberUserId, status);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_IP_M_S(
+				groupId, insurancePlanId, memberUserId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(5);
@@ -7502,6 +7580,16 @@ public class PlanEnrollmentPersistenceImpl
 				orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_IP_M_NotS(
+					groupId, insurancePlanId, memberUserId, status,
+					QueryUtil.ALL_POS, QueryUtil.ALL_POS, orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -7923,6 +8011,16 @@ public class PlanEnrollmentPersistenceImpl
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_IP_M_NotS(
 				groupId, insurancePlanId, memberUserId, status);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_IP_M_NotS(
+				groupId, insurancePlanId, memberUserId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(5);
@@ -9635,6 +9733,16 @@ public class PlanEnrollmentPersistenceImpl
 				groupId, userId, status, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_U_S(
+					groupId, userId, status, QueryUtil.ALL_POS,
+					QueryUtil.ALL_POS, orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -9995,6 +10103,16 @@ public class PlanEnrollmentPersistenceImpl
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return findByG_U_S(
 				groupId, userId, statuses, start, end, orderByComparator);
+		}
+
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_U_S(
+					groupId, userId, statuses, QueryUtil.ALL_POS,
+					QueryUtil.ALL_POS, orderByComparator),
+				groupId);
 		}
 
 		if (statuses == null) {
@@ -10491,6 +10609,16 @@ public class PlanEnrollmentPersistenceImpl
 			return countByG_U_S(groupId, userId, status);
 		}
 
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_U_S(
+				groupId, userId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
+		}
+
 		StringBundler sb = new StringBundler(4);
 
 		sb.append(_FILTER_SQL_COUNT_PLANENROLLMENT_WHERE);
@@ -10547,6 +10675,13 @@ public class PlanEnrollmentPersistenceImpl
 	public int filterCountByG_U_S(long groupId, long userId, int[] statuses) {
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_U_S(groupId, userId, statuses);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = InlineSQLHelperUtil.filter(
+				findByG_U_S(groupId, userId, statuses), groupId);
+
+			return planEnrollments.size();
 		}
 
 		if (statuses == null) {
@@ -11170,6 +11305,16 @@ public class PlanEnrollmentPersistenceImpl
 				groupId, userId, status, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByG_U_NotS(
+					groupId, userId, status, QueryUtil.ALL_POS,
+					QueryUtil.ALL_POS, orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -11564,6 +11709,16 @@ public class PlanEnrollmentPersistenceImpl
 	public int filterCountByG_U_NotS(long groupId, long userId, int status) {
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByG_U_NotS(groupId, userId, status);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments = findByG_U_NotS(
+				groupId, userId, status);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(4);
@@ -13227,6 +13382,16 @@ public class PlanEnrollmentPersistenceImpl
 				groupId, enrollmentStatus, start, end, orderByComparator);
 		}
 
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+			isPermissionsInMemoryFilterEnabled()) {
+
+			return InlineSQLHelperUtil.filter(
+				findByGroupIdEnrollmentStatus(
+					groupId, enrollmentStatus, QueryUtil.ALL_POS,
+					QueryUtil.ALL_POS, orderByComparator),
+				groupId);
+		}
+
 		StringBundler sb = null;
 
 		if (orderByComparator != null) {
@@ -13612,6 +13777,16 @@ public class PlanEnrollmentPersistenceImpl
 
 		if (!InlineSQLHelperUtil.isEnabled(groupId)) {
 			return countByGroupIdEnrollmentStatus(groupId, enrollmentStatus);
+		}
+
+		if (isPermissionsInMemoryFilterEnabled()) {
+			List<PlanEnrollment> planEnrollments =
+				findByGroupIdEnrollmentStatus(groupId, enrollmentStatus);
+
+			planEnrollments = InlineSQLHelperUtil.filter(
+				planEnrollments, groupId);
+
+			return planEnrollments.size();
 		}
 
 		StringBundler sb = new StringBundler(3);

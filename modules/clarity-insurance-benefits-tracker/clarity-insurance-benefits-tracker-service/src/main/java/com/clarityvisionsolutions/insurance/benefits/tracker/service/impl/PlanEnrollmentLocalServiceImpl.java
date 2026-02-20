@@ -290,6 +290,21 @@ public class PlanEnrollmentLocalServiceImpl
 		return planEnrollmentPersistence.findWithDynamicQuery(dynamicQuery);
 	}
 
+	/**
+	 * getActiveGroupEnrollments: Returns all of the active enrollments for the given group.
+	 * @param groupId Group to get the enrollments for.
+	 * @return The list of enrollments.
+	 */
+	@Override
+	public List<PlanEnrollment> getActiveGroupEnrollments(final long groupId) {
+		DynamicQuery dynamicQuery = dynamicQuery();
+
+		dynamicQuery.add(RestrictionsFactoryUtil.eq("groupId", groupId));
+		dynamicQuery.add(RestrictionsFactoryUtil.eq("enrollmentStatus", 1));
+
+		return dynamicQuery(dynamicQuery);
+	}
+
 	@Override
 	public List<PlanEnrollment> getPlanEnrollments(final long insurancePlanId, final int status, final int start, final int max) {
 		if (status == WorkflowConstants.STATUS_ANY) {

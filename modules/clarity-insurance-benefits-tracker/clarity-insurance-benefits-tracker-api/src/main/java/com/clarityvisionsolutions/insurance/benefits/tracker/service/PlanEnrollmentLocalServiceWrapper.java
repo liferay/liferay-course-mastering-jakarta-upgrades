@@ -314,6 +314,19 @@ public class PlanEnrollmentLocalServiceWrapper
 		return _planEnrollmentLocalService.getActionableDynamicQuery();
 	}
 
+	/**
+	 * getActiveGroupEnrollments: Returns all of the active enrollments for the given group.
+	 *
+	 * @param groupId Group to get the enrollments for.
+	 * @return The list of enrollments.
+	 */
+	@Override
+	public java.util.List<PlanEnrollment> getActiveGroupEnrollments(
+		long groupId) {
+
+		return _planEnrollmentLocalService.getActiveGroupEnrollments(groupId);
+	}
+
 	@Override
 	public com.liferay.portal.kernel.dao.orm.ExportActionableDynamicQuery
 		getExportActionableDynamicQuery(
@@ -329,6 +342,14 @@ public class PlanEnrollmentLocalServiceWrapper
 		getIndexableActionableDynamicQuery() {
 
 		return _planEnrollmentLocalService.getIndexableActionableDynamicQuery();
+	}
+
+	@Override
+	public java.util.List<PlanEnrollment> getMemberPlanEnrollments(
+		long groupId, long memberUserId, int enrollmentStatus) {
+
+		return _planEnrollmentLocalService.getMemberPlanEnrollments(
+			groupId, memberUserId, enrollmentStatus);
 	}
 
 	/**
@@ -417,14 +438,6 @@ public class PlanEnrollmentLocalServiceWrapper
 
 		return _planEnrollmentLocalService.getPlanEnrollmentByUuidAndGroupId(
 			uuid, groupId);
-	}
-
-	@Override
-	public java.util.List<PlanEnrollment> getMemberPlanEnrollments(
-			long groupId, long memberUserId, int status) {
-
-		return _planEnrollmentLocalService.getMemberPlanEnrollments(
-			groupId, memberUserId, status);
 	}
 
 	@Override

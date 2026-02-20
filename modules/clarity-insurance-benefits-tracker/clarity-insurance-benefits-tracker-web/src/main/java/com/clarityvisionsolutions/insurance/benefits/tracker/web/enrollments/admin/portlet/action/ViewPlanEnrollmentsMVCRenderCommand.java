@@ -6,10 +6,14 @@ import com.clarityvisionsolutions.insurance.benefits.tracker.model.PlanEnrollmen
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.InsurancePlanLocalService;
 import com.clarityvisionsolutions.insurance.benefits.tracker.service.PlanEnrollmentService;
 
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
 import com.liferay.portal.kernel.security.auth.PrincipalException;
+import com.liferay.portal.kernel.service.RoleLocalService;
+import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.WebKeys;
@@ -38,6 +42,12 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class ViewPlanEnrollmentsMVCRenderCommand implements MVCRenderCommand {
 
+	private static final String[] ADMIN_ROLES = {
+			"Insurance Plan Administrator",
+			"Benefits Usage Clerk",
+			"Administrator"
+	};
+
 	@Override
 	public String render(
 			RenderRequest renderRequest, RenderResponse renderResponse)
@@ -49,10 +59,27 @@ public class ViewPlanEnrollmentsMVCRenderCommand implements MVCRenderCommand {
 		long groupId = themeDisplay.getScopeGroupId();
 		long userId = themeDisplay.getUserId();
 
-		try {
-			List<PlanEnrollment> enrollments =
-				_planEnrollmentService.getMemberPlanEnrollments(
-					groupId, userId, WorkflowConstants.STATUS_ANY);
+		User user = _userLocalService.fetchUser(userId);
+		boolean showAll = false;
+
+        try {
+            if (_roleLocalService.hasUserRoles(userId, user.getCompanyId(), ADMIN_ROLES, true)) {
+                showAll = true;
+            }
+        } catch (PortalException e) {
+            _log.info("Failed to check user for admin roles, not showing all.", e);
+        }
+
+        try {
+			List<PlanEnrollment> enrollments;
+
+			if (showAll) {
+				enrollments = _planEnrollmentService.getActiveGroupEnrollments(groupId);
+			} else {
+				enrollments =
+						_planEnrollmentService.getMemberPlanEnrollments(
+								groupId, userId, 1);
+			}
 
 			renderRequest.setAttribute(
 				PlanEnrollment.class.getName() + 's', enrollments);
@@ -105,4 +132,9 @@ public class ViewPlanEnrollmentsMVCRenderCommand implements MVCRenderCommand {
 	@Reference
 	private PlanEnrollmentService _planEnrollmentService;
 
+	@Reference
+	private UserLocalService _userLocalService;
+
+	@Reference
+	private RoleLocalService _roleLocalService;
 }

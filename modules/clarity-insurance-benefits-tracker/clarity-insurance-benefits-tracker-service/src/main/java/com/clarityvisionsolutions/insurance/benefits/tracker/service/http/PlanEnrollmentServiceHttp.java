@@ -181,7 +181,7 @@ public class PlanEnrollmentServiceHttp {
 		<com.clarityvisionsolutions.insurance.benefits.tracker.model.
 			PlanEnrollment> getGroupMemberPlanEnrollments(
 					HttpPrincipal httpPrincipal, long groupId,
-					long planEnrollmentId, long memberId, int status)
+					long insurancePlanId, long memberUserId, int status)
 				throws com.liferay.portal.kernel.exception.PortalException {
 
 		try {
@@ -191,7 +191,95 @@ public class PlanEnrollmentServiceHttp {
 				_getGroupMemberPlanEnrollmentsParameterTypes3);
 
 			MethodHandler methodHandler = new MethodHandler(
-				methodKey, groupId, planEnrollmentId, memberId, status);
+				methodKey, groupId, insurancePlanId, memberUserId, status);
+
+			Object returnObj = null;
+
+			try {
+				returnObj = TunnelUtil.invoke(httpPrincipal, methodHandler);
+			}
+			catch (Exception exception) {
+				if (exception instanceof
+						com.liferay.portal.kernel.exception.PortalException) {
+
+					throw (com.liferay.portal.kernel.exception.PortalException)
+						exception;
+				}
+
+				throw new com.liferay.portal.kernel.exception.SystemException(
+					exception);
+			}
+
+			return (java.util.List
+				<com.clarityvisionsolutions.insurance.benefits.tracker.model.
+					PlanEnrollment>)returnObj;
+		}
+		catch (com.liferay.portal.kernel.exception.SystemException
+					systemException) {
+
+			_log.error(systemException, systemException);
+
+			throw systemException;
+		}
+	}
+
+	public static java.util.List
+		<com.clarityvisionsolutions.insurance.benefits.tracker.model.
+			PlanEnrollment> getActiveGroupEnrollments(
+					HttpPrincipal httpPrincipal, long groupId)
+				throws com.liferay.portal.kernel.exception.PortalException {
+
+		try {
+			MethodKey methodKey = new MethodKey(
+				PlanEnrollmentServiceUtil.class, "getActiveGroupEnrollments",
+				_getActiveGroupEnrollmentsParameterTypes4);
+
+			MethodHandler methodHandler = new MethodHandler(methodKey, groupId);
+
+			Object returnObj = null;
+
+			try {
+				returnObj = TunnelUtil.invoke(httpPrincipal, methodHandler);
+			}
+			catch (Exception exception) {
+				if (exception instanceof
+						com.liferay.portal.kernel.exception.PortalException) {
+
+					throw (com.liferay.portal.kernel.exception.PortalException)
+						exception;
+				}
+
+				throw new com.liferay.portal.kernel.exception.SystemException(
+					exception);
+			}
+
+			return (java.util.List
+				<com.clarityvisionsolutions.insurance.benefits.tracker.model.
+					PlanEnrollment>)returnObj;
+		}
+		catch (com.liferay.portal.kernel.exception.SystemException
+					systemException) {
+
+			_log.error(systemException, systemException);
+
+			throw systemException;
+		}
+	}
+
+	public static java.util.List
+		<com.clarityvisionsolutions.insurance.benefits.tracker.model.
+			PlanEnrollment> getMemberPlanEnrollments(
+					HttpPrincipal httpPrincipal, long groupId,
+					long memberUserId, int enrollmentStatus)
+				throws com.liferay.portal.kernel.exception.PortalException {
+
+		try {
+			MethodKey methodKey = new MethodKey(
+				PlanEnrollmentServiceUtil.class, "getMemberPlanEnrollments",
+				_getMemberPlanEnrollmentsParameterTypes5);
+
+			MethodHandler methodHandler = new MethodHandler(
+				methodKey, groupId, memberUserId, enrollmentStatus);
 
 			Object returnObj = null;
 
@@ -237,7 +325,7 @@ public class PlanEnrollmentServiceHttp {
 		try {
 			MethodKey methodKey = new MethodKey(
 				PlanEnrollmentServiceUtil.class, "updatePlanEnrollment",
-				_updatePlanEnrollmentParameterTypes4);
+				_updatePlanEnrollmentParameterTypes6);
 
 			MethodHandler methodHandler = new MethodHandler(
 				methodKey, planEnrollmentId, memberId, groupNumber, startDate,
@@ -282,7 +370,7 @@ public class PlanEnrollmentServiceHttp {
 		try {
 			MethodKey methodKey = new MethodKey(
 				PlanEnrollmentServiceUtil.class, "movePlanEnrollmentToTrash",
-				_movePlanEnrollmentToTrashParameterTypes5);
+				_movePlanEnrollmentToTrashParameterTypes7);
 
 			MethodHandler methodHandler = new MethodHandler(
 				methodKey, userId, planEnrollmentId);
@@ -327,7 +415,7 @@ public class PlanEnrollmentServiceHttp {
 			MethodKey methodKey = new MethodKey(
 				PlanEnrollmentServiceUtil.class,
 				"restorePlanEnrollmentFromTrash",
-				_restorePlanEnrollmentFromTrashParameterTypes6);
+				_restorePlanEnrollmentFromTrashParameterTypes8);
 
 			MethodHandler methodHandler = new MethodHandler(
 				methodKey, userId, planEnrollmentId);
@@ -378,16 +466,20 @@ public class PlanEnrollmentServiceHttp {
 		_getGroupMemberPlanEnrollmentsParameterTypes3 = new Class[] {
 			long.class, long.class, long.class, int.class
 		};
-	private static final Class<?>[] _updatePlanEnrollmentParameterTypes4 =
+	private static final Class<?>[] _getActiveGroupEnrollmentsParameterTypes4 =
+		new Class[] {long.class};
+	private static final Class<?>[] _getMemberPlanEnrollmentsParameterTypes5 =
+		new Class[] {long.class, long.class, int.class};
+	private static final Class<?>[] _updatePlanEnrollmentParameterTypes6 =
 		new Class[] {
 			long.class, String.class, String.class, java.util.Date.class,
 			java.util.Date.class, int.class, String.class,
 			com.liferay.portal.kernel.service.ServiceContext.class
 		};
-	private static final Class<?>[] _movePlanEnrollmentToTrashParameterTypes5 =
+	private static final Class<?>[] _movePlanEnrollmentToTrashParameterTypes7 =
 		new Class[] {long.class, long.class};
 	private static final Class<?>[]
-		_restorePlanEnrollmentFromTrashParameterTypes6 = new Class[] {
+		_restorePlanEnrollmentFromTrashParameterTypes8 = new Class[] {
 			long.class, long.class
 		};
 
