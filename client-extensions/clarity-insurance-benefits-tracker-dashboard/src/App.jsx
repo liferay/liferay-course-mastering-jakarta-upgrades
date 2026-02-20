@@ -66,11 +66,6 @@ export default function App() {
 
 				const enrollments = await getActiveEnrollments(siteId);
 
-				console.log(enrollments);
-				console.log(userId);
-				console.log("userId:", userId, typeof userId);
-				console.log("enrollment.member.id:", enrollments[0].member.id, typeof enrollments[0].member.id);
-
 				const userEnrollment = enrollments.find(
 					(enrollment) =>
 						enrollment.member && enrollment.member.id === Number(userId)
