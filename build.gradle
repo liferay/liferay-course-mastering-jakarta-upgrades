@@ -2,10 +2,20 @@
 
 tasks.named('initBundle').configure {
     doLast {
-        def es7Dir = new File("${rootProject.projectDir}/bundles/data/elasticsearch7")
-        if (es7Dir.exists()) {
-            delete(es7Dir)
+        def environment = project.findProperty('liferay.workspace.environment') ?: 'local'
+
+        if (environment == 'clean') {
+            def dataDir = new File("${rootProject.projectDir}/bundles/data")
+            if (dataDir.exists()) {
+                delete(dataDir)
+            }
+        } else {
+            def es7Dir = new File("${rootProject.projectDir}/bundles/data/elasticsearch7")
+            if (es7Dir.exists()) {
+                delete(es7Dir)
+            }
         }
+
         def stateDir = new File("${rootProject.projectDir}/bundles/osgi/state")
         if (stateDir.exists()) {
             delete(stateDir)
