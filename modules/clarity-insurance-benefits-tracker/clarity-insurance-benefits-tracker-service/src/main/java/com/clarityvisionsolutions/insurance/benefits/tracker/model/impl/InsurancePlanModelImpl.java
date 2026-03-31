@@ -122,9 +122,6 @@ public class InsurancePlanModelImpl
 	public static final String ORDER_BY_SQL =
 		" ORDER BY CIBT_InsurancePlan.providerName ASC, CIBT_InsurancePlan.planName ASC";
 
-	public static final String ORDER_BY_SQL_INLINE_DISTINCT =
-		" ORDER BY insurancePlan.providerName ASC, insurancePlan.planName ASC";
-
 	public static final String DATA_SOURCE = "liferayDataSource";
 
 	public static final String SESSION_FACTORY = "liferaySessionFactory";

@@ -123,9 +123,6 @@ public class PlanEnrollmentModelImpl
 	public static final String ORDER_BY_SQL =
 		" ORDER BY CIBT_PlanEnrollment.insurancePlanId ASC, CIBT_PlanEnrollment.memberUserId ASC, CIBT_PlanEnrollment.startDate DESC";
 
-	public static final String ORDER_BY_SQL_INLINE_DISTINCT =
-		" ORDER BY planEnrollment.insurancePlanId ASC, planEnrollment.memberUserId ASC, planEnrollment.startDate DESC";
-
 	public static final String DATA_SOURCE = "liferayDataSource";
 
 	public static final String SESSION_FACTORY = "liferaySessionFactory";

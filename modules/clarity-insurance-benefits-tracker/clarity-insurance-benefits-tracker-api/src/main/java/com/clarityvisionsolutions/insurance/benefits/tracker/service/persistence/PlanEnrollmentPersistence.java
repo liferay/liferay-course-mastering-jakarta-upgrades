@@ -511,62 +511,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupId(long groupId);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupId(
-		long groupId, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupId(
-		long groupId, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByGroupId_PrevAndNext(
-			long planEnrollmentId, long groupId,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -580,14 +524,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByGroupId(long groupId);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByGroupId(long groupId);
 
 	/**
 	 * Returns all the Plan Enrollments where companyId = &#63;.
@@ -870,67 +806,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_S(
-		long groupId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_S(
-		long groupId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_S(
-		long groupId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_S_PrevAndNext(
-			long planEnrollmentId, long groupId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -946,15 +821,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_S(long groupId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_S(long groupId, int status);
 
 	/**
 	 * Returns all the Plan Enrollments where groupId = &#63; and status &ne; &#63;.
@@ -1095,67 +961,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_NotS(
-		long groupId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_NotS(
-		long groupId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_NotS(
-		long groupId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_NotS_PrevAndNext(
-			long planEnrollmentId, long groupId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -1171,15 +976,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_NotS(long groupId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_NotS(long groupId, int status);
 
 	/**
 	 * Returns all the Plan Enrollments where insurancePlanId = &#63; and status = &#63;.
@@ -1652,78 +1448,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_S(
-		long groupId, long insurancePlanId, long memberUserId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_S(
-		long groupId, long insurancePlanId, long memberUserId, int status,
-		int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_S(
-		long groupId, long insurancePlanId, long memberUserId, int status,
-		int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_IP_M_S_PrevAndNext(
-			long planEnrollmentId, long groupId, long insurancePlanId,
-			long memberUserId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -1744,18 +1468,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_IP_M_S(
-		long groupId, long insurancePlanId, long memberUserId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_IP_M_S(
 		long groupId, long insurancePlanId, long memberUserId, int status);
 
 	/**
@@ -1919,78 +1631,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_NotS(
-		long groupId, long insurancePlanId, long memberUserId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_NotS(
-		long groupId, long insurancePlanId, long memberUserId, int status,
-		int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_IP_M_NotS(
-		long groupId, long insurancePlanId, long memberUserId, int status,
-		int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_IP_M_NotS_PrevAndNext(
-			long planEnrollmentId, long groupId, long insurancePlanId,
-			long memberUserId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -2011,18 +1651,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_IP_M_NotS(
-		long groupId, long insurancePlanId, long memberUserId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and insurancePlanId = &#63; and memberUserId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param insurancePlanId the insurance plan ID
-	 * @param memberUserId the member user ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_IP_M_NotS(
 		long groupId, long insurancePlanId, long memberUserId, int status);
 
 	/**
@@ -2482,119 +2110,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_U_S_PrevAndNext(
-			long planEnrollmentId, long groupId, long userId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
 	 * Returns all the Plan Enrollments where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
@@ -2696,26 +2211,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_U_S(long groupId, long userId, int[] statuses);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_U_S(long groupId, long userId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_U_S(long groupId, long userId, int[] statuses);
 
 	/**
 	 * Returns all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63;.
@@ -2865,71 +2360,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_NotS(
-		long groupId, long userId, int status);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_NotS(
-		long groupId, long userId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByG_U_NotS(
-		long groupId, long userId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByG_U_NotS_PrevAndNext(
-			long planEnrollmentId, long groupId, long userId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -2947,16 +2377,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByG_U_NotS(long groupId, long userId, int status);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByG_U_NotS(long groupId, long userId, int status);
 
 	/**
 	 * Returns all the Plan Enrollments where userId = &#63;.
@@ -3396,67 +2816,6 @@ public interface PlanEnrollmentPersistence
 		throws NoSuchPlanEnrollmentException;
 
 	/**
-	 * Returns all the Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param enrollmentStatus the enrollment status
-	 * @return the matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
-		long groupId, int enrollmentStatus);
-
-	/**
-	 * Returns a range of all the Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @return the range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
-		long groupId, int enrollmentStatus, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Plan Enrollments that the user has permissions to view where groupId = &#63; and enrollmentStatus = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>PlanEnrollmentModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param enrollmentStatus the enrollment status
-	 * @param start the lower bound of the range of Plan Enrollments
-	 * @param end the upper bound of the range of Plan Enrollments (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Plan Enrollments that the user has permission to view
-	 */
-	public java.util.List<PlanEnrollment> filterFindByGroupIdEnrollmentStatus(
-		long groupId, int enrollmentStatus, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-			orderByComparator);
-
-	/**
-	 * Returns the Plan Enrollments before and after the current Plan Enrollment in the ordered set of Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
-	 *
-	 * @param planEnrollmentId the primary key of the current Plan Enrollment
-	 * @param groupId the group ID
-	 * @param enrollmentStatus the enrollment status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Plan Enrollment
-	 * @throws NoSuchPlanEnrollmentException if a Plan Enrollment with the primary key could not be found
-	 */
-	public PlanEnrollment[] filterFindByGroupIdEnrollmentStatus_PrevAndNext(
-			long planEnrollmentId, long groupId, int enrollmentStatus,
-			com.liferay.portal.kernel.util.OrderByComparator<PlanEnrollment>
-				orderByComparator)
-		throws NoSuchPlanEnrollmentException;
-
-	/**
 	 * Removes all the Plan Enrollments where groupId = &#63; and enrollmentStatus = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -3473,16 +2832,6 @@ public interface PlanEnrollmentPersistence
 	 * @return the number of matching Plan Enrollments
 	 */
 	public int countByGroupIdEnrollmentStatus(
-		long groupId, int enrollmentStatus);
-
-	/**
-	 * Returns the number of Plan Enrollments that the user has permission to view where groupId = &#63; and enrollmentStatus = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param enrollmentStatus the enrollment status
-	 * @return the number of matching Plan Enrollments that the user has permission to view
-	 */
-	public int filterCountByGroupIdEnrollmentStatus(
 		long groupId, int enrollmentStatus);
 
 	/**

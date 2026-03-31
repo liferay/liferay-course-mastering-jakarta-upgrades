@@ -121,9 +121,6 @@ public class BenefitUsageModelImpl
 	public static final String ORDER_BY_SQL =
 		" ORDER BY CIBT_BenefitUsage.planEnrollmentId ASC, CIBT_BenefitUsage.serviceDate DESC";
 
-	public static final String ORDER_BY_SQL_INLINE_DISTINCT =
-		" ORDER BY benefitUsage.planEnrollmentId ASC, benefitUsage.serviceDate DESC";
-
 	public static final String DATA_SOURCE = "liferayDataSource";
 
 	public static final String SESSION_FACTORY = "liferaySessionFactory";

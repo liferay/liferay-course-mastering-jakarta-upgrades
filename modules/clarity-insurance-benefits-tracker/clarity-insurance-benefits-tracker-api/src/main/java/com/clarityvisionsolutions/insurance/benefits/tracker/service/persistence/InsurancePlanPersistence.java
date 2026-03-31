@@ -511,62 +511,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupId(long groupId);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupId(
-		long groupId, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupId(
-		long groupId, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByGroupId_PrevAndNext(
-			long insurancePlanId, long groupId,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
 	 * Removes all the Insurance Plans where groupId = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -580,14 +524,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByGroupId(long groupId);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByGroupId(long groupId);
 
 	/**
 	 * Returns all the Insurance Plans where companyId = &#63; and active = &#63;.
@@ -883,67 +819,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param active the active
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupIdActive(
-		long groupId, boolean active);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param active the active
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupIdActive(
-		long groupId, boolean active, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and active = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param active the active
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByGroupIdActive(
-		long groupId, boolean active, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param active the active
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByGroupIdActive_PrevAndNext(
-			long insurancePlanId, long groupId, boolean active,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
 	 * Removes all the Insurance Plans where groupId = &#63; and active = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -959,15 +834,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByGroupIdActive(long groupId, boolean active);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and active = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param active the active
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByGroupIdActive(long groupId, boolean active);
 
 	/**
 	 * Returns all the Insurance Plans where companyId = &#63;.
@@ -1250,67 +1116,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_S(
-		long groupId, int status);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_S(
-		long groupId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_S(
-		long groupId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByG_S_PrevAndNext(
-			long insurancePlanId, long groupId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
 	 * Removes all the Insurance Plans where groupId = &#63; and status = &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -1326,15 +1131,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByG_S(long groupId, int status);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByG_S(long groupId, int status);
 
 	/**
 	 * Returns all the Insurance Plans where groupId = &#63; and status &ne; &#63;.
@@ -1474,67 +1270,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_NotS(
-		long groupId, int status);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_NotS(
-		long groupId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_NotS(
-		long groupId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByG_NotS_PrevAndNext(
-			long insurancePlanId, long groupId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
 	 * Removes all the Insurance Plans where groupId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -1550,15 +1285,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByG_NotS(long groupId, int status);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param status the status
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByG_NotS(long groupId, int status);
 
 	/**
 	 * Returns all the Insurance Plans where companyId = &#63; and status = &#63;.
@@ -2017,119 +1743,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int status);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByG_U_S_PrevAndNext(
-			long insurancePlanId, long groupId, long userId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_S(
-		long groupId, long userId, int[] statuses, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
 	 * Returns all the Insurance Plans where groupId = &#63; and userId = &#63; and status = any &#63;.
 	 *
 	 * <p>
@@ -2231,26 +1844,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByG_U_S(long groupId, long userId, int[] statuses);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByG_U_S(long groupId, long userId, int status);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status = any &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param statuses the statuses
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByG_U_S(long groupId, long userId, int[] statuses);
 
 	/**
 	 * Returns all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63;.
@@ -2400,71 +1993,6 @@ public interface InsurancePlanPersistence
 		throws NoSuchInsurancePlanException;
 
 	/**
-	 * Returns all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_NotS(
-		long groupId, long userId, int status);
-
-	/**
-	 * Returns a range of all the Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @return the range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_NotS(
-		long groupId, long userId, int status, int start, int end);
-
-	/**
-	 * Returns an ordered range of all the Insurance Plans that the user has permissions to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * <p>
-	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>InsurancePlanModelImpl</code>.
-	 * </p>
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param start the lower bound of the range of Insurance Plans
-	 * @param end the upper bound of the range of Insurance Plans (not inclusive)
-	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
-	 * @return the ordered range of matching Insurance Plans that the user has permission to view
-	 */
-	public java.util.List<InsurancePlan> filterFindByG_U_NotS(
-		long groupId, long userId, int status, int start, int end,
-		com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-			orderByComparator);
-
-	/**
-	 * Returns the Insurance Plans before and after the current Insurance Plan in the ordered set of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param insurancePlanId the primary key of the current Insurance Plan
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
-	 * @return the previous, current, and next Insurance Plan
-	 * @throws NoSuchInsurancePlanException if a Insurance Plan with the primary key could not be found
-	 */
-	public InsurancePlan[] filterFindByG_U_NotS_PrevAndNext(
-			long insurancePlanId, long groupId, long userId, int status,
-			com.liferay.portal.kernel.util.OrderByComparator<InsurancePlan>
-				orderByComparator)
-		throws NoSuchInsurancePlanException;
-
-	/**
 	 * Removes all the Insurance Plans where groupId = &#63; and userId = &#63; and status &ne; &#63; from the database.
 	 *
 	 * @param groupId the group ID
@@ -2482,16 +2010,6 @@ public interface InsurancePlanPersistence
 	 * @return the number of matching Insurance Plans
 	 */
 	public int countByG_U_NotS(long groupId, long userId, int status);
-
-	/**
-	 * Returns the number of Insurance Plans that the user has permission to view where groupId = &#63; and userId = &#63; and status &ne; &#63;.
-	 *
-	 * @param groupId the group ID
-	 * @param userId the user ID
-	 * @param status the status
-	 * @return the number of matching Insurance Plans that the user has permission to view
-	 */
-	public int filterCountByG_U_NotS(long groupId, long userId, int status);
 
 	/**
 	 * Returns the Insurance Plan where externalReferenceCode = &#63; or throws a <code>NoSuchInsurancePlanException</code> if it could not be found.
